@@ -1,0 +1,7 @@
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Bdd.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Bdd.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Comun.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Comun.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.csprojResolveAssemblyReference.cache
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.pdb

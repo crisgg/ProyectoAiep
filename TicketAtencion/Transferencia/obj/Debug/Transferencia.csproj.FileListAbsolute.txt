@@ -1,0 +1,7 @@
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\Transferencia.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\Transferencia.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\Comun.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\Comun.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\obj\Debug\Transferencia.csprojResolveAssemblyReference.cache
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\obj\Debug\Transferencia.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\obj\Debug\Transferencia.pdb

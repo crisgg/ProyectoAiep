@@ -1,0 +1,13 @@
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Negocio.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Negocio.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Bdd.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Comun.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Transferencia.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Bdd.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Comun.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Transferencia.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\obj\Debug\Negocio.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\obj\Debug\Negocio.pdb
