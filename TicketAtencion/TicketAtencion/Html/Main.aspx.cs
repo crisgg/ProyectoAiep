@@ -15,5 +15,10 @@ namespace TicketAtencion.Html
         {
             return new Conexion.ServicioTicket().ObtenerDato();
         }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
     }   
 }

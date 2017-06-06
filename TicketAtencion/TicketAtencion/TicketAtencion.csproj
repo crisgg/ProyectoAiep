@@ -70,8 +70,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\bootstrap-theme.css" />
+    <Content Include="Css\bootstrap-theme.min.css" />
+    <Content Include="Css\bootstrap.css" />
+    <Content Include="Css\bootstrap.min.css" />
     <Content Include="Js\Comunes\Comun.js" />
     <Content Include="Js\Comunes\FolioDuplicado.js" />
+    <Content Include="Js\Comunes\jquery-3.2.1.js" />
     <Content Include="packages.config" />
     <Content Include="Data\TICKET.Master" />
     <None Include="Web.Debug.config">

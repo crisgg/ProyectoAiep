@@ -11,11 +11,15 @@
 </head>
 <body>    
     <script type="text/javascript" src="../Js/Comunes/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../Js/Ticket.js"></script>
+    <script type="text/javascript" src="../Js/Comunes/jquery-3.2.1.js"></script>
+    <link href="../Css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../Css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Css/bootstrap.css" rel="stylesheet" />
+    <link href="../Css/bootstrap.min.css" rel="stylesheet" />
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
+
+        <asp:ContentPlaceHolder ID="Body1" runat="server">        
         </asp:ContentPlaceHolder>
     </div>
     </form>
