@@ -1,0 +1,2586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_A255CD_MoDeskDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AGENTE_HIJOS">
+          <Key>
+            <PropertyRef Name="ID_AGENTE" />
+            <PropertyRef Name="ID_HIJO" />
+          </Key>
+          <Property Name="ID_AGENTE" Type="int" Nullable="false" />
+          <Property Name="ID_HIJO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AGENTES">
+          <Key>
+            <PropertyRef Name="ID_AGENTE" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_AGENTE" Type="int" Nullable="false" />
+          <Property Name="ID_LOGIN" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_COMUNA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_AREA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_AGENTE" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="APELLIDOP_AGENTE" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="APELLIDOM_AGENTE" Type="varchar" MaxLength="15" />
+          <Property Name="EMAIL_AGENTE" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ALERTAS">
+          <Key>
+            <PropertyRef Name="ID_ALERTA" />
+          </Key>
+          <Property Name="ID_ALERTA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="SONIDO_ALERTA" Type="smallint" />
+          <Property Name="COLOR_ALERTA" Type="tinyint" />
+          <Property Name="MAIL_ALERTA" Type="smallint" />
+        </EntityType>
+        <EntityType Name="AREA">
+          <Key>
+            <PropertyRef Name="ID_AREA" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_AREA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="EMAIL_AREA" Type="varchar" MaxLength="50" />
+          <Property Name="DESCRIPCION_AREA" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CALENDARIO">
+          <Key>
+            <PropertyRef Name="ID_FERIADO" />
+          </Key>
+          <Property Name="ID_FERIADO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_PAIS" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FECHA_NO_LABORAL" Type="datetime" />
+          <Property Name="DESCRIPCION_NO_LABORAL" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CAMBIO_MONEDA">
+          <Key>
+            <PropertyRef Name="ID_MONEDA" />
+            <PropertyRef Name="VALOR_CAMBIO" />
+            <PropertyRef Name="MONEDA_CAMBIO" />
+          </Key>
+          <Property Name="ID_MONEDA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="VALOR_CAMBIO" Type="real" Nullable="false" />
+          <Property Name="MONEDA_CAMBIO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COMUNAS">
+          <Key>
+            <PropertyRef Name="ID_COMUNA" />
+          </Key>
+          <Property Name="ID_COMUNA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_DISTRIRO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOM_COMUNA" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DATOS_EXTRAS">
+          <Key>
+            <PropertyRef Name="ID_DATOS_EXTRAS" />
+          </Key>
+          <Property Name="ID_DATOS_EXTRAS" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_AGENTE" Type="int" />
+        </EntityType>
+        <EntityType Name="DISTRITO_META">
+          <Key>
+            <PropertyRef Name="FECHA_META" />
+            <PropertyRef Name="ID_DISTRIRO" />
+          </Key>
+          <Property Name="FECHA_META" Type="datetime" Nullable="false" />
+          <Property Name="ID_DISTRIRO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DISTRITOS">
+          <Key>
+            <PropertyRef Name="ID_DISTRIRO" />
+          </Key>
+          <Property Name="ID_DISTRIRO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_REGION" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOM_DISTRITO" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EMPRESA">
+          <Key>
+            <PropertyRef Name="RUT_EMPRESA_PROV" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_PAIS" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_EMPRESA" Type="varchar" MaxLength="50" />
+          <Property Name="RAZON_SOCIAL_EMPRESA" Type="varchar" MaxLength="150" />
+          <Property Name="DIRECCION_EMPRSA" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="EMPRESA_CLI">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_EMPRESA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_COMUNA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_EMPRESA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="DIRECCION_EMPRESA" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ESTADOS">
+          <Key>
+            <PropertyRef Name="ID_ESTADO" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_ESTADO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DESCRIPCION_ESTADO" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HIJOS">
+          <Key>
+            <PropertyRef Name="ID_HIJO" />
+          </Key>
+          <Property Name="ID_HIJO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_HIJO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EDAD_HIJO" Type="tinyint" Nullable="false" />
+          <Property Name="NAC_HIJO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HISTORIA">
+          <Key>
+            <PropertyRef Name="RESOLUTOR" />
+          </Key>
+          <Property Name="RESOLUTOR" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ID_TKT" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_RESOL_TER" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="FECHA_HIST" Type="date" Nullable="false" />
+          <Property Name="TIEMPO_HIST" Type="time" Precision="7" />
+          <Property Name="ESTADO_HIST" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="NOTAS_HIST" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="ATTACH_HIST" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="HITOS_NO_LABORALES">
+          <Key>
+            <PropertyRef Name="ID_HITOS" />
+          </Key>
+          <Property Name="ID_HITOS" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" />
+          <Property Name="DESCRIPCION_HITONL" Type="varchar" MaxLength="250" />
+          <Property Name="FECHA_INICO_HITONL" Type="datetime" />
+          <Property Name="FECHA_TERMINO_HITONL" Type="datetime" />
+          <Property Name="HORA_INICIO_HITONL" Type="datetime" />
+          <Property Name="HORA_TERMNO_HITONL" Type="datetime" />
+        </EntityType>
+        <EntityType Name="HORAS_TURNOS">
+          <Key>
+            <PropertyRef Name="ID_TURNO" />
+          </Key>
+          <Property Name="HRS_TRABAJO_SEM" Type="int" />
+          <Property Name="ID_TURNO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" />
+          <Property Name="HORA_INICIO_LABORAL" Type="datetime" />
+          <Property Name="HORA_TERMINO_LABORAL" Type="datetime" />
+          <Property Name="HORAS_TRABAJADAS" Type="int" />
+        </EntityType>
+        <EntityType Name="IMPACTO">
+          <Key>
+            <PropertyRef Name="ID_IMPACTO" />
+          </Key>
+          <Property Name="ID_IMPACTO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_IMPACTO" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DESCRIPCION_IMPACTO" Type="varchar" MaxLength="100" />
+          <Property Name="VALOR_IMPACTO" Type="tinyint" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOGIN">
+          <Key>
+            <PropertyRef Name="ID_LOGIN" />
+          </Key>
+          <Property Name="ID_LOGIN" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="PASS_HASH" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="USER_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="METADATA">
+          <Key>
+            <PropertyRef Name="FECHA_META" />
+          </Key>
+          <Property Name="FECHA_META" Type="datetime" Nullable="false" />
+          <Property Name="VALOR_META" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="ID_TIPO_META" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="MODULO">
+          <Key>
+            <PropertyRef Name="ID_MODULO" />
+          </Key>
+          <Property Name="ID_MODULO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DESCRIPCION_MODULO" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MONEDA">
+          <Key>
+            <PropertyRef Name="ID_MONEDA" />
+          </Key>
+          <Property Name="ID_MONEDA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MONEDA" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PAISES">
+          <Key>
+            <PropertyRef Name="ID_PAIS" />
+          </Key>
+          <Property Name="ID_PAIS" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_MONEDA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOM_PAIS" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="REGIONES">
+          <Key>
+            <PropertyRef Name="ID_REGION" />
+          </Key>
+          <Property Name="ID_REGION" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_PAIS" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_REGION" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RESOLUTORES_TERCEROS">
+          <Key>
+            <PropertyRef Name="ID_RESOL_TER" />
+          </Key>
+          <Property Name="ID_RESOL_TER" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_COMUNA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOM_RESOL_TER" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="RSOCIAL_RESOL_TER" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="RUT_RESOL_TER" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="DIRECCION_RESOL_TER" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_ROL" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_LOGIN" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="DESCRIPCION_ROL" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROL_MODULO">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+            <PropertyRef Name="ID_MODULO" />
+          </Key>
+          <Property Name="ID_ROL" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_MODULO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FECHA_ROLMODULO" Type="datetime" Nullable="false" />
+          <Property Name="ESTADO" Type="smallint" Nullable="false" />
+          <Property Name="PERMISO" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SERVICIO">
+          <Key>
+            <PropertyRef Name="ID_SERV" />
+          </Key>
+          <Property Name="ID_SERV" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" />
+          <Property Name="NOMBRE_SERVICIO" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SERVICIO_EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_SERVI_EMP" />
+          </Key>
+          <Property Name="ID_SERV" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_EMPRESA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_SERVI_EMP" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SLA">
+          <Key>
+            <PropertyRef Name="ID_SLA" />
+          </Key>
+          <Property Name="ID_SLA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_ALERTA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_SERVI_EMP" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_SLA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IMPORTANCIA_SLA" Type="tinyint" Nullable="false" />
+          <Property Name="URGENCIA_SLA" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IMPACTO_SLA" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TELS_EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_TEL_EMRPESA" />
+          </Key>
+          <Property Name="TEL_EMPRESA" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_TEL_EMRPESA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="TELS_RESOL_TER">
+          <Key>
+            <PropertyRef Name="ID_TEL_RESTER" />
+          </Key>
+          <Property Name="TEL_RESOL_TER" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_TEL_RESTER" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_RESOL_TER" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="TIPIFICACION">
+          <Key>
+            <PropertyRef Name="ID_TIPO" />
+          </Key>
+          <Property Name="ID_TIPO" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_TIPO_PADRE" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_TIPO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="NIVEL_TIPO" Type="int" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TIPOS_METADTA">
+          <Key>
+            <PropertyRef Name="ID_TIPO_META" />
+          </Key>
+          <Property Name="ID_TIPO_META" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DESC_TIPO_META" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TKT">
+          <Key>
+            <PropertyRef Name="ID_TKT" />
+          </Key>
+          <Property Name="ID_TKT" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_URGENCIA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_ESTADO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_IMPACTO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_TIPO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_LOGIN" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_SERVI_EMP" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="CREADOR_TKT" Type="int" Nullable="false" />
+          <Property Name="REPORTADOR_TKT" Type="smallint" Nullable="false" />
+          <Property Name="AFECTADO_TKT" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PRIORIDAD_TKT" Type="int" Nullable="false" />
+          <Property Name="VALOR_IMPACTO_TKT" Type="tinyint" Nullable="false" />
+          <Property Name="VALOR_URGENCIA_TKT" Type="tinyint" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+        </EntityType>
+        <EntityType Name="URGENCIA">
+          <Key>
+            <PropertyRef Name="ID_URGENCIA" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_URGENCIA" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_URGENCIA" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DESCRIPCION_URGENCIA" Type="varchar" MaxLength="100" />
+          <Property Name="VALOR_URGENCIA" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USUARIO_FINAL">
+          <Key>
+            <PropertyRef Name="ID_USUFINAL" />
+          </Key>
+          <Property Name="ID_USUFINAL" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_EMPRESA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_LOGIN" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="VIP" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VALORES">
+          <Key>
+            <PropertyRef Name="FECHA_VALOR" />
+            <PropertyRef Name="VALOR" />
+          </Key>
+          <Property Name="FECHA_VALOR" Type="datetime" Nullable="false" />
+          <Property Name="VALOR" Type="real" Nullable="false" />
+          <Property Name="ID_MONEDA" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <Association Name="FK_AGENTE_H_RELATIONS_AGENTES">
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="1" />
+          <End Role="AGENTE_HIJOS" Type="Self.AGENTE_HIJOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AGENTES">
+              <PropertyRef Name="ID_AGENTE" />
+            </Principal>
+            <Dependent Role="AGENTE_HIJOS">
+              <PropertyRef Name="ID_AGENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AGENTE_H_RELATIONS_HIJOS">
+          <End Role="HIJOS" Type="Self.HIJOS" Multiplicity="1" />
+          <End Role="AGENTE_HIJOS" Type="Self.AGENTE_HIJOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HIJOS">
+              <PropertyRef Name="ID_HIJO" />
+            </Principal>
+            <Dependent Role="AGENTE_HIJOS">
+              <PropertyRef Name="ID_HIJO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AGENTES_RELATIONS_AREA">
+          <End Role="AREA" Type="Self.AREA" Multiplicity="0..1" />
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AREA">
+              <PropertyRef Name="ID_AREA" />
+            </Principal>
+            <Dependent Role="AGENTES">
+              <PropertyRef Name="ID_AREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AGENTES_RELATIONS_COMUNAS">
+          <End Role="COMUNAS" Type="Self.COMUNAS" Multiplicity="0..1" />
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNAS">
+              <PropertyRef Name="ID_COMUNA" />
+            </Principal>
+            <Dependent Role="AGENTES">
+              <PropertyRef Name="ID_COMUNA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AGENTES_RELATIONS_LOGIN">
+          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOGIN">
+              <PropertyRef Name="ID_LOGIN" />
+            </Principal>
+            <Dependent Role="AGENTES">
+              <PropertyRef Name="ID_LOGIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CALENDAR_REFERENCE_PAISES">
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
+          <End Role="CALENDARIO" Type="Self.CALENDARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAISES">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="CALENDARIO">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAMBIO_M_REFERENCE_MONEDA">
+          <End Role="MONEDA" Type="Self.MONEDA" Multiplicity="1" />
+          <End Role="CAMBIO_MONEDA" Type="Self.CAMBIO_MONEDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONEDA">
+              <PropertyRef Name="ID_MONEDA" />
+            </Principal>
+            <Dependent Role="CAMBIO_MONEDA">
+              <PropertyRef Name="ID_MONEDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COMUNAS_RELATIONS_DISTRITO">
+          <End Role="DISTRITOS" Type="Self.DISTRITOS" Multiplicity="0..1" />
+          <End Role="COMUNAS" Type="Self.COMUNAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DISTRITOS">
+              <PropertyRef Name="ID_DISTRIRO" />
+            </Principal>
+            <Dependent Role="COMUNAS">
+              <PropertyRef Name="ID_DISTRIRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DATOS_EX_RELATIONS_AGENTES">
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="0..1" />
+          <End Role="DATOS_EXTRAS" Type="Self.DATOS_EXTRAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AGENTES">
+              <PropertyRef Name="ID_AGENTE" />
+            </Principal>
+            <Dependent Role="DATOS_EXTRAS">
+              <PropertyRef Name="ID_AGENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DISTRITO_REFERENCE_DISTRITO">
+          <End Role="DISTRITOS" Type="Self.DISTRITOS" Multiplicity="1" />
+          <End Role="DISTRITO_META" Type="Self.DISTRITO_META" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DISTRITOS">
+              <PropertyRef Name="ID_DISTRIRO" />
+            </Principal>
+            <Dependent Role="DISTRITO_META">
+              <PropertyRef Name="ID_DISTRIRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DISTRITO_REFERENCE_METADATA">
+          <End Role="METADATA" Type="Self.METADATA" Multiplicity="1" />
+          <End Role="DISTRITO_META" Type="Self.DISTRITO_META" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="METADATA">
+              <PropertyRef Name="FECHA_META" />
+            </Principal>
+            <Dependent Role="DISTRITO_META">
+              <PropertyRef Name="FECHA_META" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DISTRITO_REFERENCE_REGIONES">
+          <End Role="REGIONES" Type="Self.REGIONES" Multiplicity="0..1" />
+          <End Role="DISTRITOS" Type="Self.DISTRITOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGIONES">
+              <PropertyRef Name="ID_REGION" />
+            </Principal>
+            <Dependent Role="DISTRITOS">
+              <PropertyRef Name="ID_REGION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPRESA__RELATIONS_COMUNAS">
+          <End Role="COMUNAS" Type="Self.COMUNAS" Multiplicity="0..1" />
+          <End Role="EMPRESA_CLI" Type="Self.EMPRESA_CLI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNAS">
+              <PropertyRef Name="ID_COMUNA" />
+            </Principal>
+            <Dependent Role="EMPRESA_CLI">
+              <PropertyRef Name="ID_COMUNA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPRESA_REFERENCE_PAISES">
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAISES">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="EMPRESA">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORIA_RELATIONS_RESOLUTO">
+          <End Role="RESOLUTORES_TERCEROS" Type="Self.RESOLUTORES_TERCEROS" Multiplicity="0..1" />
+          <End Role="HISTORIA" Type="Self.HISTORIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESOLUTORES_TERCEROS">
+              <PropertyRef Name="ID_RESOL_TER" />
+            </Principal>
+            <Dependent Role="HISTORIA">
+              <PropertyRef Name="ID_RESOL_TER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORIA_RELATIONS_TKT">
+          <End Role="TKT" Type="Self.TKT" Multiplicity="1" />
+          <End Role="HISTORIA" Type="Self.HISTORIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TKT">
+              <PropertyRef Name="ID_TKT" />
+            </Principal>
+            <Dependent Role="HISTORIA">
+              <PropertyRef Name="ID_TKT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HITOS_NO_REFERENCE_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="HITOS_NO_LABORALES" Type="Self.HITOS_NO_LABORALES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Principal>
+            <Dependent Role="HITOS_NO_LABORALES">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HORAS_TU_REFERENCE_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="HORAS_TURNOS" Type="Self.HORAS_TURNOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Principal>
+            <Dependent Role="HORAS_TURNOS">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_METADATA_REFERENCE_TIPOS_ME">
+          <End Role="TIPOS_METADTA" Type="Self.TIPOS_METADTA" Multiplicity="0..1" />
+          <End Role="METADATA" Type="Self.METADATA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPOS_METADTA">
+              <PropertyRef Name="ID_TIPO_META" />
+            </Principal>
+            <Dependent Role="METADATA">
+              <PropertyRef Name="ID_TIPO_META" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PAISES_REFERENCE_MONEDA">
+          <End Role="MONEDA" Type="Self.MONEDA" Multiplicity="0..1" />
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONEDA">
+              <PropertyRef Name="ID_MONEDA" />
+            </Principal>
+            <Dependent Role="PAISES">
+              <PropertyRef Name="ID_MONEDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGIONES_REFERENCE_PAISES">
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
+          <End Role="REGIONES" Type="Self.REGIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAISES">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="REGIONES">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESOLUTO_RELATIONS_COMUNAS">
+          <End Role="COMUNAS" Type="Self.COMUNAS" Multiplicity="0..1" />
+          <End Role="RESOLUTORES_TERCEROS" Type="Self.RESOLUTORES_TERCEROS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNAS">
+              <PropertyRef Name="ID_COMUNA" />
+            </Principal>
+            <Dependent Role="RESOLUTORES_TERCEROS">
+              <PropertyRef Name="ID_COMUNA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ROL_MODU_RELATIONS_MODULO">
+          <End Role="MODULO" Type="Self.MODULO" Multiplicity="1" />
+          <End Role="ROL_MODULO" Type="Self.ROL_MODULO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MODULO">
+              <PropertyRef Name="ID_MODULO" />
+            </Principal>
+            <Dependent Role="ROL_MODULO">
+              <PropertyRef Name="ID_MODULO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ROL_MODU_RELATIONS_ROL">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="1" />
+          <End Role="ROL_MODULO" Type="Self.ROL_MODULO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="ID_ROL" />
+            </Principal>
+            <Dependent Role="ROL_MODULO">
+              <PropertyRef Name="ID_ROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ROL_RELATIONS_LOGIN">
+          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+          <End Role="ROL" Type="Self.ROL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOGIN">
+              <PropertyRef Name="ID_LOGIN" />
+            </Principal>
+            <Dependent Role="ROL">
+              <PropertyRef Name="ID_LOGIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERVICIO_REFERENCE_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Principal>
+            <Dependent Role="SERVICIO">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERVICIO_RELATIONS_EMPRESA_">
+          <End Role="EMPRESA_CLI" Type="Self.EMPRESA_CLI" Multiplicity="0..1" />
+          <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA_CLI">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="SERVICIO_EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERVICIO_RELATIONS_SERVICIO">
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="0..1" />
+          <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO">
+              <PropertyRef Name="ID_SERV" />
+            </Principal>
+            <Dependent Role="SERVICIO_EMPRESA">
+              <PropertyRef Name="ID_SERV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SLA_RELATIONS_ALERTAS">
+          <End Role="ALERTAS" Type="Self.ALERTAS" Multiplicity="0..1" />
+          <End Role="SLA" Type="Self.SLA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ALERTAS">
+              <PropertyRef Name="ID_ALERTA" />
+            </Principal>
+            <Dependent Role="SLA">
+              <PropertyRef Name="ID_ALERTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SLA_RELATIONS_SERVICIO">
+          <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="0..1" />
+          <End Role="SLA" Type="Self.SLA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO_EMPRESA">
+              <PropertyRef Name="ID_SERVI_EMP" />
+            </Principal>
+            <Dependent Role="SLA">
+              <PropertyRef Name="ID_SERVI_EMP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TELS_EMP_REFERENCE_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="TELS_EMPRESA" Type="Self.TELS_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Principal>
+            <Dependent Role="TELS_EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TELS_RES_RELATIONS_RESOLUTO">
+          <End Role="RESOLUTORES_TERCEROS" Type="Self.RESOLUTORES_TERCEROS" Multiplicity="0..1" />
+          <End Role="TELS_RESOL_TER" Type="Self.TELS_RESOL_TER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESOLUTORES_TERCEROS">
+              <PropertyRef Name="ID_RESOL_TER" />
+            </Principal>
+            <Dependent Role="TELS_RESOL_TER">
+              <PropertyRef Name="ID_RESOL_TER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPIFICA_RELATIONS_TIPIFICA">
+          <End Role="TIPIFICACION" Type="Self.TIPIFICACION" Multiplicity="0..1" />
+          <End Role="TIPIFICACION1" Type="Self.TIPIFICACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPIFICACION">
+              <PropertyRef Name="ID_TIPO" />
+            </Principal>
+            <Dependent Role="TIPIFICACION1">
+              <PropertyRef Name="ID_TIPO_PADRE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_ESTADOS">
+          <End Role="ESTADOS" Type="Self.ESTADOS" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADOS">
+              <PropertyRef Name="ID_ESTADO" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_ESTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_IMPACTO">
+          <End Role="IMPACTO" Type="Self.IMPACTO" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IMPACTO">
+              <PropertyRef Name="ID_IMPACTO" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_IMPACTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_LOGIN">
+          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOGIN">
+              <PropertyRef Name="ID_LOGIN" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_LOGIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_SERVICIO">
+          <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO_EMPRESA">
+              <PropertyRef Name="ID_SERVI_EMP" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_SERVI_EMP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_TIPIFICA">
+          <End Role="TIPIFICACION" Type="Self.TIPIFICACION" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPIFICACION">
+              <PropertyRef Name="ID_TIPO" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_TIPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_URGENCIA">
+          <End Role="URGENCIA" Type="Self.URGENCIA" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="URGENCIA">
+              <PropertyRef Name="ID_URGENCIA" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_URGENCIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIO__RELATIONS_EMPRESA_">
+          <End Role="EMPRESA_CLI" Type="Self.EMPRESA_CLI" Multiplicity="0..1" />
+          <End Role="USUARIO_FINAL" Type="Self.USUARIO_FINAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA_CLI">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="USUARIO_FINAL">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIO__RELATIONS_LOGIN">
+          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+          <End Role="USUARIO_FINAL" Type="Self.USUARIO_FINAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOGIN">
+              <PropertyRef Name="ID_LOGIN" />
+            </Principal>
+            <Dependent Role="USUARIO_FINAL">
+              <PropertyRef Name="ID_LOGIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VALORES_REFERENCE_MONEDA">
+          <End Role="MONEDA" Type="Self.MONEDA" Multiplicity="0..1" />
+          <End Role="VALORES" Type="Self.VALORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONEDA">
+              <PropertyRef Name="ID_MONEDA" />
+            </Principal>
+            <Dependent Role="VALORES">
+              <PropertyRef Name="ID_MONEDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_A255CD_MoDeskDBModelStoreContainer">
+          <EntitySet Name="AGENTE_HIJOS" EntityType="Self.AGENTE_HIJOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AGENTES" EntityType="Self.AGENTES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ALERTAS" EntityType="Self.ALERTAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AREA" EntityType="Self.AREA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CALENDARIO" EntityType="Self.CALENDARIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAMBIO_MONEDA" EntityType="Self.CAMBIO_MONEDA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COMUNAS" EntityType="Self.COMUNAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DATOS_EXTRAS" EntityType="Self.DATOS_EXTRAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DISTRITO_META" EntityType="Self.DISTRITO_META" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DISTRITOS" EntityType="Self.DISTRITOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPRESA_CLI" EntityType="Self.EMPRESA_CLI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ESTADOS" EntityType="Self.ESTADOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HIJOS" EntityType="Self.HIJOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HISTORIA" EntityType="Self.HISTORIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HITOS_NO_LABORALES" EntityType="Self.HITOS_NO_LABORALES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HORAS_TURNOS" EntityType="Self.HORAS_TURNOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IMPACTO" EntityType="Self.IMPACTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOGIN" EntityType="Self.LOGIN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="METADATA" EntityType="Self.METADATA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MODULO" EntityType="Self.MODULO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MONEDA" EntityType="Self.MONEDA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PAISES" EntityType="Self.PAISES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="REGIONES" EntityType="Self.REGIONES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RESOLUTORES_TERCEROS" EntityType="Self.RESOLUTORES_TERCEROS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROL_MODULO" EntityType="Self.ROL_MODULO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SERVICIO_EMPRESA" EntityType="Self.SERVICIO_EMPRESA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SLA" EntityType="Self.SLA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TELS_EMPRESA" EntityType="Self.TELS_EMPRESA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TELS_RESOL_TER" EntityType="Self.TELS_RESOL_TER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIPIFICACION" EntityType="Self.TIPIFICACION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIPOS_METADTA" EntityType="Self.TIPOS_METADTA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TKT" EntityType="Self.TKT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="URGENCIA" EntityType="Self.URGENCIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIO_FINAL" EntityType="Self.USUARIO_FINAL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VALORES" EntityType="Self.VALORES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AGENTE_H_RELATIONS_AGENTES" Association="Self.FK_AGENTE_H_RELATIONS_AGENTES">
+            <End Role="AGENTES" EntitySet="AGENTES" />
+            <End Role="AGENTE_HIJOS" EntitySet="AGENTE_HIJOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AGENTE_H_RELATIONS_HIJOS" Association="Self.FK_AGENTE_H_RELATIONS_HIJOS">
+            <End Role="HIJOS" EntitySet="HIJOS" />
+            <End Role="AGENTE_HIJOS" EntitySet="AGENTE_HIJOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AGENTES_RELATIONS_AREA" Association="Self.FK_AGENTES_RELATIONS_AREA">
+            <End Role="AREA" EntitySet="AREA" />
+            <End Role="AGENTES" EntitySet="AGENTES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AGENTES_RELATIONS_COMUNAS" Association="Self.FK_AGENTES_RELATIONS_COMUNAS">
+            <End Role="COMUNAS" EntitySet="COMUNAS" />
+            <End Role="AGENTES" EntitySet="AGENTES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AGENTES_RELATIONS_LOGIN" Association="Self.FK_AGENTES_RELATIONS_LOGIN">
+            <End Role="LOGIN" EntitySet="LOGIN" />
+            <End Role="AGENTES" EntitySet="AGENTES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CALENDAR_REFERENCE_PAISES" Association="Self.FK_CALENDAR_REFERENCE_PAISES">
+            <End Role="PAISES" EntitySet="PAISES" />
+            <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAMBIO_M_REFERENCE_MONEDA" Association="Self.FK_CAMBIO_M_REFERENCE_MONEDA">
+            <End Role="MONEDA" EntitySet="MONEDA" />
+            <End Role="CAMBIO_MONEDA" EntitySet="CAMBIO_MONEDA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COMUNAS_RELATIONS_DISTRITO" Association="Self.FK_COMUNAS_RELATIONS_DISTRITO">
+            <End Role="DISTRITOS" EntitySet="DISTRITOS" />
+            <End Role="COMUNAS" EntitySet="COMUNAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DATOS_EX_RELATIONS_AGENTES" Association="Self.FK_DATOS_EX_RELATIONS_AGENTES">
+            <End Role="AGENTES" EntitySet="AGENTES" />
+            <End Role="DATOS_EXTRAS" EntitySet="DATOS_EXTRAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DISTRITO_REFERENCE_DISTRITO" Association="Self.FK_DISTRITO_REFERENCE_DISTRITO">
+            <End Role="DISTRITOS" EntitySet="DISTRITOS" />
+            <End Role="DISTRITO_META" EntitySet="DISTRITO_META" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DISTRITO_REFERENCE_METADATA" Association="Self.FK_DISTRITO_REFERENCE_METADATA">
+            <End Role="METADATA" EntitySet="METADATA" />
+            <End Role="DISTRITO_META" EntitySet="DISTRITO_META" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DISTRITO_REFERENCE_REGIONES" Association="Self.FK_DISTRITO_REFERENCE_REGIONES">
+            <End Role="REGIONES" EntitySet="REGIONES" />
+            <End Role="DISTRITOS" EntitySet="DISTRITOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPRESA__RELATIONS_COMUNAS" Association="Self.FK_EMPRESA__RELATIONS_COMUNAS">
+            <End Role="COMUNAS" EntitySet="COMUNAS" />
+            <End Role="EMPRESA_CLI" EntitySet="EMPRESA_CLI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPRESA_REFERENCE_PAISES" Association="Self.FK_EMPRESA_REFERENCE_PAISES">
+            <End Role="PAISES" EntitySet="PAISES" />
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORIA_RELATIONS_RESOLUTO" Association="Self.FK_HISTORIA_RELATIONS_RESOLUTO">
+            <End Role="RESOLUTORES_TERCEROS" EntitySet="RESOLUTORES_TERCEROS" />
+            <End Role="HISTORIA" EntitySet="HISTORIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORIA_RELATIONS_TKT" Association="Self.FK_HISTORIA_RELATIONS_TKT">
+            <End Role="TKT" EntitySet="TKT" />
+            <End Role="HISTORIA" EntitySet="HISTORIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HITOS_NO_REFERENCE_EMPRESA" Association="Self.FK_HITOS_NO_REFERENCE_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="HITOS_NO_LABORALES" EntitySet="HITOS_NO_LABORALES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HORAS_TU_REFERENCE_EMPRESA" Association="Self.FK_HORAS_TU_REFERENCE_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="HORAS_TURNOS" EntitySet="HORAS_TURNOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_METADATA_REFERENCE_TIPOS_ME" Association="Self.FK_METADATA_REFERENCE_TIPOS_ME">
+            <End Role="TIPOS_METADTA" EntitySet="TIPOS_METADTA" />
+            <End Role="METADATA" EntitySet="METADATA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PAISES_REFERENCE_MONEDA" Association="Self.FK_PAISES_REFERENCE_MONEDA">
+            <End Role="MONEDA" EntitySet="MONEDA" />
+            <End Role="PAISES" EntitySet="PAISES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGIONES_REFERENCE_PAISES" Association="Self.FK_REGIONES_REFERENCE_PAISES">
+            <End Role="PAISES" EntitySet="PAISES" />
+            <End Role="REGIONES" EntitySet="REGIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESOLUTO_RELATIONS_COMUNAS" Association="Self.FK_RESOLUTO_RELATIONS_COMUNAS">
+            <End Role="COMUNAS" EntitySet="COMUNAS" />
+            <End Role="RESOLUTORES_TERCEROS" EntitySet="RESOLUTORES_TERCEROS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ROL_MODU_RELATIONS_MODULO" Association="Self.FK_ROL_MODU_RELATIONS_MODULO">
+            <End Role="MODULO" EntitySet="MODULO" />
+            <End Role="ROL_MODULO" EntitySet="ROL_MODULO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ROL_MODU_RELATIONS_ROL" Association="Self.FK_ROL_MODU_RELATIONS_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="ROL_MODULO" EntitySet="ROL_MODULO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ROL_RELATIONS_LOGIN" Association="Self.FK_ROL_RELATIONS_LOGIN">
+            <End Role="LOGIN" EntitySet="LOGIN" />
+            <End Role="ROL" EntitySet="ROL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERVICIO_REFERENCE_EMPRESA" Association="Self.FK_SERVICIO_REFERENCE_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERVICIO_RELATIONS_EMPRESA_" Association="Self.FK_SERVICIO_RELATIONS_EMPRESA_">
+            <End Role="EMPRESA_CLI" EntitySet="EMPRESA_CLI" />
+            <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERVICIO_RELATIONS_SERVICIO" Association="Self.FK_SERVICIO_RELATIONS_SERVICIO">
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+            <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SLA_RELATIONS_ALERTAS" Association="Self.FK_SLA_RELATIONS_ALERTAS">
+            <End Role="ALERTAS" EntitySet="ALERTAS" />
+            <End Role="SLA" EntitySet="SLA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SLA_RELATIONS_SERVICIO" Association="Self.FK_SLA_RELATIONS_SERVICIO">
+            <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
+            <End Role="SLA" EntitySet="SLA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TELS_EMP_REFERENCE_EMPRESA" Association="Self.FK_TELS_EMP_REFERENCE_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="TELS_EMPRESA" EntitySet="TELS_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TELS_RES_RELATIONS_RESOLUTO" Association="Self.FK_TELS_RES_RELATIONS_RESOLUTO">
+            <End Role="RESOLUTORES_TERCEROS" EntitySet="RESOLUTORES_TERCEROS" />
+            <End Role="TELS_RESOL_TER" EntitySet="TELS_RESOL_TER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPIFICA_RELATIONS_TIPIFICA" Association="Self.FK_TIPIFICA_RELATIONS_TIPIFICA">
+            <End Role="TIPIFICACION" EntitySet="TIPIFICACION" />
+            <End Role="TIPIFICACION1" EntitySet="TIPIFICACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_ESTADOS" Association="Self.FK_TKT_RELATIONS_ESTADOS">
+            <End Role="ESTADOS" EntitySet="ESTADOS" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_IMPACTO" Association="Self.FK_TKT_RELATIONS_IMPACTO">
+            <End Role="IMPACTO" EntitySet="IMPACTO" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_LOGIN" Association="Self.FK_TKT_RELATIONS_LOGIN">
+            <End Role="LOGIN" EntitySet="LOGIN" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_SERVICIO" Association="Self.FK_TKT_RELATIONS_SERVICIO">
+            <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_TIPIFICA" Association="Self.FK_TKT_RELATIONS_TIPIFICA">
+            <End Role="TIPIFICACION" EntitySet="TIPIFICACION" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_URGENCIA" Association="Self.FK_TKT_RELATIONS_URGENCIA">
+            <End Role="URGENCIA" EntitySet="URGENCIA" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIO__RELATIONS_EMPRESA_" Association="Self.FK_USUARIO__RELATIONS_EMPRESA_">
+            <End Role="EMPRESA_CLI" EntitySet="EMPRESA_CLI" />
+            <End Role="USUARIO_FINAL" EntitySet="USUARIO_FINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIO__RELATIONS_LOGIN" Association="Self.FK_USUARIO__RELATIONS_LOGIN">
+            <End Role="LOGIN" EntitySet="LOGIN" />
+            <End Role="USUARIO_FINAL" EntitySet="USUARIO_FINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VALORES_REFERENCE_MONEDA" Association="Self.FK_VALORES_REFERENCE_MONEDA">
+            <End Role="MONEDA" EntitySet="MONEDA" />
+            <End Role="VALORES" EntitySet="VALORES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A255CD_MoDeskDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AGENTES">
+          <Key>
+            <PropertyRef Name="ID_AGENTE" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_AGENTE" Type="Int32" Nullable="false" />
+          <Property Name="ID_LOGIN" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_COMUNA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_AREA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_AGENTE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDOP_AGENTE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDOM_AGENTE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL_AGENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AREA" Relationship="Self.FK_AGENTES_RELATIONS_AREA" FromRole="AGENTES" ToRole="AREA" />
+          <NavigationProperty Name="COMUNAS" Relationship="Self.FK_AGENTES_RELATIONS_COMUNAS" FromRole="AGENTES" ToRole="COMUNAS" />
+          <NavigationProperty Name="LOGIN" Relationship="Self.FK_AGENTES_RELATIONS_LOGIN" FromRole="AGENTES" ToRole="LOGIN" />
+          <NavigationProperty Name="DATOS_EXTRAS" Relationship="Self.FK_DATOS_EX_RELATIONS_AGENTES" FromRole="AGENTES" ToRole="DATOS_EXTRAS" />
+          <NavigationProperty Name="HIJOS" Relationship="Self.AGENTE_HIJOS" FromRole="AGENTES" ToRole="HIJOS" />
+        </EntityType>
+        <EntityType Name="ALERTAS">
+          <Key>
+            <PropertyRef Name="ID_ALERTA" />
+          </Key>
+          <Property Name="ID_ALERTA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="SONIDO_ALERTA" Type="Int16" />
+          <Property Name="COLOR_ALERTA" Type="Byte" />
+          <Property Name="MAIL_ALERTA" Type="Int16" />
+          <NavigationProperty Name="SLA" Relationship="Self.FK_SLA_RELATIONS_ALERTAS" FromRole="ALERTAS" ToRole="SLA" />
+        </EntityType>
+        <EntityType Name="AREA">
+          <Key>
+            <PropertyRef Name="ID_AREA" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_AREA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="EMAIL_AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPCION_AREA" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="AGENTES" Relationship="Self.FK_AGENTES_RELATIONS_AREA" FromRole="AREA" ToRole="AGENTES" />
+        </EntityType>
+        <EntityType Name="CALENDARIO">
+          <Key>
+            <PropertyRef Name="ID_FERIADO" />
+          </Key>
+          <Property Name="ID_FERIADO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_PAIS" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FECHA_NO_LABORAL" Type="DateTime" Precision="3" />
+          <Property Name="DESCRIPCION_NO_LABORAL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PAISES" Relationship="Self.FK_CALENDAR_REFERENCE_PAISES" FromRole="CALENDARIO" ToRole="PAISES" />
+        </EntityType>
+        <EntityType Name="CAMBIO_MONEDA">
+          <Key>
+            <PropertyRef Name="ID_MONEDA" />
+            <PropertyRef Name="VALOR_CAMBIO" />
+            <PropertyRef Name="MONEDA_CAMBIO" />
+          </Key>
+          <Property Name="ID_MONEDA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="VALOR_CAMBIO" Type="Single" Nullable="false" />
+          <Property Name="MONEDA_CAMBIO" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MONEDA" Relationship="Self.FK_CAMBIO_M_REFERENCE_MONEDA" FromRole="CAMBIO_MONEDA" ToRole="MONEDA" />
+        </EntityType>
+        <EntityType Name="COMUNAS">
+          <Key>
+            <PropertyRef Name="ID_COMUNA" />
+          </Key>
+          <Property Name="ID_COMUNA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_DISTRIRO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOM_COMUNA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="AGENTES" Relationship="Self.FK_AGENTES_RELATIONS_COMUNAS" FromRole="COMUNAS" ToRole="AGENTES" />
+          <NavigationProperty Name="DISTRITOS" Relationship="Self.FK_COMUNAS_RELATIONS_DISTRITO" FromRole="COMUNAS" ToRole="DISTRITOS" />
+          <NavigationProperty Name="EMPRESA_CLI" Relationship="Self.FK_EMPRESA__RELATIONS_COMUNAS" FromRole="COMUNAS" ToRole="EMPRESA_CLI" />
+          <NavigationProperty Name="RESOLUTORES_TERCEROS" Relationship="Self.FK_RESOLUTO_RELATIONS_COMUNAS" FromRole="COMUNAS" ToRole="RESOLUTORES_TERCEROS" />
+        </EntityType>
+        <EntityType Name="DATOS_EXTRAS">
+          <Key>
+            <PropertyRef Name="ID_DATOS_EXTRAS" />
+          </Key>
+          <Property Name="ID_DATOS_EXTRAS" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_AGENTE" Type="Int32" />
+          <NavigationProperty Name="AGENTES" Relationship="Self.FK_DATOS_EX_RELATIONS_AGENTES" FromRole="DATOS_EXTRAS" ToRole="AGENTES" />
+        </EntityType>
+        <EntityType Name="DISTRITOS">
+          <Key>
+            <PropertyRef Name="ID_DISTRIRO" />
+          </Key>
+          <Property Name="ID_DISTRIRO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_REGION" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOM_DISTRITO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="COMUNAS" Relationship="Self.FK_COMUNAS_RELATIONS_DISTRITO" FromRole="DISTRITOS" ToRole="COMUNAS" />
+          <NavigationProperty Name="REGIONES" Relationship="Self.FK_DISTRITO_REFERENCE_REGIONES" FromRole="DISTRITOS" ToRole="REGIONES" />
+          <NavigationProperty Name="METADATA" Relationship="Self.DISTRITO_META" FromRole="DISTRITOS" ToRole="METADATA" />
+        </EntityType>
+        <EntityType Name="EMPRESA">
+          <Key>
+            <PropertyRef Name="RUT_EMPRESA_PROV" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_PAIS" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RAZON_SOCIAL_EMPRESA" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION_EMPRSA" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PAISES" Relationship="Self.FK_EMPRESA_REFERENCE_PAISES" FromRole="EMPRESA" ToRole="PAISES" />
+          <NavigationProperty Name="HITOS_NO_LABORALES" Relationship="Self.FK_HITOS_NO_REFERENCE_EMPRESA" FromRole="EMPRESA" ToRole="HITOS_NO_LABORALES" />
+          <NavigationProperty Name="HORAS_TURNOS" Relationship="Self.FK_HORAS_TU_REFERENCE_EMPRESA" FromRole="EMPRESA" ToRole="HORAS_TURNOS" />
+          <NavigationProperty Name="SERVICIO" Relationship="Self.FK_SERVICIO_REFERENCE_EMPRESA" FromRole="EMPRESA" ToRole="SERVICIO" />
+          <NavigationProperty Name="TELS_EMPRESA" Relationship="Self.FK_TELS_EMP_REFERENCE_EMPRESA" FromRole="EMPRESA" ToRole="TELS_EMPRESA" />
+        </EntityType>
+        <EntityType Name="EMPRESA_CLI">
+          <Key>
+            <PropertyRef Name="ID_EMPRESA" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_EMPRESA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_COMUNA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIRECCION_EMPRESA" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="COMUNAS" Relationship="Self.FK_EMPRESA__RELATIONS_COMUNAS" FromRole="EMPRESA_CLI" ToRole="COMUNAS" />
+          <NavigationProperty Name="SERVICIO_EMPRESA" Relationship="Self.FK_SERVICIO_RELATIONS_EMPRESA_" FromRole="EMPRESA_CLI" ToRole="SERVICIO_EMPRESA" />
+          <NavigationProperty Name="USUARIO_FINAL" Relationship="Self.FK_USUARIO__RELATIONS_EMPRESA_" FromRole="EMPRESA_CLI" ToRole="USUARIO_FINAL" />
+        </EntityType>
+        <EntityType Name="ESTADOS">
+          <Key>
+            <PropertyRef Name="ID_ESTADO" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_ESTADO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DESCRIPCION_ESTADO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_ESTADOS" FromRole="ESTADOS" ToRole="TKT" />
+        </EntityType>
+        <EntityType Name="HIJOS">
+          <Key>
+            <PropertyRef Name="ID_HIJO" />
+          </Key>
+          <Property Name="ID_HIJO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_HIJO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EDAD_HIJO" Type="Byte" Nullable="false" />
+          <Property Name="NAC_HIJO" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="AGENTES" Relationship="Self.AGENTE_HIJOS" FromRole="HIJOS" ToRole="AGENTES" />
+        </EntityType>
+        <EntityType Name="HISTORIA">
+          <Key>
+            <PropertyRef Name="RESOLUTOR" />
+          </Key>
+          <Property Name="RESOLUTOR" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_TKT" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_RESOL_TER" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FECHA_HIST" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TIEMPO_HIST" Type="Time" Precision="7" />
+          <Property Name="ESTADO_HIST" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NOTAS_HIST" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ATTACH_HIST" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="RESOLUTORES_TERCEROS" Relationship="Self.FK_HISTORIA_RELATIONS_RESOLUTO" FromRole="HISTORIA" ToRole="RESOLUTORES_TERCEROS" />
+          <NavigationProperty Name="TKT" Relationship="Self.FK_HISTORIA_RELATIONS_TKT" FromRole="HISTORIA" ToRole="TKT" />
+        </EntityType>
+        <EntityType Name="HITOS_NO_LABORALES">
+          <Key>
+            <PropertyRef Name="ID_HITOS" />
+          </Key>
+          <Property Name="ID_HITOS" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPCION_HITONL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_INICO_HITONL" Type="DateTime" Precision="3" />
+          <Property Name="FECHA_TERMINO_HITONL" Type="DateTime" Precision="3" />
+          <Property Name="HORA_INICIO_HITONL" Type="DateTime" Precision="3" />
+          <Property Name="HORA_TERMNO_HITONL" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_HITOS_NO_REFERENCE_EMPRESA" FromRole="HITOS_NO_LABORALES" ToRole="EMPRESA" />
+        </EntityType>
+        <EntityType Name="HORAS_TURNOS">
+          <Key>
+            <PropertyRef Name="ID_TURNO" />
+          </Key>
+          <Property Name="HRS_TRABAJO_SEM" Type="Int32" />
+          <Property Name="ID_TURNO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="HORA_INICIO_LABORAL" Type="DateTime" Precision="3" />
+          <Property Name="HORA_TERMINO_LABORAL" Type="DateTime" Precision="3" />
+          <Property Name="HORAS_TRABAJADAS" Type="Int32" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_HORAS_TU_REFERENCE_EMPRESA" FromRole="HORAS_TURNOS" ToRole="EMPRESA" />
+        </EntityType>
+        <EntityType Name="IMPACTO">
+          <Key>
+            <PropertyRef Name="ID_IMPACTO" />
+          </Key>
+          <Property Name="ID_IMPACTO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_IMPACTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION_IMPACTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VALOR_IMPACTO" Type="Byte" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_IMPACTO" FromRole="IMPACTO" ToRole="TKT" />
+        </EntityType>
+        <EntityType Name="LOGIN">
+          <Key>
+            <PropertyRef Name="ID_LOGIN" />
+          </Key>
+          <Property Name="ID_LOGIN" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="PASS_HASH" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="AGENTES" Relationship="Self.FK_AGENTES_RELATIONS_LOGIN" FromRole="LOGIN" ToRole="AGENTES" />
+          <NavigationProperty Name="ROL" Relationship="Self.FK_ROL_RELATIONS_LOGIN" FromRole="LOGIN" ToRole="ROL" />
+          <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_LOGIN" FromRole="LOGIN" ToRole="TKT" />
+          <NavigationProperty Name="USUARIO_FINAL" Relationship="Self.FK_USUARIO__RELATIONS_LOGIN" FromRole="LOGIN" ToRole="USUARIO_FINAL" />
+        </EntityType>
+        <EntityType Name="METADATA">
+          <Key>
+            <PropertyRef Name="FECHA_META" />
+          </Key>
+          <Property Name="FECHA_META" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="VALOR_META" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_TIPO_META" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="TIPOS_METADTA" Relationship="Self.FK_METADATA_REFERENCE_TIPOS_ME" FromRole="METADATA" ToRole="TIPOS_METADTA" />
+          <NavigationProperty Name="DISTRITOS" Relationship="Self.DISTRITO_META" FromRole="METADATA" ToRole="DISTRITOS" />
+        </EntityType>
+        <EntityType Name="MODULO">
+          <Key>
+            <PropertyRef Name="ID_MODULO" />
+          </Key>
+          <Property Name="ID_MODULO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DESCRIPCION_MODULO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ROL_MODULO" Relationship="Self.FK_ROL_MODU_RELATIONS_MODULO" FromRole="MODULO" ToRole="ROL_MODULO" />
+        </EntityType>
+        <EntityType Name="MONEDA">
+          <Key>
+            <PropertyRef Name="ID_MONEDA" />
+          </Key>
+          <Property Name="ID_MONEDA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MONEDA1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CAMBIO_MONEDA" Relationship="Self.FK_CAMBIO_M_REFERENCE_MONEDA" FromRole="MONEDA" ToRole="CAMBIO_MONEDA" />
+          <NavigationProperty Name="PAISES" Relationship="Self.FK_PAISES_REFERENCE_MONEDA" FromRole="MONEDA" ToRole="PAISES" />
+          <NavigationProperty Name="VALORES" Relationship="Self.FK_VALORES_REFERENCE_MONEDA" FromRole="MONEDA" ToRole="VALORES" />
+        </EntityType>
+        <EntityType Name="PAISES">
+          <Key>
+            <PropertyRef Name="ID_PAIS" />
+          </Key>
+          <Property Name="ID_PAIS" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_MONEDA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOM_PAIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CALENDARIO" Relationship="Self.FK_CALENDAR_REFERENCE_PAISES" FromRole="PAISES" ToRole="CALENDARIO" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_EMPRESA_REFERENCE_PAISES" FromRole="PAISES" ToRole="EMPRESA" />
+          <NavigationProperty Name="MONEDA" Relationship="Self.FK_PAISES_REFERENCE_MONEDA" FromRole="PAISES" ToRole="MONEDA" />
+          <NavigationProperty Name="REGIONES" Relationship="Self.FK_REGIONES_REFERENCE_PAISES" FromRole="PAISES" ToRole="REGIONES" />
+        </EntityType>
+        <EntityType Name="REGIONES">
+          <Key>
+            <PropertyRef Name="ID_REGION" />
+          </Key>
+          <Property Name="ID_REGION" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_PAIS" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_REGION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="DISTRITOS" Relationship="Self.FK_DISTRITO_REFERENCE_REGIONES" FromRole="REGIONES" ToRole="DISTRITOS" />
+          <NavigationProperty Name="PAISES" Relationship="Self.FK_REGIONES_REFERENCE_PAISES" FromRole="REGIONES" ToRole="PAISES" />
+        </EntityType>
+        <EntityType Name="RESOLUTORES_TERCEROS">
+          <Key>
+            <PropertyRef Name="ID_RESOL_TER" />
+          </Key>
+          <Property Name="ID_RESOL_TER" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_COMUNA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOM_RESOL_TER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RSOCIAL_RESOL_TER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RUT_RESOL_TER" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DIRECCION_RESOL_TER" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="COMUNAS" Relationship="Self.FK_RESOLUTO_RELATIONS_COMUNAS" FromRole="RESOLUTORES_TERCEROS" ToRole="COMUNAS" />
+          <NavigationProperty Name="HISTORIA" Relationship="Self.FK_HISTORIA_RELATIONS_RESOLUTO" FromRole="RESOLUTORES_TERCEROS" ToRole="HISTORIA" />
+          <NavigationProperty Name="TELS_RESOL_TER" Relationship="Self.FK_TELS_RES_RELATIONS_RESOLUTO" FromRole="RESOLUTORES_TERCEROS" ToRole="TELS_RESOL_TER" />
+        </EntityType>
+        <EntityType Name="ROL">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_ROL" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_LOGIN" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="DESCRIPCION_ROL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="LOGIN" Relationship="Self.FK_ROL_RELATIONS_LOGIN" FromRole="ROL" ToRole="LOGIN" />
+          <NavigationProperty Name="ROL_MODULO" Relationship="Self.FK_ROL_MODU_RELATIONS_ROL" FromRole="ROL" ToRole="ROL_MODULO" />
+        </EntityType>
+        <EntityType Name="ROL_MODULO">
+          <Key>
+            <PropertyRef Name="ID_ROL" />
+            <PropertyRef Name="ID_MODULO" />
+          </Key>
+          <Property Name="ID_ROL" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_MODULO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FECHA_ROLMODULO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ESTADO" Type="Int16" Nullable="false" />
+          <Property Name="PERMISO" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="MODULO" Relationship="Self.FK_ROL_MODU_RELATIONS_MODULO" FromRole="ROL_MODULO" ToRole="MODULO" />
+          <NavigationProperty Name="ROL" Relationship="Self.FK_ROL_MODU_RELATIONS_ROL" FromRole="ROL_MODULO" ToRole="ROL" />
+        </EntityType>
+        <EntityType Name="SERVICIO">
+          <Key>
+            <PropertyRef Name="ID_SERV" />
+          </Key>
+          <Property Name="ID_SERV" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE_SERVICIO" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_SERVICIO_REFERENCE_EMPRESA" FromRole="SERVICIO" ToRole="EMPRESA" />
+          <NavigationProperty Name="SERVICIO_EMPRESA" Relationship="Self.FK_SERVICIO_RELATIONS_SERVICIO" FromRole="SERVICIO" ToRole="SERVICIO_EMPRESA" />
+        </EntityType>
+        <EntityType Name="SERVICIO_EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_SERVI_EMP" />
+          </Key>
+          <Property Name="ID_SERV" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_EMPRESA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_SERVI_EMP" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <NavigationProperty Name="EMPRESA_CLI" Relationship="Self.FK_SERVICIO_RELATIONS_EMPRESA_" FromRole="SERVICIO_EMPRESA" ToRole="EMPRESA_CLI" />
+          <NavigationProperty Name="SERVICIO" Relationship="Self.FK_SERVICIO_RELATIONS_SERVICIO" FromRole="SERVICIO_EMPRESA" ToRole="SERVICIO" />
+          <NavigationProperty Name="SLA" Relationship="Self.FK_SLA_RELATIONS_SERVICIO" FromRole="SERVICIO_EMPRESA" ToRole="SLA" />
+          <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_SERVICIO" FromRole="SERVICIO_EMPRESA" ToRole="TKT" />
+        </EntityType>
+        <EntityType Name="SLA">
+          <Key>
+            <PropertyRef Name="ID_SLA" />
+          </Key>
+          <Property Name="ID_SLA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_ALERTA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_SERVI_EMP" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_SLA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IMPORTANCIA_SLA" Type="Byte" Nullable="false" />
+          <Property Name="URGENCIA_SLA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IMPACTO_SLA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ALERTAS" Relationship="Self.FK_SLA_RELATIONS_ALERTAS" FromRole="SLA" ToRole="ALERTAS" />
+          <NavigationProperty Name="SERVICIO_EMPRESA" Relationship="Self.FK_SLA_RELATIONS_SERVICIO" FromRole="SLA" ToRole="SERVICIO_EMPRESA" />
+        </EntityType>
+        <EntityType Name="TELS_EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_TEL_EMRPESA" />
+          </Key>
+          <Property Name="TEL_EMPRESA" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_TEL_EMRPESA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_TELS_EMP_REFERENCE_EMPRESA" FromRole="TELS_EMPRESA" ToRole="EMPRESA" />
+        </EntityType>
+        <EntityType Name="TELS_RESOL_TER">
+          <Key>
+            <PropertyRef Name="ID_TEL_RESTER" />
+          </Key>
+          <Property Name="TEL_RESOL_TER" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_TEL_RESTER" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_RESOL_TER" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="RESOLUTORES_TERCEROS" Relationship="Self.FK_TELS_RES_RELATIONS_RESOLUTO" FromRole="TELS_RESOL_TER" ToRole="RESOLUTORES_TERCEROS" />
+        </EntityType>
+        <EntityType Name="TIPIFICACION">
+          <Key>
+            <PropertyRef Name="ID_TIPO" />
+          </Key>
+          <Property Name="ID_TIPO" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_TIPO_PADRE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_TIPO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NIVEL_TIPO" Type="Int32" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TIPIFICACION1" Relationship="Self.FK_TIPIFICA_RELATIONS_TIPIFICA" FromRole="TIPIFICACION" ToRole="TIPIFICACION1" />
+          <NavigationProperty Name="TIPIFICACION2" Relationship="Self.FK_TIPIFICA_RELATIONS_TIPIFICA" FromRole="TIPIFICACION1" ToRole="TIPIFICACION" />
+          <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_TIPIFICA" FromRole="TIPIFICACION" ToRole="TKT" />
+        </EntityType>
+        <EntityType Name="TIPOS_METADTA">
+          <Key>
+            <PropertyRef Name="ID_TIPO_META" />
+          </Key>
+          <Property Name="ID_TIPO_META" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DESC_TIPO_META" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="METADATA" Relationship="Self.FK_METADATA_REFERENCE_TIPOS_ME" FromRole="TIPOS_METADTA" ToRole="METADATA" />
+        </EntityType>
+        <EntityType Name="TKT">
+          <Key>
+            <PropertyRef Name="ID_TKT" />
+          </Key>
+          <Property Name="ID_TKT" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_URGENCIA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_ESTADO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_IMPACTO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_TIPO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_LOGIN" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_SERVI_EMP" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CREADOR_TKT" Type="Int32" Nullable="false" />
+          <Property Name="REPORTADOR_TKT" Type="Int16" Nullable="false" />
+          <Property Name="AFECTADO_TKT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PRIORIDAD_TKT" Type="Int32" Nullable="false" />
+          <Property Name="VALOR_IMPACTO_TKT" Type="Byte" Nullable="false" />
+          <Property Name="VALOR_URGENCIA_TKT" Type="Byte" Nullable="false" />
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ESTADOS" Relationship="Self.FK_TKT_RELATIONS_ESTADOS" FromRole="TKT" ToRole="ESTADOS" />
+          <NavigationProperty Name="HISTORIA" Relationship="Self.FK_HISTORIA_RELATIONS_TKT" FromRole="TKT" ToRole="HISTORIA" />
+          <NavigationProperty Name="IMPACTO" Relationship="Self.FK_TKT_RELATIONS_IMPACTO" FromRole="TKT" ToRole="IMPACTO" />
+          <NavigationProperty Name="LOGIN" Relationship="Self.FK_TKT_RELATIONS_LOGIN" FromRole="TKT" ToRole="LOGIN" />
+          <NavigationProperty Name="SERVICIO_EMPRESA" Relationship="Self.FK_TKT_RELATIONS_SERVICIO" FromRole="TKT" ToRole="SERVICIO_EMPRESA" />
+          <NavigationProperty Name="TIPIFICACION" Relationship="Self.FK_TKT_RELATIONS_TIPIFICA" FromRole="TKT" ToRole="TIPIFICACION" />
+          <NavigationProperty Name="URGENCIA" Relationship="Self.FK_TKT_RELATIONS_URGENCIA" FromRole="TKT" ToRole="URGENCIA" />
+        </EntityType>
+        <EntityType Name="URGENCIA">
+          <Key>
+            <PropertyRef Name="ID_URGENCIA" />
+          </Key>
+          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_URGENCIA" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE_URGENCIA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESCRIPCION_URGENCIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VALOR_URGENCIA" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_URGENCIA" FromRole="URGENCIA" ToRole="TKT" />
+        </EntityType>
+        <EntityType Name="USUARIO_FINAL">
+          <Key>
+            <PropertyRef Name="ID_USUFINAL" />
+          </Key>
+          <Property Name="ID_USUFINAL" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_EMPRESA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_LOGIN" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="VIP" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="EMPRESA_CLI" Relationship="Self.FK_USUARIO__RELATIONS_EMPRESA_" FromRole="USUARIO_FINAL" ToRole="EMPRESA_CLI" />
+          <NavigationProperty Name="LOGIN" Relationship="Self.FK_USUARIO__RELATIONS_LOGIN" FromRole="USUARIO_FINAL" ToRole="LOGIN" />
+        </EntityType>
+        <EntityType Name="VALORES">
+          <Key>
+            <PropertyRef Name="FECHA_VALOR" />
+            <PropertyRef Name="VALOR" />
+          </Key>
+          <Property Name="FECHA_VALOR" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="VALOR" Type="Single" Nullable="false" />
+          <Property Name="ID_MONEDA" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="MONEDA" Relationship="Self.FK_VALORES_REFERENCE_MONEDA" FromRole="VALORES" ToRole="MONEDA" />
+        </EntityType>
+        <Association Name="FK_AGENTES_RELATIONS_AREA">
+          <End Role="AREA" Type="Self.AREA" Multiplicity="0..1" />
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AREA">
+              <PropertyRef Name="ID_AREA" />
+            </Principal>
+            <Dependent Role="AGENTES">
+              <PropertyRef Name="ID_AREA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AGENTES_RELATIONS_COMUNAS">
+          <End Role="COMUNAS" Type="Self.COMUNAS" Multiplicity="0..1" />
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNAS">
+              <PropertyRef Name="ID_COMUNA" />
+            </Principal>
+            <Dependent Role="AGENTES">
+              <PropertyRef Name="ID_COMUNA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AGENTES_RELATIONS_LOGIN">
+          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOGIN">
+              <PropertyRef Name="ID_LOGIN" />
+            </Principal>
+            <Dependent Role="AGENTES">
+              <PropertyRef Name="ID_LOGIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DATOS_EX_RELATIONS_AGENTES">
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="0..1" />
+          <End Role="DATOS_EXTRAS" Type="Self.DATOS_EXTRAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AGENTES">
+              <PropertyRef Name="ID_AGENTE" />
+            </Principal>
+            <Dependent Role="DATOS_EXTRAS">
+              <PropertyRef Name="ID_AGENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SLA_RELATIONS_ALERTAS">
+          <End Role="ALERTAS" Type="Self.ALERTAS" Multiplicity="0..1" />
+          <End Role="SLA" Type="Self.SLA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ALERTAS">
+              <PropertyRef Name="ID_ALERTA" />
+            </Principal>
+            <Dependent Role="SLA">
+              <PropertyRef Name="ID_ALERTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CALENDAR_REFERENCE_PAISES">
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
+          <End Role="CALENDARIO" Type="Self.CALENDARIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAISES">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="CALENDARIO">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CAMBIO_M_REFERENCE_MONEDA">
+          <End Role="MONEDA" Type="Self.MONEDA" Multiplicity="1" />
+          <End Role="CAMBIO_MONEDA" Type="Self.CAMBIO_MONEDA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONEDA">
+              <PropertyRef Name="ID_MONEDA" />
+            </Principal>
+            <Dependent Role="CAMBIO_MONEDA">
+              <PropertyRef Name="ID_MONEDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COMUNAS_RELATIONS_DISTRITO">
+          <End Role="DISTRITOS" Type="Self.DISTRITOS" Multiplicity="0..1" />
+          <End Role="COMUNAS" Type="Self.COMUNAS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DISTRITOS">
+              <PropertyRef Name="ID_DISTRIRO" />
+            </Principal>
+            <Dependent Role="COMUNAS">
+              <PropertyRef Name="ID_DISTRIRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPRESA__RELATIONS_COMUNAS">
+          <End Role="COMUNAS" Type="Self.COMUNAS" Multiplicity="0..1" />
+          <End Role="EMPRESA_CLI" Type="Self.EMPRESA_CLI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNAS">
+              <PropertyRef Name="ID_COMUNA" />
+            </Principal>
+            <Dependent Role="EMPRESA_CLI">
+              <PropertyRef Name="ID_COMUNA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RESOLUTO_RELATIONS_COMUNAS">
+          <End Role="COMUNAS" Type="Self.COMUNAS" Multiplicity="0..1" />
+          <End Role="RESOLUTORES_TERCEROS" Type="Self.RESOLUTORES_TERCEROS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="COMUNAS">
+              <PropertyRef Name="ID_COMUNA" />
+            </Principal>
+            <Dependent Role="RESOLUTORES_TERCEROS">
+              <PropertyRef Name="ID_COMUNA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DISTRITO_REFERENCE_REGIONES">
+          <End Role="REGIONES" Type="Self.REGIONES" Multiplicity="0..1" />
+          <End Role="DISTRITOS" Type="Self.DISTRITOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="REGIONES">
+              <PropertyRef Name="ID_REGION" />
+            </Principal>
+            <Dependent Role="DISTRITOS">
+              <PropertyRef Name="ID_REGION" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPRESA_REFERENCE_PAISES">
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAISES">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="EMPRESA">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HITOS_NO_REFERENCE_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="HITOS_NO_LABORALES" Type="Self.HITOS_NO_LABORALES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Principal>
+            <Dependent Role="HITOS_NO_LABORALES">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HORAS_TU_REFERENCE_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="HORAS_TURNOS" Type="Self.HORAS_TURNOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Principal>
+            <Dependent Role="HORAS_TURNOS">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERVICIO_REFERENCE_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Principal>
+            <Dependent Role="SERVICIO">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TELS_EMP_REFERENCE_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="TELS_EMPRESA" Type="Self.TELS_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Principal>
+            <Dependent Role="TELS_EMPRESA">
+              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERVICIO_RELATIONS_EMPRESA_">
+          <End Role="EMPRESA_CLI" Type="Self.EMPRESA_CLI" Multiplicity="0..1" />
+          <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA_CLI">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="SERVICIO_EMPRESA">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIO__RELATIONS_EMPRESA_">
+          <End Role="EMPRESA_CLI" Type="Self.EMPRESA_CLI" Multiplicity="0..1" />
+          <End Role="USUARIO_FINAL" Type="Self.USUARIO_FINAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA_CLI">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Principal>
+            <Dependent Role="USUARIO_FINAL">
+              <PropertyRef Name="ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_ESTADOS">
+          <End Role="ESTADOS" Type="Self.ESTADOS" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTADOS">
+              <PropertyRef Name="ID_ESTADO" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_ESTADO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORIA_RELATIONS_RESOLUTO">
+          <End Role="RESOLUTORES_TERCEROS" Type="Self.RESOLUTORES_TERCEROS" Multiplicity="0..1" />
+          <End Role="HISTORIA" Type="Self.HISTORIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESOLUTORES_TERCEROS">
+              <PropertyRef Name="ID_RESOL_TER" />
+            </Principal>
+            <Dependent Role="HISTORIA">
+              <PropertyRef Name="ID_RESOL_TER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HISTORIA_RELATIONS_TKT">
+          <End Role="TKT" Type="Self.TKT" Multiplicity="1" />
+          <End Role="HISTORIA" Type="Self.HISTORIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TKT">
+              <PropertyRef Name="ID_TKT" />
+            </Principal>
+            <Dependent Role="HISTORIA">
+              <PropertyRef Name="ID_TKT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_IMPACTO">
+          <End Role="IMPACTO" Type="Self.IMPACTO" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IMPACTO">
+              <PropertyRef Name="ID_IMPACTO" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_IMPACTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ROL_RELATIONS_LOGIN">
+          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+          <End Role="ROL" Type="Self.ROL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOGIN">
+              <PropertyRef Name="ID_LOGIN" />
+            </Principal>
+            <Dependent Role="ROL">
+              <PropertyRef Name="ID_LOGIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_LOGIN">
+          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOGIN">
+              <PropertyRef Name="ID_LOGIN" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_LOGIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIO__RELATIONS_LOGIN">
+          <End Role="LOGIN" Type="Self.LOGIN" Multiplicity="0..1" />
+          <End Role="USUARIO_FINAL" Type="Self.USUARIO_FINAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOGIN">
+              <PropertyRef Name="ID_LOGIN" />
+            </Principal>
+            <Dependent Role="USUARIO_FINAL">
+              <PropertyRef Name="ID_LOGIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_METADATA_REFERENCE_TIPOS_ME">
+          <End Role="TIPOS_METADTA" Type="Self.TIPOS_METADTA" Multiplicity="0..1" />
+          <End Role="METADATA" Type="Self.METADATA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPOS_METADTA">
+              <PropertyRef Name="ID_TIPO_META" />
+            </Principal>
+            <Dependent Role="METADATA">
+              <PropertyRef Name="ID_TIPO_META" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ROL_MODU_RELATIONS_MODULO">
+          <End Role="MODULO" Type="Self.MODULO" Multiplicity="1" />
+          <End Role="ROL_MODULO" Type="Self.ROL_MODULO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MODULO">
+              <PropertyRef Name="ID_MODULO" />
+            </Principal>
+            <Dependent Role="ROL_MODULO">
+              <PropertyRef Name="ID_MODULO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PAISES_REFERENCE_MONEDA">
+          <End Role="MONEDA" Type="Self.MONEDA" Multiplicity="0..1" />
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONEDA">
+              <PropertyRef Name="ID_MONEDA" />
+            </Principal>
+            <Dependent Role="PAISES">
+              <PropertyRef Name="ID_MONEDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VALORES_REFERENCE_MONEDA">
+          <End Role="MONEDA" Type="Self.MONEDA" Multiplicity="0..1" />
+          <End Role="VALORES" Type="Self.VALORES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONEDA">
+              <PropertyRef Name="ID_MONEDA" />
+            </Principal>
+            <Dependent Role="VALORES">
+              <PropertyRef Name="ID_MONEDA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGIONES_REFERENCE_PAISES">
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
+          <End Role="REGIONES" Type="Self.REGIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAISES">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="REGIONES">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TELS_RES_RELATIONS_RESOLUTO">
+          <End Role="RESOLUTORES_TERCEROS" Type="Self.RESOLUTORES_TERCEROS" Multiplicity="0..1" />
+          <End Role="TELS_RESOL_TER" Type="Self.TELS_RESOL_TER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RESOLUTORES_TERCEROS">
+              <PropertyRef Name="ID_RESOL_TER" />
+            </Principal>
+            <Dependent Role="TELS_RESOL_TER">
+              <PropertyRef Name="ID_RESOL_TER" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ROL_MODU_RELATIONS_ROL">
+          <End Role="ROL" Type="Self.ROL" Multiplicity="1" />
+          <End Role="ROL_MODULO" Type="Self.ROL_MODULO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROL">
+              <PropertyRef Name="ID_ROL" />
+            </Principal>
+            <Dependent Role="ROL_MODULO">
+              <PropertyRef Name="ID_ROL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERVICIO_RELATIONS_SERVICIO">
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="0..1" />
+          <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO">
+              <PropertyRef Name="ID_SERV" />
+            </Principal>
+            <Dependent Role="SERVICIO_EMPRESA">
+              <PropertyRef Name="ID_SERV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SLA_RELATIONS_SERVICIO">
+          <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="0..1" />
+          <End Role="SLA" Type="Self.SLA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO_EMPRESA">
+              <PropertyRef Name="ID_SERVI_EMP" />
+            </Principal>
+            <Dependent Role="SLA">
+              <PropertyRef Name="ID_SERVI_EMP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_SERVICIO">
+          <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICIO_EMPRESA">
+              <PropertyRef Name="ID_SERVI_EMP" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_SERVI_EMP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIPIFICA_RELATIONS_TIPIFICA">
+          <End Role="TIPIFICACION" Type="Self.TIPIFICACION" Multiplicity="0..1" />
+          <End Role="TIPIFICACION1" Type="Self.TIPIFICACION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPIFICACION">
+              <PropertyRef Name="ID_TIPO" />
+            </Principal>
+            <Dependent Role="TIPIFICACION1">
+              <PropertyRef Name="ID_TIPO_PADRE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_TIPIFICA">
+          <End Role="TIPIFICACION" Type="Self.TIPIFICACION" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TIPIFICACION">
+              <PropertyRef Name="ID_TIPO" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_TIPO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TKT_RELATIONS_URGENCIA">
+          <End Role="URGENCIA" Type="Self.URGENCIA" Multiplicity="0..1" />
+          <End Role="TKT" Type="Self.TKT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="URGENCIA">
+              <PropertyRef Name="ID_URGENCIA" />
+            </Principal>
+            <Dependent Role="TKT">
+              <PropertyRef Name="ID_URGENCIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AGENTE_HIJOS">
+          <End Role="AGENTES" Type="Self.AGENTES" Multiplicity="*" />
+          <End Role="HIJOS" Type="Self.HIJOS" Multiplicity="*" />
+        </Association>
+        <Association Name="DISTRITO_META">
+          <End Role="DISTRITOS" Type="Self.DISTRITOS" Multiplicity="*" />
+          <End Role="METADATA" Type="Self.METADATA" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="DBEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AGENTES" EntityType="Self.AGENTES" />
+          <EntitySet Name="ALERTAS" EntityType="Self.ALERTAS" />
+          <EntitySet Name="AREA" EntityType="Self.AREA" />
+          <EntitySet Name="CALENDARIO" EntityType="Self.CALENDARIO" />
+          <EntitySet Name="CAMBIO_MONEDA" EntityType="Self.CAMBIO_MONEDA" />
+          <EntitySet Name="COMUNAS" EntityType="Self.COMUNAS" />
+          <EntitySet Name="DATOS_EXTRAS" EntityType="Self.DATOS_EXTRAS" />
+          <EntitySet Name="DISTRITOS" EntityType="Self.DISTRITOS" />
+          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" />
+          <EntitySet Name="EMPRESA_CLI" EntityType="Self.EMPRESA_CLI" />
+          <EntitySet Name="ESTADOS" EntityType="Self.ESTADOS" />
+          <EntitySet Name="HIJOS" EntityType="Self.HIJOS" />
+          <EntitySet Name="HISTORIA" EntityType="Self.HISTORIA" />
+          <EntitySet Name="HITOS_NO_LABORALES" EntityType="Self.HITOS_NO_LABORALES" />
+          <EntitySet Name="HORAS_TURNOS" EntityType="Self.HORAS_TURNOS" />
+          <EntitySet Name="IMPACTO" EntityType="Self.IMPACTO" />
+          <EntitySet Name="LOGIN" EntityType="Self.LOGIN" />
+          <EntitySet Name="METADATA" EntityType="Self.METADATA" />
+          <EntitySet Name="MODULO" EntityType="Self.MODULO" />
+          <EntitySet Name="MONEDA" EntityType="Self.MONEDA" />
+          <EntitySet Name="PAISES" EntityType="Self.PAISES" />
+          <EntitySet Name="REGIONES" EntityType="Self.REGIONES" />
+          <EntitySet Name="RESOLUTORES_TERCEROS" EntityType="Self.RESOLUTORES_TERCEROS" />
+          <EntitySet Name="ROL" EntityType="Self.ROL" />
+          <EntitySet Name="ROL_MODULO" EntityType="Self.ROL_MODULO" />
+          <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" />
+          <EntitySet Name="SERVICIO_EMPRESA" EntityType="Self.SERVICIO_EMPRESA" />
+          <EntitySet Name="SLA" EntityType="Self.SLA" />
+          <EntitySet Name="TELS_EMPRESA" EntityType="Self.TELS_EMPRESA" />
+          <EntitySet Name="TELS_RESOL_TER" EntityType="Self.TELS_RESOL_TER" />
+          <EntitySet Name="TIPIFICACION" EntityType="Self.TIPIFICACION" />
+          <EntitySet Name="TIPOS_METADTA" EntityType="Self.TIPOS_METADTA" />
+          <EntitySet Name="TKT" EntityType="Self.TKT" />
+          <EntitySet Name="URGENCIA" EntityType="Self.URGENCIA" />
+          <EntitySet Name="USUARIO_FINAL" EntityType="Self.USUARIO_FINAL" />
+          <EntitySet Name="VALORES" EntityType="Self.VALORES" />
+          <AssociationSet Name="FK_AGENTES_RELATIONS_AREA" Association="Self.FK_AGENTES_RELATIONS_AREA">
+            <End Role="AREA" EntitySet="AREA" />
+            <End Role="AGENTES" EntitySet="AGENTES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AGENTES_RELATIONS_COMUNAS" Association="Self.FK_AGENTES_RELATIONS_COMUNAS">
+            <End Role="COMUNAS" EntitySet="COMUNAS" />
+            <End Role="AGENTES" EntitySet="AGENTES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AGENTES_RELATIONS_LOGIN" Association="Self.FK_AGENTES_RELATIONS_LOGIN">
+            <End Role="LOGIN" EntitySet="LOGIN" />
+            <End Role="AGENTES" EntitySet="AGENTES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DATOS_EX_RELATIONS_AGENTES" Association="Self.FK_DATOS_EX_RELATIONS_AGENTES">
+            <End Role="AGENTES" EntitySet="AGENTES" />
+            <End Role="DATOS_EXTRAS" EntitySet="DATOS_EXTRAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SLA_RELATIONS_ALERTAS" Association="Self.FK_SLA_RELATIONS_ALERTAS">
+            <End Role="ALERTAS" EntitySet="ALERTAS" />
+            <End Role="SLA" EntitySet="SLA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CALENDAR_REFERENCE_PAISES" Association="Self.FK_CALENDAR_REFERENCE_PAISES">
+            <End Role="PAISES" EntitySet="PAISES" />
+            <End Role="CALENDARIO" EntitySet="CALENDARIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CAMBIO_M_REFERENCE_MONEDA" Association="Self.FK_CAMBIO_M_REFERENCE_MONEDA">
+            <End Role="MONEDA" EntitySet="MONEDA" />
+            <End Role="CAMBIO_MONEDA" EntitySet="CAMBIO_MONEDA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COMUNAS_RELATIONS_DISTRITO" Association="Self.FK_COMUNAS_RELATIONS_DISTRITO">
+            <End Role="DISTRITOS" EntitySet="DISTRITOS" />
+            <End Role="COMUNAS" EntitySet="COMUNAS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPRESA__RELATIONS_COMUNAS" Association="Self.FK_EMPRESA__RELATIONS_COMUNAS">
+            <End Role="COMUNAS" EntitySet="COMUNAS" />
+            <End Role="EMPRESA_CLI" EntitySet="EMPRESA_CLI" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RESOLUTO_RELATIONS_COMUNAS" Association="Self.FK_RESOLUTO_RELATIONS_COMUNAS">
+            <End Role="COMUNAS" EntitySet="COMUNAS" />
+            <End Role="RESOLUTORES_TERCEROS" EntitySet="RESOLUTORES_TERCEROS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DISTRITO_REFERENCE_REGIONES" Association="Self.FK_DISTRITO_REFERENCE_REGIONES">
+            <End Role="REGIONES" EntitySet="REGIONES" />
+            <End Role="DISTRITOS" EntitySet="DISTRITOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPRESA_REFERENCE_PAISES" Association="Self.FK_EMPRESA_REFERENCE_PAISES">
+            <End Role="PAISES" EntitySet="PAISES" />
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HITOS_NO_REFERENCE_EMPRESA" Association="Self.FK_HITOS_NO_REFERENCE_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="HITOS_NO_LABORALES" EntitySet="HITOS_NO_LABORALES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HORAS_TU_REFERENCE_EMPRESA" Association="Self.FK_HORAS_TU_REFERENCE_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="HORAS_TURNOS" EntitySet="HORAS_TURNOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERVICIO_REFERENCE_EMPRESA" Association="Self.FK_SERVICIO_REFERENCE_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TELS_EMP_REFERENCE_EMPRESA" Association="Self.FK_TELS_EMP_REFERENCE_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="TELS_EMPRESA" EntitySet="TELS_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERVICIO_RELATIONS_EMPRESA_" Association="Self.FK_SERVICIO_RELATIONS_EMPRESA_">
+            <End Role="EMPRESA_CLI" EntitySet="EMPRESA_CLI" />
+            <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIO__RELATIONS_EMPRESA_" Association="Self.FK_USUARIO__RELATIONS_EMPRESA_">
+            <End Role="EMPRESA_CLI" EntitySet="EMPRESA_CLI" />
+            <End Role="USUARIO_FINAL" EntitySet="USUARIO_FINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_ESTADOS" Association="Self.FK_TKT_RELATIONS_ESTADOS">
+            <End Role="ESTADOS" EntitySet="ESTADOS" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORIA_RELATIONS_RESOLUTO" Association="Self.FK_HISTORIA_RELATIONS_RESOLUTO">
+            <End Role="RESOLUTORES_TERCEROS" EntitySet="RESOLUTORES_TERCEROS" />
+            <End Role="HISTORIA" EntitySet="HISTORIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HISTORIA_RELATIONS_TKT" Association="Self.FK_HISTORIA_RELATIONS_TKT">
+            <End Role="TKT" EntitySet="TKT" />
+            <End Role="HISTORIA" EntitySet="HISTORIA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_IMPACTO" Association="Self.FK_TKT_RELATIONS_IMPACTO">
+            <End Role="IMPACTO" EntitySet="IMPACTO" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ROL_RELATIONS_LOGIN" Association="Self.FK_ROL_RELATIONS_LOGIN">
+            <End Role="LOGIN" EntitySet="LOGIN" />
+            <End Role="ROL" EntitySet="ROL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_LOGIN" Association="Self.FK_TKT_RELATIONS_LOGIN">
+            <End Role="LOGIN" EntitySet="LOGIN" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIO__RELATIONS_LOGIN" Association="Self.FK_USUARIO__RELATIONS_LOGIN">
+            <End Role="LOGIN" EntitySet="LOGIN" />
+            <End Role="USUARIO_FINAL" EntitySet="USUARIO_FINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_METADATA_REFERENCE_TIPOS_ME" Association="Self.FK_METADATA_REFERENCE_TIPOS_ME">
+            <End Role="TIPOS_METADTA" EntitySet="TIPOS_METADTA" />
+            <End Role="METADATA" EntitySet="METADATA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ROL_MODU_RELATIONS_MODULO" Association="Self.FK_ROL_MODU_RELATIONS_MODULO">
+            <End Role="MODULO" EntitySet="MODULO" />
+            <End Role="ROL_MODULO" EntitySet="ROL_MODULO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PAISES_REFERENCE_MONEDA" Association="Self.FK_PAISES_REFERENCE_MONEDA">
+            <End Role="MONEDA" EntitySet="MONEDA" />
+            <End Role="PAISES" EntitySet="PAISES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VALORES_REFERENCE_MONEDA" Association="Self.FK_VALORES_REFERENCE_MONEDA">
+            <End Role="MONEDA" EntitySet="MONEDA" />
+            <End Role="VALORES" EntitySet="VALORES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGIONES_REFERENCE_PAISES" Association="Self.FK_REGIONES_REFERENCE_PAISES">
+            <End Role="PAISES" EntitySet="PAISES" />
+            <End Role="REGIONES" EntitySet="REGIONES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TELS_RES_RELATIONS_RESOLUTO" Association="Self.FK_TELS_RES_RELATIONS_RESOLUTO">
+            <End Role="RESOLUTORES_TERCEROS" EntitySet="RESOLUTORES_TERCEROS" />
+            <End Role="TELS_RESOL_TER" EntitySet="TELS_RESOL_TER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ROL_MODU_RELATIONS_ROL" Association="Self.FK_ROL_MODU_RELATIONS_ROL">
+            <End Role="ROL" EntitySet="ROL" />
+            <End Role="ROL_MODULO" EntitySet="ROL_MODULO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERVICIO_RELATIONS_SERVICIO" Association="Self.FK_SERVICIO_RELATIONS_SERVICIO">
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+            <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SLA_RELATIONS_SERVICIO" Association="Self.FK_SLA_RELATIONS_SERVICIO">
+            <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
+            <End Role="SLA" EntitySet="SLA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_SERVICIO" Association="Self.FK_TKT_RELATIONS_SERVICIO">
+            <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIPIFICA_RELATIONS_TIPIFICA" Association="Self.FK_TIPIFICA_RELATIONS_TIPIFICA">
+            <End Role="TIPIFICACION" EntitySet="TIPIFICACION" />
+            <End Role="TIPIFICACION1" EntitySet="TIPIFICACION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_TIPIFICA" Association="Self.FK_TKT_RELATIONS_TIPIFICA">
+            <End Role="TIPIFICACION" EntitySet="TIPIFICACION" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TKT_RELATIONS_URGENCIA" Association="Self.FK_TKT_RELATIONS_URGENCIA">
+            <End Role="URGENCIA" EntitySet="URGENCIA" />
+            <End Role="TKT" EntitySet="TKT" />
+          </AssociationSet>
+          <AssociationSet Name="AGENTE_HIJOS" Association="Self.AGENTE_HIJOS">
+            <End Role="AGENTES" EntitySet="AGENTES" />
+            <End Role="HIJOS" EntitySet="HIJOS" />
+          </AssociationSet>
+          <AssociationSet Name="DISTRITO_META" Association="Self.DISTRITO_META">
+            <End Role="DISTRITOS" EntitySet="DISTRITOS" />
+            <End Role="METADATA" EntitySet="METADATA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A255CD_MoDeskDBModelStoreContainer" CdmEntityContainer="DBEntities2">
+          <EntitySetMapping Name="AGENTES">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.AGENTES">
+              <MappingFragment StoreEntitySet="AGENTES">
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+                <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+                <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+                <ScalarProperty Name="ID_AREA" ColumnName="ID_AREA" />
+                <ScalarProperty Name="NOMBRE_AGENTE" ColumnName="NOMBRE_AGENTE" />
+                <ScalarProperty Name="APELLIDOP_AGENTE" ColumnName="APELLIDOP_AGENTE" />
+                <ScalarProperty Name="APELLIDOM_AGENTE" ColumnName="APELLIDOM_AGENTE" />
+                <ScalarProperty Name="EMAIL_AGENTE" ColumnName="EMAIL_AGENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ALERTAS">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.ALERTAS">
+              <MappingFragment StoreEntitySet="ALERTAS">
+                <ScalarProperty Name="ID_ALERTA" ColumnName="ID_ALERTA" />
+                <ScalarProperty Name="SONIDO_ALERTA" ColumnName="SONIDO_ALERTA" />
+                <ScalarProperty Name="COLOR_ALERTA" ColumnName="COLOR_ALERTA" />
+                <ScalarProperty Name="MAIL_ALERTA" ColumnName="MAIL_ALERTA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AREA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.AREA">
+              <MappingFragment StoreEntitySet="AREA">
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_AREA" ColumnName="ID_AREA" />
+                <ScalarProperty Name="EMAIL_AREA" ColumnName="EMAIL_AREA" />
+                <ScalarProperty Name="DESCRIPCION_AREA" ColumnName="DESCRIPCION_AREA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CALENDARIO">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.CALENDARIO">
+              <MappingFragment StoreEntitySet="CALENDARIO">
+                <ScalarProperty Name="ID_FERIADO" ColumnName="ID_FERIADO" />
+                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+                <ScalarProperty Name="FECHA_NO_LABORAL" ColumnName="FECHA_NO_LABORAL" />
+                <ScalarProperty Name="DESCRIPCION_NO_LABORAL" ColumnName="DESCRIPCION_NO_LABORAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CAMBIO_MONEDA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.CAMBIO_MONEDA">
+              <MappingFragment StoreEntitySet="CAMBIO_MONEDA">
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+                <ScalarProperty Name="VALOR_CAMBIO" ColumnName="VALOR_CAMBIO" />
+                <ScalarProperty Name="MONEDA_CAMBIO" ColumnName="MONEDA_CAMBIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COMUNAS">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.COMUNAS">
+              <MappingFragment StoreEntitySet="COMUNAS">
+                <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+                <ScalarProperty Name="ID_DISTRIRO" ColumnName="ID_DISTRIRO" />
+                <ScalarProperty Name="NOM_COMUNA" ColumnName="NOM_COMUNA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DATOS_EXTRAS">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.DATOS_EXTRAS">
+              <MappingFragment StoreEntitySet="DATOS_EXTRAS">
+                <ScalarProperty Name="ID_DATOS_EXTRAS" ColumnName="ID_DATOS_EXTRAS" />
+                <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DISTRITOS">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.DISTRITOS">
+              <MappingFragment StoreEntitySet="DISTRITOS">
+                <ScalarProperty Name="ID_DISTRIRO" ColumnName="ID_DISTRIRO" />
+                <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
+                <ScalarProperty Name="NOM_DISTRITO" ColumnName="NOM_DISTRITO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPRESA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.EMPRESA">
+              <MappingFragment StoreEntitySet="EMPRESA">
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+                <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+                <ScalarProperty Name="RAZON_SOCIAL_EMPRESA" ColumnName="RAZON_SOCIAL_EMPRESA" />
+                <ScalarProperty Name="DIRECCION_EMPRSA" ColumnName="DIRECCION_EMPRSA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPRESA_CLI">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.EMPRESA_CLI">
+              <MappingFragment StoreEntitySet="EMPRESA_CLI">
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+                <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+                <ScalarProperty Name="DIRECCION_EMPRESA" ColumnName="DIRECCION_EMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESTADOS">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.ESTADOS">
+              <MappingFragment StoreEntitySet="ESTADOS">
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+                <ScalarProperty Name="DESCRIPCION_ESTADO" ColumnName="DESCRIPCION_ESTADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HIJOS">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.HIJOS">
+              <MappingFragment StoreEntitySet="HIJOS">
+                <ScalarProperty Name="ID_HIJO" ColumnName="ID_HIJO" />
+                <ScalarProperty Name="NOMBRE_HIJO" ColumnName="NOMBRE_HIJO" />
+                <ScalarProperty Name="EDAD_HIJO" ColumnName="EDAD_HIJO" />
+                <ScalarProperty Name="NAC_HIJO" ColumnName="NAC_HIJO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HISTORIA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.HISTORIA">
+              <MappingFragment StoreEntitySet="HISTORIA">
+                <ScalarProperty Name="RESOLUTOR" ColumnName="RESOLUTOR" />
+                <ScalarProperty Name="ID_TKT" ColumnName="ID_TKT" />
+                <ScalarProperty Name="ID_RESOL_TER" ColumnName="ID_RESOL_TER" />
+                <ScalarProperty Name="FECHA_HIST" ColumnName="FECHA_HIST" />
+                <ScalarProperty Name="TIEMPO_HIST" ColumnName="TIEMPO_HIST" />
+                <ScalarProperty Name="ESTADO_HIST" ColumnName="ESTADO_HIST" />
+                <ScalarProperty Name="NOTAS_HIST" ColumnName="NOTAS_HIST" />
+                <ScalarProperty Name="ATTACH_HIST" ColumnName="ATTACH_HIST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HITOS_NO_LABORALES">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.HITOS_NO_LABORALES">
+              <MappingFragment StoreEntitySet="HITOS_NO_LABORALES">
+                <ScalarProperty Name="ID_HITOS" ColumnName="ID_HITOS" />
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="DESCRIPCION_HITONL" ColumnName="DESCRIPCION_HITONL" />
+                <ScalarProperty Name="FECHA_INICO_HITONL" ColumnName="FECHA_INICO_HITONL" />
+                <ScalarProperty Name="FECHA_TERMINO_HITONL" ColumnName="FECHA_TERMINO_HITONL" />
+                <ScalarProperty Name="HORA_INICIO_HITONL" ColumnName="HORA_INICIO_HITONL" />
+                <ScalarProperty Name="HORA_TERMNO_HITONL" ColumnName="HORA_TERMNO_HITONL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HORAS_TURNOS">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.HORAS_TURNOS">
+              <MappingFragment StoreEntitySet="HORAS_TURNOS">
+                <ScalarProperty Name="HRS_TRABAJO_SEM" ColumnName="HRS_TRABAJO_SEM" />
+                <ScalarProperty Name="ID_TURNO" ColumnName="ID_TURNO" />
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="HORA_INICIO_LABORAL" ColumnName="HORA_INICIO_LABORAL" />
+                <ScalarProperty Name="HORA_TERMINO_LABORAL" ColumnName="HORA_TERMINO_LABORAL" />
+                <ScalarProperty Name="HORAS_TRABAJADAS" ColumnName="HORAS_TRABAJADAS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMPACTO">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.IMPACTO">
+              <MappingFragment StoreEntitySet="IMPACTO">
+                <ScalarProperty Name="ID_IMPACTO" ColumnName="ID_IMPACTO" />
+                <ScalarProperty Name="NOMBRE_IMPACTO" ColumnName="NOMBRE_IMPACTO" />
+                <ScalarProperty Name="DESCRIPCION_IMPACTO" ColumnName="DESCRIPCION_IMPACTO" />
+                <ScalarProperty Name="VALOR_IMPACTO" ColumnName="VALOR_IMPACTO" />
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOGIN">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.LOGIN">
+              <MappingFragment StoreEntitySet="LOGIN">
+                <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+                <ScalarProperty Name="PASS_HASH" ColumnName="PASS_HASH" />
+                <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="METADATA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.METADATA">
+              <MappingFragment StoreEntitySet="METADATA">
+                <ScalarProperty Name="FECHA_META" ColumnName="FECHA_META" />
+                <ScalarProperty Name="VALOR_META" ColumnName="VALOR_META" />
+                <ScalarProperty Name="ID_TIPO_META" ColumnName="ID_TIPO_META" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MODULO">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.MODULO">
+              <MappingFragment StoreEntitySet="MODULO">
+                <ScalarProperty Name="ID_MODULO" ColumnName="ID_MODULO" />
+                <ScalarProperty Name="DESCRIPCION_MODULO" ColumnName="DESCRIPCION_MODULO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MONEDA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.MONEDA">
+              <MappingFragment StoreEntitySet="MONEDA">
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+                <ScalarProperty Name="MONEDA1" ColumnName="MONEDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAISES">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.PAISES">
+              <MappingFragment StoreEntitySet="PAISES">
+                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+                <ScalarProperty Name="NOM_PAIS" ColumnName="NOM_PAIS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="REGIONES">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.REGIONES">
+              <MappingFragment StoreEntitySet="REGIONES">
+                <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
+                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+                <ScalarProperty Name="NOMBRE_REGION" ColumnName="NOMBRE_REGION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESOLUTORES_TERCEROS">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.RESOLUTORES_TERCEROS">
+              <MappingFragment StoreEntitySet="RESOLUTORES_TERCEROS">
+                <ScalarProperty Name="ID_RESOL_TER" ColumnName="ID_RESOL_TER" />
+                <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+                <ScalarProperty Name="NOM_RESOL_TER" ColumnName="NOM_RESOL_TER" />
+                <ScalarProperty Name="RSOCIAL_RESOL_TER" ColumnName="RSOCIAL_RESOL_TER" />
+                <ScalarProperty Name="RUT_RESOL_TER" ColumnName="RUT_RESOL_TER" />
+                <ScalarProperty Name="DIRECCION_RESOL_TER" ColumnName="DIRECCION_RESOL_TER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROL">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.ROL">
+              <MappingFragment StoreEntitySet="ROL">
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+                <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+                <ScalarProperty Name="DESCRIPCION_ROL" ColumnName="DESCRIPCION_ROL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROL_MODULO">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.ROL_MODULO">
+              <MappingFragment StoreEntitySet="ROL_MODULO">
+                <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+                <ScalarProperty Name="ID_MODULO" ColumnName="ID_MODULO" />
+                <ScalarProperty Name="FECHA_ROLMODULO" ColumnName="FECHA_ROLMODULO" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="PERMISO" ColumnName="PERMISO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICIO">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.SERVICIO">
+              <MappingFragment StoreEntitySet="SERVICIO">
+                <ScalarProperty Name="ID_SERV" ColumnName="ID_SERV" />
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="NOMBRE_SERVICIO" ColumnName="NOMBRE_SERVICIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICIO_EMPRESA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.SERVICIO_EMPRESA">
+              <MappingFragment StoreEntitySet="SERVICIO_EMPRESA">
+                <ScalarProperty Name="ID_SERV" ColumnName="ID_SERV" />
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="ID_SERVI_EMP" ColumnName="ID_SERVI_EMP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SLA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.SLA">
+              <MappingFragment StoreEntitySet="SLA">
+                <ScalarProperty Name="ID_SLA" ColumnName="ID_SLA" />
+                <ScalarProperty Name="ID_ALERTA" ColumnName="ID_ALERTA" />
+                <ScalarProperty Name="ID_SERVI_EMP" ColumnName="ID_SERVI_EMP" />
+                <ScalarProperty Name="NOMBRE_SLA" ColumnName="NOMBRE_SLA" />
+                <ScalarProperty Name="IMPORTANCIA_SLA" ColumnName="IMPORTANCIA_SLA" />
+                <ScalarProperty Name="URGENCIA_SLA" ColumnName="URGENCIA_SLA" />
+                <ScalarProperty Name="IMPACTO_SLA" ColumnName="IMPACTO_SLA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TELS_EMPRESA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TELS_EMPRESA">
+              <MappingFragment StoreEntitySet="TELS_EMPRESA">
+                <ScalarProperty Name="TEL_EMPRESA" ColumnName="TEL_EMPRESA" />
+                <ScalarProperty Name="ID_TEL_EMRPESA" ColumnName="ID_TEL_EMRPESA" />
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TELS_RESOL_TER">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TELS_RESOL_TER">
+              <MappingFragment StoreEntitySet="TELS_RESOL_TER">
+                <ScalarProperty Name="TEL_RESOL_TER" ColumnName="TEL_RESOL_TER" />
+                <ScalarProperty Name="ID_TEL_RESTER" ColumnName="ID_TEL_RESTER" />
+                <ScalarProperty Name="ID_RESOL_TER" ColumnName="ID_RESOL_TER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPIFICACION">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TIPIFICACION">
+              <MappingFragment StoreEntitySet="TIPIFICACION">
+                <ScalarProperty Name="ID_TIPO" ColumnName="ID_TIPO" />
+                <ScalarProperty Name="ID_TIPO_PADRE" ColumnName="ID_TIPO_PADRE" />
+                <ScalarProperty Name="NOMBRE_TIPO" ColumnName="NOMBRE_TIPO" />
+                <ScalarProperty Name="NIVEL_TIPO" ColumnName="NIVEL_TIPO" />
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPOS_METADTA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TIPOS_METADTA">
+              <MappingFragment StoreEntitySet="TIPOS_METADTA">
+                <ScalarProperty Name="ID_TIPO_META" ColumnName="ID_TIPO_META" />
+                <ScalarProperty Name="DESC_TIPO_META" ColumnName="DESC_TIPO_META" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TKT">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TKT">
+              <MappingFragment StoreEntitySet="TKT">
+                <ScalarProperty Name="ID_TKT" ColumnName="ID_TKT" />
+                <ScalarProperty Name="ID_URGENCIA" ColumnName="ID_URGENCIA" />
+                <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+                <ScalarProperty Name="ID_IMPACTO" ColumnName="ID_IMPACTO" />
+                <ScalarProperty Name="ID_TIPO" ColumnName="ID_TIPO" />
+                <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+                <ScalarProperty Name="ID_SERVI_EMP" ColumnName="ID_SERVI_EMP" />
+                <ScalarProperty Name="CREADOR_TKT" ColumnName="CREADOR_TKT" />
+                <ScalarProperty Name="REPORTADOR_TKT" ColumnName="REPORTADOR_TKT" />
+                <ScalarProperty Name="AFECTADO_TKT" ColumnName="AFECTADO_TKT" />
+                <ScalarProperty Name="PRIORIDAD_TKT" ColumnName="PRIORIDAD_TKT" />
+                <ScalarProperty Name="VALOR_IMPACTO_TKT" ColumnName="VALOR_IMPACTO_TKT" />
+                <ScalarProperty Name="VALOR_URGENCIA_TKT" ColumnName="VALOR_URGENCIA_TKT" />
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="URGENCIA">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.URGENCIA">
+              <MappingFragment StoreEntitySet="URGENCIA">
+                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_URGENCIA" ColumnName="ID_URGENCIA" />
+                <ScalarProperty Name="NOMBRE_URGENCIA" ColumnName="NOMBRE_URGENCIA" />
+                <ScalarProperty Name="DESCRIPCION_URGENCIA" ColumnName="DESCRIPCION_URGENCIA" />
+                <ScalarProperty Name="VALOR_URGENCIA" ColumnName="VALOR_URGENCIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIO_FINAL">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.USUARIO_FINAL">
+              <MappingFragment StoreEntitySet="USUARIO_FINAL">
+                <ScalarProperty Name="ID_USUFINAL" ColumnName="ID_USUFINAL" />
+                <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+                <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+                <ScalarProperty Name="VIP" ColumnName="VIP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VALORES">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.VALORES">
+              <MappingFragment StoreEntitySet="VALORES">
+                <ScalarProperty Name="FECHA_VALOR" ColumnName="FECHA_VALOR" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+                <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AGENTE_HIJOS" TypeName="DB_A255CD_MoDeskDBModel.AGENTE_HIJOS" StoreEntitySet="AGENTE_HIJOS">
+            <EndProperty Name="AGENTES">
+              <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+            </EndProperty>
+            <EndProperty Name="HIJOS">
+              <ScalarProperty Name="ID_HIJO" ColumnName="ID_HIJO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="DISTRITO_META" TypeName="DB_A255CD_MoDeskDBModel.DISTRITO_META" StoreEntitySet="DISTRITO_META">
+            <EndProperty Name="DISTRITOS">
+              <ScalarProperty Name="ID_DISTRIRO" ColumnName="ID_DISTRIRO" />
+            </EndProperty>
+            <EndProperty Name="METADATA">
+              <ScalarProperty Name="FECHA_META" ColumnName="FECHA_META" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

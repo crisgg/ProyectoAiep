@@ -14,9 +14,3 @@
         }
     });
 };
-
-//Eventos
-$("#Boton").click(function () {
-    console.log("llegue aqui");
-    ObtenerDato();
-})

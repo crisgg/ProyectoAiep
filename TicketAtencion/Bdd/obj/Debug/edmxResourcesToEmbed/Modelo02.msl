@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A255CD_MoDeskDBModelStoreContainer" CdmEntityContainer="DBEntities2">
+    <EntitySetMapping Name="AGENTES">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.AGENTES">
+        <MappingFragment StoreEntitySet="AGENTES">
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+          <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+          <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+          <ScalarProperty Name="ID_AREA" ColumnName="ID_AREA" />
+          <ScalarProperty Name="NOMBRE_AGENTE" ColumnName="NOMBRE_AGENTE" />
+          <ScalarProperty Name="APELLIDOP_AGENTE" ColumnName="APELLIDOP_AGENTE" />
+          <ScalarProperty Name="APELLIDOM_AGENTE" ColumnName="APELLIDOM_AGENTE" />
+          <ScalarProperty Name="EMAIL_AGENTE" ColumnName="EMAIL_AGENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ALERTAS">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.ALERTAS">
+        <MappingFragment StoreEntitySet="ALERTAS">
+          <ScalarProperty Name="ID_ALERTA" ColumnName="ID_ALERTA" />
+          <ScalarProperty Name="SONIDO_ALERTA" ColumnName="SONIDO_ALERTA" />
+          <ScalarProperty Name="COLOR_ALERTA" ColumnName="COLOR_ALERTA" />
+          <ScalarProperty Name="MAIL_ALERTA" ColumnName="MAIL_ALERTA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AREA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.AREA">
+        <MappingFragment StoreEntitySet="AREA">
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="ID_AREA" ColumnName="ID_AREA" />
+          <ScalarProperty Name="EMAIL_AREA" ColumnName="EMAIL_AREA" />
+          <ScalarProperty Name="DESCRIPCION_AREA" ColumnName="DESCRIPCION_AREA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CALENDARIO">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.CALENDARIO">
+        <MappingFragment StoreEntitySet="CALENDARIO">
+          <ScalarProperty Name="ID_FERIADO" ColumnName="ID_FERIADO" />
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="FECHA_NO_LABORAL" ColumnName="FECHA_NO_LABORAL" />
+          <ScalarProperty Name="DESCRIPCION_NO_LABORAL" ColumnName="DESCRIPCION_NO_LABORAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CAMBIO_MONEDA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.CAMBIO_MONEDA">
+        <MappingFragment StoreEntitySet="CAMBIO_MONEDA">
+          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+          <ScalarProperty Name="VALOR_CAMBIO" ColumnName="VALOR_CAMBIO" />
+          <ScalarProperty Name="MONEDA_CAMBIO" ColumnName="MONEDA_CAMBIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMUNAS">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.COMUNAS">
+        <MappingFragment StoreEntitySet="COMUNAS">
+          <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+          <ScalarProperty Name="ID_DISTRIRO" ColumnName="ID_DISTRIRO" />
+          <ScalarProperty Name="NOM_COMUNA" ColumnName="NOM_COMUNA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DATOS_EXTRAS">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.DATOS_EXTRAS">
+        <MappingFragment StoreEntitySet="DATOS_EXTRAS">
+          <ScalarProperty Name="ID_DATOS_EXTRAS" ColumnName="ID_DATOS_EXTRAS" />
+          <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRITOS">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.DISTRITOS">
+        <MappingFragment StoreEntitySet="DISTRITOS">
+          <ScalarProperty Name="ID_DISTRIRO" ColumnName="ID_DISTRIRO" />
+          <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
+          <ScalarProperty Name="NOM_DISTRITO" ColumnName="NOM_DISTRITO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.EMPRESA">
+        <MappingFragment StoreEntitySet="EMPRESA">
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+          <ScalarProperty Name="RAZON_SOCIAL_EMPRESA" ColumnName="RAZON_SOCIAL_EMPRESA" />
+          <ScalarProperty Name="DIRECCION_EMPRSA" ColumnName="DIRECCION_EMPRSA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESA_CLI">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.EMPRESA_CLI">
+        <MappingFragment StoreEntitySet="EMPRESA_CLI">
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+          <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+          <ScalarProperty Name="DIRECCION_EMPRESA" ColumnName="DIRECCION_EMPRESA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOS">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.ESTADOS">
+        <MappingFragment StoreEntitySet="ESTADOS">
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="DESCRIPCION_ESTADO" ColumnName="DESCRIPCION_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HIJOS">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.HIJOS">
+        <MappingFragment StoreEntitySet="HIJOS">
+          <ScalarProperty Name="ID_HIJO" ColumnName="ID_HIJO" />
+          <ScalarProperty Name="NOMBRE_HIJO" ColumnName="NOMBRE_HIJO" />
+          <ScalarProperty Name="EDAD_HIJO" ColumnName="EDAD_HIJO" />
+          <ScalarProperty Name="NAC_HIJO" ColumnName="NAC_HIJO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HISTORIA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.HISTORIA">
+        <MappingFragment StoreEntitySet="HISTORIA">
+          <ScalarProperty Name="RESOLUTOR" ColumnName="RESOLUTOR" />
+          <ScalarProperty Name="ID_TKT" ColumnName="ID_TKT" />
+          <ScalarProperty Name="ID_RESOL_TER" ColumnName="ID_RESOL_TER" />
+          <ScalarProperty Name="FECHA_HIST" ColumnName="FECHA_HIST" />
+          <ScalarProperty Name="TIEMPO_HIST" ColumnName="TIEMPO_HIST" />
+          <ScalarProperty Name="ESTADO_HIST" ColumnName="ESTADO_HIST" />
+          <ScalarProperty Name="NOTAS_HIST" ColumnName="NOTAS_HIST" />
+          <ScalarProperty Name="ATTACH_HIST" ColumnName="ATTACH_HIST" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HITOS_NO_LABORALES">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.HITOS_NO_LABORALES">
+        <MappingFragment StoreEntitySet="HITOS_NO_LABORALES">
+          <ScalarProperty Name="ID_HITOS" ColumnName="ID_HITOS" />
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="DESCRIPCION_HITONL" ColumnName="DESCRIPCION_HITONL" />
+          <ScalarProperty Name="FECHA_INICO_HITONL" ColumnName="FECHA_INICO_HITONL" />
+          <ScalarProperty Name="FECHA_TERMINO_HITONL" ColumnName="FECHA_TERMINO_HITONL" />
+          <ScalarProperty Name="HORA_INICIO_HITONL" ColumnName="HORA_INICIO_HITONL" />
+          <ScalarProperty Name="HORA_TERMNO_HITONL" ColumnName="HORA_TERMNO_HITONL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HORAS_TURNOS">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.HORAS_TURNOS">
+        <MappingFragment StoreEntitySet="HORAS_TURNOS">
+          <ScalarProperty Name="HRS_TRABAJO_SEM" ColumnName="HRS_TRABAJO_SEM" />
+          <ScalarProperty Name="ID_TURNO" ColumnName="ID_TURNO" />
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="HORA_INICIO_LABORAL" ColumnName="HORA_INICIO_LABORAL" />
+          <ScalarProperty Name="HORA_TERMINO_LABORAL" ColumnName="HORA_TERMINO_LABORAL" />
+          <ScalarProperty Name="HORAS_TRABAJADAS" ColumnName="HORAS_TRABAJADAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMPACTO">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.IMPACTO">
+        <MappingFragment StoreEntitySet="IMPACTO">
+          <ScalarProperty Name="ID_IMPACTO" ColumnName="ID_IMPACTO" />
+          <ScalarProperty Name="NOMBRE_IMPACTO" ColumnName="NOMBRE_IMPACTO" />
+          <ScalarProperty Name="DESCRIPCION_IMPACTO" ColumnName="DESCRIPCION_IMPACTO" />
+          <ScalarProperty Name="VALOR_IMPACTO" ColumnName="VALOR_IMPACTO" />
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGIN">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.LOGIN">
+        <MappingFragment StoreEntitySet="LOGIN">
+          <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+          <ScalarProperty Name="PASS_HASH" ColumnName="PASS_HASH" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="METADATA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.METADATA">
+        <MappingFragment StoreEntitySet="METADATA">
+          <ScalarProperty Name="FECHA_META" ColumnName="FECHA_META" />
+          <ScalarProperty Name="VALOR_META" ColumnName="VALOR_META" />
+          <ScalarProperty Name="ID_TIPO_META" ColumnName="ID_TIPO_META" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MODULO">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.MODULO">
+        <MappingFragment StoreEntitySet="MODULO">
+          <ScalarProperty Name="ID_MODULO" ColumnName="ID_MODULO" />
+          <ScalarProperty Name="DESCRIPCION_MODULO" ColumnName="DESCRIPCION_MODULO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MONEDA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.MONEDA">
+        <MappingFragment StoreEntitySet="MONEDA">
+          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+          <ScalarProperty Name="MONEDA1" ColumnName="MONEDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAISES">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.PAISES">
+        <MappingFragment StoreEntitySet="PAISES">
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+          <ScalarProperty Name="NOM_PAIS" ColumnName="NOM_PAIS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGIONES">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.REGIONES">
+        <MappingFragment StoreEntitySet="REGIONES">
+          <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE_REGION" ColumnName="NOMBRE_REGION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESOLUTORES_TERCEROS">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.RESOLUTORES_TERCEROS">
+        <MappingFragment StoreEntitySet="RESOLUTORES_TERCEROS">
+          <ScalarProperty Name="ID_RESOL_TER" ColumnName="ID_RESOL_TER" />
+          <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
+          <ScalarProperty Name="NOM_RESOL_TER" ColumnName="NOM_RESOL_TER" />
+          <ScalarProperty Name="RSOCIAL_RESOL_TER" ColumnName="RSOCIAL_RESOL_TER" />
+          <ScalarProperty Name="RUT_RESOL_TER" ColumnName="RUT_RESOL_TER" />
+          <ScalarProperty Name="DIRECCION_RESOL_TER" ColumnName="DIRECCION_RESOL_TER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.ROL">
+        <MappingFragment StoreEntitySet="ROL">
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+          <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+          <ScalarProperty Name="DESCRIPCION_ROL" ColumnName="DESCRIPCION_ROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROL_MODULO">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.ROL_MODULO">
+        <MappingFragment StoreEntitySet="ROL_MODULO">
+          <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
+          <ScalarProperty Name="ID_MODULO" ColumnName="ID_MODULO" />
+          <ScalarProperty Name="FECHA_ROLMODULO" ColumnName="FECHA_ROLMODULO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="PERMISO" ColumnName="PERMISO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIO">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.SERVICIO">
+        <MappingFragment StoreEntitySet="SERVICIO">
+          <ScalarProperty Name="ID_SERV" ColumnName="ID_SERV" />
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="NOMBRE_SERVICIO" ColumnName="NOMBRE_SERVICIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICIO_EMPRESA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.SERVICIO_EMPRESA">
+        <MappingFragment StoreEntitySet="SERVICIO_EMPRESA">
+          <ScalarProperty Name="ID_SERV" ColumnName="ID_SERV" />
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="ID_SERVI_EMP" ColumnName="ID_SERVI_EMP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SLA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.SLA">
+        <MappingFragment StoreEntitySet="SLA">
+          <ScalarProperty Name="ID_SLA" ColumnName="ID_SLA" />
+          <ScalarProperty Name="ID_ALERTA" ColumnName="ID_ALERTA" />
+          <ScalarProperty Name="ID_SERVI_EMP" ColumnName="ID_SERVI_EMP" />
+          <ScalarProperty Name="NOMBRE_SLA" ColumnName="NOMBRE_SLA" />
+          <ScalarProperty Name="IMPORTANCIA_SLA" ColumnName="IMPORTANCIA_SLA" />
+          <ScalarProperty Name="URGENCIA_SLA" ColumnName="URGENCIA_SLA" />
+          <ScalarProperty Name="IMPACTO_SLA" ColumnName="IMPACTO_SLA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TELS_EMPRESA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TELS_EMPRESA">
+        <MappingFragment StoreEntitySet="TELS_EMPRESA">
+          <ScalarProperty Name="TEL_EMPRESA" ColumnName="TEL_EMPRESA" />
+          <ScalarProperty Name="ID_TEL_EMRPESA" ColumnName="ID_TEL_EMRPESA" />
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TELS_RESOL_TER">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TELS_RESOL_TER">
+        <MappingFragment StoreEntitySet="TELS_RESOL_TER">
+          <ScalarProperty Name="TEL_RESOL_TER" ColumnName="TEL_RESOL_TER" />
+          <ScalarProperty Name="ID_TEL_RESTER" ColumnName="ID_TEL_RESTER" />
+          <ScalarProperty Name="ID_RESOL_TER" ColumnName="ID_RESOL_TER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPIFICACION">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TIPIFICACION">
+        <MappingFragment StoreEntitySet="TIPIFICACION">
+          <ScalarProperty Name="ID_TIPO" ColumnName="ID_TIPO" />
+          <ScalarProperty Name="ID_TIPO_PADRE" ColumnName="ID_TIPO_PADRE" />
+          <ScalarProperty Name="NOMBRE_TIPO" ColumnName="NOMBRE_TIPO" />
+          <ScalarProperty Name="NIVEL_TIPO" ColumnName="NIVEL_TIPO" />
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOS_METADTA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TIPOS_METADTA">
+        <MappingFragment StoreEntitySet="TIPOS_METADTA">
+          <ScalarProperty Name="ID_TIPO_META" ColumnName="ID_TIPO_META" />
+          <ScalarProperty Name="DESC_TIPO_META" ColumnName="DESC_TIPO_META" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TKT">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.TKT">
+        <MappingFragment StoreEntitySet="TKT">
+          <ScalarProperty Name="ID_TKT" ColumnName="ID_TKT" />
+          <ScalarProperty Name="ID_URGENCIA" ColumnName="ID_URGENCIA" />
+          <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
+          <ScalarProperty Name="ID_IMPACTO" ColumnName="ID_IMPACTO" />
+          <ScalarProperty Name="ID_TIPO" ColumnName="ID_TIPO" />
+          <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+          <ScalarProperty Name="ID_SERVI_EMP" ColumnName="ID_SERVI_EMP" />
+          <ScalarProperty Name="CREADOR_TKT" ColumnName="CREADOR_TKT" />
+          <ScalarProperty Name="REPORTADOR_TKT" ColumnName="REPORTADOR_TKT" />
+          <ScalarProperty Name="AFECTADO_TKT" ColumnName="AFECTADO_TKT" />
+          <ScalarProperty Name="PRIORIDAD_TKT" ColumnName="PRIORIDAD_TKT" />
+          <ScalarProperty Name="VALOR_IMPACTO_TKT" ColumnName="VALOR_IMPACTO_TKT" />
+          <ScalarProperty Name="VALOR_URGENCIA_TKT" ColumnName="VALOR_URGENCIA_TKT" />
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="URGENCIA">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.URGENCIA">
+        <MappingFragment StoreEntitySet="URGENCIA">
+          <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+          <ScalarProperty Name="ID_URGENCIA" ColumnName="ID_URGENCIA" />
+          <ScalarProperty Name="NOMBRE_URGENCIA" ColumnName="NOMBRE_URGENCIA" />
+          <ScalarProperty Name="DESCRIPCION_URGENCIA" ColumnName="DESCRIPCION_URGENCIA" />
+          <ScalarProperty Name="VALOR_URGENCIA" ColumnName="VALOR_URGENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO_FINAL">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.USUARIO_FINAL">
+        <MappingFragment StoreEntitySet="USUARIO_FINAL">
+          <ScalarProperty Name="ID_USUFINAL" ColumnName="ID_USUFINAL" />
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
+          <ScalarProperty Name="VIP" ColumnName="VIP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VALORES">
+      <EntityTypeMapping TypeName="DB_A255CD_MoDeskDBModel.VALORES">
+        <MappingFragment StoreEntitySet="VALORES">
+          <ScalarProperty Name="FECHA_VALOR" ColumnName="FECHA_VALOR" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AGENTE_HIJOS" TypeName="DB_A255CD_MoDeskDBModel.AGENTE_HIJOS" StoreEntitySet="AGENTE_HIJOS">
+      <EndProperty Name="AGENTES">
+        <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
+      </EndProperty>
+      <EndProperty Name="HIJOS">
+        <ScalarProperty Name="ID_HIJO" ColumnName="ID_HIJO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DISTRITO_META" TypeName="DB_A255CD_MoDeskDBModel.DISTRITO_META" StoreEntitySet="DISTRITO_META">
+      <EndProperty Name="DISTRITOS">
+        <ScalarProperty Name="ID_DISTRIRO" ColumnName="ID_DISTRIRO" />
+      </EndProperty>
+      <EndProperty Name="METADATA">
+        <ScalarProperty Name="FECHA_META" ColumnName="FECHA_META" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

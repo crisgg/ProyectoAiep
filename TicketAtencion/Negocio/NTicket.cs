@@ -1,22 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
+using System.Data;
 
 namespace Negocio
 {
     public class NTicket
     {
-        public string ObtenerDato() {
+        public object ObtenerDato()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetTicket() {
             try
             {
-                return new Bdd.BTicket().ObtenerDato();
+                Bdd.BTicket Ticket = new Bdd.BTicket();
+                return JsonConvert.SerializeObject(new { resultado = true, data = Ticket});
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw new Exception(string.Format("ha ocurrido un problema con la Consulta, Error: {0}", ex));
+                return JsonConvert.SerializeObject(new { resultado = false, data = "Error el Traer los datos de ticket" });
             }
         }
     }

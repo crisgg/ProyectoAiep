@@ -16,36 +16,13 @@ C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAte
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Negocio.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Newtonsoft.Json.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Bdd.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\EntityFramework.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Negocio.pdb
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Newtonsoft.Json.xml
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Bdd.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\EntityFramework.xml
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\obj\Debug\TicketAtencion.csprojResolveAssemblyReference.cache
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\obj\Debug\TicketAtencion.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\obj\Debug\TicketAtencion.pdb
-C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Bdd.dll
-C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\TicketAtencion\bin\Bdd.pdb
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\csc.exe
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\vbc.exe
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\VBCSCompiler.exe
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\TicketAtencion.dll.config
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\TicketAtencion.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\TicketAtencion.pdb
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\Negocio.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\Newtonsoft.Json.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\Bdd.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\Negocio.pdb
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\Newtonsoft.Json.xml
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\bin\Bdd.pdb
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\obj\Debug\TicketAtencion.dll
-C:\Users\maxco\Documents\GitHub\ProyectoAiep\TicketAtencion\TicketAtencion\obj\Debug\TicketAtencion.pdb

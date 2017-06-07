@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constante.cs" />
     <Compile Include="CTicket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

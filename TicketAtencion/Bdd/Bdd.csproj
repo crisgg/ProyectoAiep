@@ -30,8 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,14 +51,167 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AGENTES.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ALERTAS.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AREA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
     <Compile Include="BTicket.cs" />
+    <Compile Include="CALENDARIO.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CAMBIO_MONEDA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMUNAS.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATOS_EXTRAS.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DISTRITOS.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPRESA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPRESA_CLI.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADOS.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HIJOS.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HISTORIA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HITOS_NO_LABORALES.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HORAS_TURNOS.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IMPACTO.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="METADATA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo02.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo02.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo02.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo02.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo02.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MODULO.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MONEDA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAISES.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REGIONES.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RESOLUTORES_TERCEROS.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROL.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ROL_MODULO.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERVICIO.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERVICIO_EMPRESA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SLA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TELS_EMPRESA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TELS_RESOL_TER.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPIFICACION.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPOS_METADTA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TKT.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="URGENCIA.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USUARIO_FINAL.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VALORES.cs">
+      <DependentUpon>Modelo02.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Comun\Comun.csproj">
       <Project>{6a3e2e61-f7ac-4c36-8554-2e46d7009aab}</Project>
       <Name>Comun</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Transferencia\Transferencia.csproj">
+      <Project>{b5142f36-7a1d-41a9-b4fa-6a95b71d55fd}</Project>
+      <Name>Transferencia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Modelo02.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Modelo02.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo02.edmx.diagram">
+      <DependentUpon>Modelo02.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelo02.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelo02.edmx</DependentUpon>
+      <LastGenOutput>Modelo02.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo02.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Modelo02.edmx</DependentUpon>
+      <LastGenOutput>Modelo02.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="74b70e9a753c4f6bb1ce6570162d7bbd" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.AGENTES" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.ALERTAS" Width="1.5" PointX="3.75" PointY="60.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.AREA" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.CALENDARIO" Width="1.5" PointX="3.75" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.CAMBIO_MONEDA" Width="1.5" PointX="3.75" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.COMUNAS" Width="1.5" PointX="1.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.DATOS_EXTRAS" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.DISTRITOS" Width="1.5" PointX="1.5" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.EMPRESA" Width="1.5" PointX="1.5" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.EMPRESA_CLI" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.ESTADOS" Width="1.5" PointX="3.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.HIJOS" Width="1.5" PointX="5.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.HISTORIA" Width="1.5" PointX="8.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.HITOS_NO_LABORALES" Width="1.5" PointX="3.75" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.HORAS_TURNOS" Width="1.5" PointX="3.75" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.IMPACTO" Width="1.5" PointX="3.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.LOGIN" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.METADATA" Width="1.5" PointX="6.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.MODULO" Width="1.5" PointX="3" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.MONEDA" Width="1.5" PointX="1.5" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.PAISES" Width="1.5" PointX="1.5" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.REGIONES" Width="1.5" PointX="1.5" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.RESOLUTORES_TERCEROS" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.ROL" Width="1.5" PointX="3" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.ROL_MODULO" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.SERVICIO" Width="1.5" PointX="1.5" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.SERVICIO_EMPRESA" Width="1.5" PointX="3.75" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.SLA" Width="1.5" PointX="6" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.TELS_EMPRESA" Width="1.5" PointX="3.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.TELS_RESOL_TER" Width="1.5" PointX="8.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.TIPIFICACION" Width="1.5" PointX="3.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.TIPOS_METADTA" Width="1.5" PointX="4.5" PointY="57.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.TKT" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.URGENCIA" Width="1.5" PointX="3.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.USUARIO_FINAL" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A255CD_MoDeskDBModel.VALORES" Width="1.5" PointX="3.75" PointY="54.625" IsExpanded="true" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_AGENTES_RELATIONS_AREA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_AGENTES_RELATIONS_COMUNAS" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_AGENTES_RELATIONS_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_DATOS_EX_RELATIONS_AGENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_SLA_RELATIONS_ALERTAS" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_CALENDAR_REFERENCE_PAISES" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_CAMBIO_M_REFERENCE_MONEDA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_COMUNAS_RELATIONS_DISTRITO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_EMPRESA__RELATIONS_COMUNAS" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_RESOLUTO_RELATIONS_COMUNAS" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_DISTRITO_REFERENCE_REGIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_EMPRESA_REFERENCE_PAISES" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_HITOS_NO_REFERENCE_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_HORAS_TU_REFERENCE_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_SERVICIO_REFERENCE_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TELS_EMP_REFERENCE_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_SERVICIO_RELATIONS_EMPRESA_" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_USUARIO__RELATIONS_EMPRESA_" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TKT_RELATIONS_ESTADOS" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_HISTORIA_RELATIONS_RESOLUTO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_HISTORIA_RELATIONS_TKT" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TKT_RELATIONS_IMPACTO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_ROL_RELATIONS_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TKT_RELATIONS_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_USUARIO__RELATIONS_LOGIN" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_METADATA_REFERENCE_TIPOS_ME" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_ROL_MODU_RELATIONS_MODULO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_PAISES_REFERENCE_MONEDA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_VALORES_REFERENCE_MONEDA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_REGIONES_REFERENCE_PAISES" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TELS_RES_RELATIONS_RESOLUTO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_ROL_MODU_RELATIONS_ROL" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_SERVICIO_RELATIONS_SERVICIO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_SLA_RELATIONS_SERVICIO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TKT_RELATIONS_SERVICIO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TIPIFICA_RELATIONS_TIPIFICA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TKT_RELATIONS_TIPIFICA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.FK_TKT_RELATIONS_URGENCIA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.AGENTE_HIJOS" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A255CD_MoDeskDBModel.DISTRITO_META" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
