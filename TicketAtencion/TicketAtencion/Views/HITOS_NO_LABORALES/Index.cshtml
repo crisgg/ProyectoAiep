@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Bdd.HITOS_NO_LABORALES>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_HITONL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_INICO_HITONL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_TERMINO_HITONL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORA_INICIO_HITONL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORA_TERMNO_HITONL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPCION_HITONL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_INICO_HITONL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_TERMINO_HITONL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_INICIO_HITONL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_TERMNO_HITONL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPRESA.NOMBRE_EMPRESA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_HITOS }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_HITOS }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_HITOS })
+        </td>
+    </tr>
+}
+
+</table>

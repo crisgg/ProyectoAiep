@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Bdd.TELS_EMPRESA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TEL_EMPRESA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEL_EMPRESA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPRESA.NOMBRE_EMPRESA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_TEL_EMRPESA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_TEL_EMRPESA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_TEL_EMRPESA })
+        </td>
+    </tr>
+}
+
+</table>

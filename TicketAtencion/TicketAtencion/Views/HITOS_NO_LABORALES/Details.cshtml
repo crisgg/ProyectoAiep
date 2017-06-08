@@ -1,0 +1,66 @@
+﻿@model Bdd.HITOS_NO_LABORALES
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HITOS_NO_LABORALES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_HITONL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION_HITONL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_INICO_HITONL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_INICO_HITONL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_TERMINO_HITONL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_TERMINO_HITONL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_INICIO_HITONL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_INICIO_HITONL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_TERMNO_HITONL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_TERMNO_HITONL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_HITOS }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

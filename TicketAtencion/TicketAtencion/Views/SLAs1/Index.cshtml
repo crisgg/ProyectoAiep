@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Bdd.SLA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_SLA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IMPORTANCIA_SLA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URGENCIA_SLA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IMPACTO_SLA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ALERTAS.ID_ALERTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SERVICIO_EMPRESA.ID_SERVI_EMP)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_SLA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IMPORTANCIA_SLA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.URGENCIA_SLA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IMPACTO_SLA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ALERTAS.ID_ALERTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SERVICIO_EMPRESA.ID_SERVI_EMP)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_SLA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_SLA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_SLA })
+        </td>
+    </tr>
+}
+
+</table>

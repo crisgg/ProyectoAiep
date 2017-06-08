@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Bdd.TKT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CREADOR_TKT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.REPORTADOR_TKT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AFECTADO_TKT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRIORIDAD_TKT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALOR_IMPACTO_TKT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VALOR_URGENCIA_TKT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT_EMPRESA_PROV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADOS.RUT_EMPRESA_PROV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IMPACTO.NOMBRE_IMPACTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOGIN.PASS_HASH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SERVICIO_EMPRESA.ID_SERVI_EMP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPIFICACION.NOMBRE_TIPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URGENCIA.RUT_EMPRESA_PROV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CREADOR_TKT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.REPORTADOR_TKT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AFECTADO_TKT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIORIDAD_TKT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALOR_IMPACTO_TKT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VALOR_URGENCIA_TKT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT_EMPRESA_PROV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADOS.RUT_EMPRESA_PROV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IMPACTO.NOMBRE_IMPACTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOGIN.PASS_HASH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SERVICIO_EMPRESA.ID_SERVI_EMP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPIFICACION.NOMBRE_TIPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.URGENCIA.RUT_EMPRESA_PROV)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_TKT }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_TKT }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_TKT })
+        </td>
+    </tr>
+}
+
+</table>

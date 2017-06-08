@@ -1,0 +1,50 @@
+﻿@model Bdd.EMPRESA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EMPRESA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAZON_SOCIAL_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAZON_SOCIAL_EMPRESA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIRECCION_EMPRSA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECCION_EMPRSA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PAISES.NOM_PAIS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PAISES.NOM_PAIS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RUT_EMPRESA_PROV }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

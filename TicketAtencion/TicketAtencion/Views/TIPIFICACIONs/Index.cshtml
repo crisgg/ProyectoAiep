@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Bdd.TIPIFICACION>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_TIPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NIVEL_TIPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT_EMPRESA_PROV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPIFICACION2.NOMBRE_TIPO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_TIPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIVEL_TIPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT_EMPRESA_PROV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPIFICACION2.NOMBRE_TIPO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_TIPO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_TIPO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_TIPO })
+        </td>
+    </tr>
+}
+
+</table>

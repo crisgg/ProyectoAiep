@@ -1,0 +1,66 @@
+﻿@model Bdd.SLA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SLA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_SLA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_SLA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMPORTANCIA_SLA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMPORTANCIA_SLA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URGENCIA_SLA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URGENCIA_SLA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMPACTO_SLA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMPACTO_SLA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALERTAS.ID_ALERTA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALERTAS.ID_ALERTA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SERVICIO_EMPRESA.ID_SERVI_EMP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SERVICIO_EMPRESA.ID_SERVI_EMP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_SLA }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

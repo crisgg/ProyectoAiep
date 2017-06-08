@@ -1,14 +1,12 @@
-C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.csprojResolveAssemblyReference.cache
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Bdd.dll.config
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Bdd.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Bdd.pdb
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Comun.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\EntityFramework.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Transferencia.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Comun.pdb
-C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\Transferencia.pdb
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\EntityFramework.xml
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.csprojResolveAssemblyReference.cache
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.pdb

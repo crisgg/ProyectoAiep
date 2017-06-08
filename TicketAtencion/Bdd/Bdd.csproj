@@ -182,10 +182,6 @@
       <Project>{6a3e2e61-f7ac-4c36-8554-2e46d7009aab}</Project>
       <Name>Comun</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Transferencia\Transferencia.csproj">
-      <Project>{b5142f36-7a1d-41a9-b4fa-6a95b71d55fd}</Project>
-      <Name>Transferencia</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

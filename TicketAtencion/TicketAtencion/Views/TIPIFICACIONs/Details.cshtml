@@ -1,0 +1,50 @@
+﻿@model Bdd.TIPIFICACION
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TIPIFICACION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIVEL_TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIVEL_TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RUT_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RUT_EMPRESA_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPIFICACION2.NOMBRE_TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPIFICACION2.NOMBRE_TIPO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_TIPO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

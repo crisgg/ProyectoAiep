@@ -1,0 +1,122 @@
+﻿@model Bdd.TKT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TKT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CREADOR_TKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CREADOR_TKT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.REPORTADOR_TKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.REPORTADOR_TKT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AFECTADO_TKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AFECTADO_TKT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRIORIDAD_TKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRIORIDAD_TKT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_IMPACTO_TKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_IMPACTO_TKT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_URGENCIA_TKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_URGENCIA_TKT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RUT_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RUT_EMPRESA_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADOS.RUT_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADOS.RUT_EMPRESA_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMPACTO.NOMBRE_IMPACTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMPACTO.NOMBRE_IMPACTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOGIN.PASS_HASH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOGIN.PASS_HASH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SERVICIO_EMPRESA.ID_SERVI_EMP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SERVICIO_EMPRESA.ID_SERVI_EMP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPIFICACION.NOMBRE_TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPIFICACION.NOMBRE_TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URGENCIA.RUT_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URGENCIA.RUT_EMPRESA_PROV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_TKT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

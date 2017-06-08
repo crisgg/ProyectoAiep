@@ -1,0 +1,34 @@
+﻿@model Bdd.SERVICIO_EMPRESA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SERVICIO_EMPRESA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPRESA_CLI.RUT_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPRESA_CLI.RUT_EMPRESA_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SERVICIO.RUT_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SERVICIO.RUT_EMPRESA_PROV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_SERVI_EMP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Data;
+using System.Data.Entity;
 
 namespace Negocio
 {
@@ -10,12 +11,11 @@ namespace Negocio
         {
             throw new NotImplementedException();
         }
-
+        
         public string GetTicket() {
             try
-            {
-                Bdd.BTicket Ticket = new Bdd.BTicket();
-                return JsonConvert.SerializeObject(new { resultado = true, data = Ticket});
+            {                
+                return JsonConvert.SerializeObject(new { resultado = true, data = new Bdd.BTicket().GetTicket()});
             }
             catch (Exception)
             {

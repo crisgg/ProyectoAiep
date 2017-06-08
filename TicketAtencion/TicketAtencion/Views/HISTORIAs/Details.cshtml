@@ -1,0 +1,74 @@
+﻿@model Bdd.HISTORIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HISTORIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_HIST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_HIST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIEMPO_HIST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIEMPO_HIST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO_HIST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO_HIST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOTAS_HIST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOTAS_HIST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ATTACH_HIST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ATTACH_HIST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RESOLUTORES_TERCEROS.NOM_RESOL_TER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RESOLUTORES_TERCEROS.NOM_RESOL_TER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TKT.AFECTADO_TKT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TKT.AFECTADO_TKT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RESOLUTOR }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

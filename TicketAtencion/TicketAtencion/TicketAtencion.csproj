@@ -43,13 +43,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
@@ -61,6 +77,34 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -68,12 +112,222 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Html\Buscar.aspx" />
+    <Content Include="Img\images.jpg" />
+    <Content Include="Img\oie_transparent.png" />
     <Content Include="Js\Comunes\Comun.js" />
     <Content Include="Js\Comunes\FolioDuplicado.js" />
+    <Content Include="Js\Comunes\jquery.js" />
     <Content Include="packages.config" />
     <Content Include="Data\TICKET.Master" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Fuentes\fontawesome-webfont.woff2" />
+    <Content Include="Fuentes\glyphicons-halflings-regular.woff2" />
+    <Content Include="Fuentes\OpenSans-Regular-webfont.woff2" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="Views\COMUNAS\Create.cshtml" />
+    <Content Include="Views\COMUNAS\Delete.cshtml" />
+    <Content Include="Views\COMUNAS\Details.cshtml" />
+    <Content Include="Views\COMUNAS\Edit.cshtml" />
+    <Content Include="Views\COMUNAS\Index.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\AGENTES\Create.cshtml" />
+    <Content Include="Views\AGENTES\Delete.cshtml" />
+    <Content Include="Views\AGENTES\Details.cshtml" />
+    <Content Include="Views\AGENTES\Edit.cshtml" />
+    <Content Include="Views\AGENTES\Index.cshtml" />
+    <Content Include="Views\ALERTAS\Create.cshtml" />
+    <Content Include="Views\ALERTAS\Delete.cshtml" />
+    <Content Include="Views\ALERTAS\Details.cshtml" />
+    <Content Include="Views\ALERTAS\Edit.cshtml" />
+    <Content Include="Views\ALERTAS\Index.cshtml" />
+    <Content Include="Views\AREAs\Create.cshtml" />
+    <Content Include="Views\AREAs\Delete.cshtml" />
+    <Content Include="Views\AREAs\Details.cshtml" />
+    <Content Include="Views\AREAs\Edit.cshtml" />
+    <Content Include="Views\AREAs\Index.cshtml" />
+    <Content Include="Views\CALENDARIOs\Create.cshtml" />
+    <Content Include="Views\CALENDARIOs\Delete.cshtml" />
+    <Content Include="Views\CALENDARIOs\Details.cshtml" />
+    <Content Include="Views\CALENDARIOs\Edit.cshtml" />
+    <Content Include="Views\CALENDARIOs\Index.cshtml" />
+    <Content Include="Views\CAMBIO_MONEDA\Create.cshtml" />
+    <Content Include="Views\CAMBIO_MONEDA\Delete.cshtml" />
+    <Content Include="Views\CAMBIO_MONEDA\Details.cshtml" />
+    <Content Include="Views\CAMBIO_MONEDA\Edit.cshtml" />
+    <Content Include="Views\CAMBIO_MONEDA\Index.cshtml" />
+    <Content Include="Views\DATOS_EXTRAS\Create.cshtml" />
+    <Content Include="Views\DATOS_EXTRAS\Delete.cshtml" />
+    <Content Include="Views\DATOS_EXTRAS\Details.cshtml" />
+    <Content Include="Views\DATOS_EXTRAS\Edit.cshtml" />
+    <Content Include="Views\DATOS_EXTRAS\Index.cshtml" />
+    <Content Include="Views\DISTRITOS\Create.cshtml" />
+    <Content Include="Views\DISTRITOS\Delete.cshtml" />
+    <Content Include="Views\DISTRITOS\Details.cshtml" />
+    <Content Include="Views\DISTRITOS\Edit.cshtml" />
+    <Content Include="Views\DISTRITOS\Index.cshtml" />
+    <Content Include="Views\EMPRESAs\Create.cshtml" />
+    <Content Include="Views\EMPRESAs\Delete.cshtml" />
+    <Content Include="Views\EMPRESAs\Details.cshtml" />
+    <Content Include="Views\EMPRESAs\Edit.cshtml" />
+    <Content Include="Views\EMPRESAs\Index.cshtml" />
+    <Content Include="Views\ESTADOS\Create.cshtml" />
+    <Content Include="Views\ESTADOS\Delete.cshtml" />
+    <Content Include="Views\ESTADOS\Details.cshtml" />
+    <Content Include="Views\ESTADOS\Edit.cshtml" />
+    <Content Include="Views\ESTADOS\Index.cshtml" />
+    <Content Include="Views\HIJOS\Create.cshtml" />
+    <Content Include="Views\HIJOS\Delete.cshtml" />
+    <Content Include="Views\HIJOS\Details.cshtml" />
+    <Content Include="Views\HIJOS\Edit.cshtml" />
+    <Content Include="Views\HIJOS\Index.cshtml" />
+    <Content Include="Views\HISTORIAs\Create.cshtml" />
+    <Content Include="Views\HISTORIAs\Delete.cshtml" />
+    <Content Include="Views\HISTORIAs\Details.cshtml" />
+    <Content Include="Views\HISTORIAs\Edit.cshtml" />
+    <Content Include="Views\HISTORIAs\Index.cshtml" />
+    <Content Include="Views\HITOS_NO_LABORALES\Create.cshtml" />
+    <Content Include="Views\HITOS_NO_LABORALES\Delete.cshtml" />
+    <Content Include="Views\HITOS_NO_LABORALES\Details.cshtml" />
+    <Content Include="Views\HITOS_NO_LABORALES\Edit.cshtml" />
+    <Content Include="Views\HITOS_NO_LABORALES\Index.cshtml" />
+    <Content Include="Views\HORAS_TURNOS\Create.cshtml" />
+    <Content Include="Views\HORAS_TURNOS\Delete.cshtml" />
+    <Content Include="Views\HORAS_TURNOS\Details.cshtml" />
+    <Content Include="Views\HORAS_TURNOS\Edit.cshtml" />
+    <Content Include="Views\HORAS_TURNOS\Index.cshtml" />
+    <Content Include="Views\IMPACTOes\Create.cshtml" />
+    <Content Include="Views\IMPACTOes\Delete.cshtml" />
+    <Content Include="Views\IMPACTOes\Details.cshtml" />
+    <Content Include="Views\IMPACTOes\Edit.cshtml" />
+    <Content Include="Views\IMPACTOes\Index.cshtml" />
+    <Content Include="Views\LOGINs\Create.cshtml" />
+    <Content Include="Views\LOGINs\Delete.cshtml" />
+    <Content Include="Views\LOGINs\Details.cshtml" />
+    <Content Include="Views\LOGINs\Edit.cshtml" />
+    <Content Include="Views\LOGINs\Index.cshtml" />
+    <Content Include="Views\METADATAs\Create.cshtml" />
+    <Content Include="Views\METADATAs\Delete.cshtml" />
+    <Content Include="Views\METADATAs\Details.cshtml" />
+    <Content Include="Views\METADATAs\Edit.cshtml" />
+    <Content Include="Views\METADATAs\Index.cshtml" />
+    <Content Include="Views\MODULOes\Create.cshtml" />
+    <Content Include="Views\MODULOes\Delete.cshtml" />
+    <Content Include="Views\MODULOes\Details.cshtml" />
+    <Content Include="Views\MODULOes\Edit.cshtml" />
+    <Content Include="Views\MODULOes\Index.cshtml" />
+    <Content Include="Views\MONEDAs\Create.cshtml" />
+    <Content Include="Views\MONEDAs\Delete.cshtml" />
+    <Content Include="Views\MONEDAs\Details.cshtml" />
+    <Content Include="Views\MONEDAs\Edit.cshtml" />
+    <Content Include="Views\MONEDAs\Index.cshtml" />
+    <Content Include="Views\PAISES\Create.cshtml" />
+    <Content Include="Views\PAISES\Delete.cshtml" />
+    <Content Include="Views\PAISES\Details.cshtml" />
+    <Content Include="Views\PAISES\Edit.cshtml" />
+    <Content Include="Views\PAISES\Index.cshtml" />
+    <Content Include="Views\REGIONES\Create.cshtml" />
+    <Content Include="Views\REGIONES\Delete.cshtml" />
+    <Content Include="Views\REGIONES\Details.cshtml" />
+    <Content Include="Views\REGIONES\Edit.cshtml" />
+    <Content Include="Views\REGIONES\Index.cshtml" />
+    <Content Include="Views\RESOLUTORES_TERCEROS\Create.cshtml" />
+    <Content Include="Views\RESOLUTORES_TERCEROS\Delete.cshtml" />
+    <Content Include="Views\RESOLUTORES_TERCEROS\Details.cshtml" />
+    <Content Include="Views\RESOLUTORES_TERCEROS\Edit.cshtml" />
+    <Content Include="Views\RESOLUTORES_TERCEROS\Index.cshtml" />
+    <Content Include="Views\TELS_EMPRESA\Create.cshtml" />
+    <Content Include="Views\TELS_EMPRESA\Delete.cshtml" />
+    <Content Include="Views\TELS_EMPRESA\Details.cshtml" />
+    <Content Include="Views\TELS_EMPRESA\Edit.cshtml" />
+    <Content Include="Views\TELS_EMPRESA\Index.cshtml" />
+    <Content Include="Views\TELS_RESOL_TER\Create.cshtml" />
+    <Content Include="Views\TELS_RESOL_TER\Delete.cshtml" />
+    <Content Include="Views\TELS_RESOL_TER\Details.cshtml" />
+    <Content Include="Views\TELS_RESOL_TER\Edit.cshtml" />
+    <Content Include="Views\TELS_RESOL_TER\Index.cshtml" />
+    <Content Include="Views\TIPIFICACIONs\Create.cshtml" />
+    <Content Include="Views\TIPIFICACIONs\Delete.cshtml" />
+    <Content Include="Views\TIPIFICACIONs\Details.cshtml" />
+    <Content Include="Views\TIPIFICACIONs\Edit.cshtml" />
+    <Content Include="Views\TIPIFICACIONs\Index.cshtml" />
+    <Content Include="Views\TIPOS_METADTA\Create.cshtml" />
+    <Content Include="Views\TIPOS_METADTA\Delete.cshtml" />
+    <Content Include="Views\TIPOS_METADTA\Details.cshtml" />
+    <Content Include="Views\TIPOS_METADTA\Edit.cshtml" />
+    <Content Include="Views\TIPOS_METADTA\Index.cshtml" />
+    <Content Include="Views\ROL_MODULO\Create.cshtml" />
+    <Content Include="Views\ROL_MODULO\Delete.cshtml" />
+    <Content Include="Views\ROL_MODULO\Details.cshtml" />
+    <Content Include="Views\ROL_MODULO\Edit.cshtml" />
+    <Content Include="Views\ROL_MODULO\Index.cshtml" />
+    <Content Include="Views\ROLs\Create.cshtml" />
+    <Content Include="Views\ROLs\Delete.cshtml" />
+    <Content Include="Views\ROLs\Details.cshtml" />
+    <Content Include="Views\ROLs\Edit.cshtml" />
+    <Content Include="Views\ROLs\Index.cshtml" />
+    <Content Include="Views\SERVICIO_EMPRESA\Create.cshtml" />
+    <Content Include="Views\SERVICIO_EMPRESA\Delete.cshtml" />
+    <Content Include="Views\SERVICIO_EMPRESA\Details.cshtml" />
+    <Content Include="Views\SERVICIO_EMPRESA\Edit.cshtml" />
+    <Content Include="Views\SERVICIO_EMPRESA\Index.cshtml" />
+    <Content Include="Views\SERVICIOs\Create.cshtml" />
+    <Content Include="Views\SERVICIOs\Delete.cshtml" />
+    <Content Include="Views\SERVICIOs\Details.cshtml" />
+    <Content Include="Views\SERVICIOs\Edit.cshtml" />
+    <Content Include="Views\SERVICIOs\Index.cshtml" />
+    <Content Include="Views\SLAs1\Create.cshtml" />
+    <Content Include="Views\SLAs1\Delete.cshtml" />
+    <Content Include="Views\SLAs1\Details.cshtml" />
+    <Content Include="Views\SLAs1\Edit.cshtml" />
+    <Content Include="Views\SLAs1\Index.cshtml" />
+    <Content Include="Views\TKTs\Create.cshtml" />
+    <Content Include="Views\TKTs\Delete.cshtml" />
+    <Content Include="Views\TKTs\Details.cshtml" />
+    <Content Include="Views\TKTs\Edit.cshtml" />
+    <Content Include="Views\TKTs\Index.cshtml" />
+    <Content Include="Views\URGENCIAs\Create.cshtml" />
+    <Content Include="Views\URGENCIAs\Delete.cshtml" />
+    <Content Include="Views\URGENCIAs\Details.cshtml" />
+    <Content Include="Views\URGENCIAs\Edit.cshtml" />
+    <Content Include="Views\URGENCIAs\Index.cshtml" />
+    <Content Include="Views\USUARIO_FINAL\Create.cshtml" />
+    <Content Include="Views\USUARIO_FINAL\Delete.cshtml" />
+    <Content Include="Views\USUARIO_FINAL\Details.cshtml" />
+    <Content Include="Views\USUARIO_FINAL\Edit.cshtml" />
+    <Content Include="Views\USUARIO_FINAL\Index.cshtml" />
+    <Content Include="Views\VALORES\Create.cshtml" />
+    <Content Include="Views\VALORES\Delete.cshtml" />
+    <Content Include="Views\VALORES\Details.cshtml" />
+    <Content Include="Views\VALORES\Edit.cshtml" />
+    <Content Include="Views\VALORES\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -85,10 +339,51 @@
     <Content Include="Html\Main.aspx" />
     <Content Include="Js\Comunes\jquery-3.2.1.min.js" />
     <Content Include="Js\Ticket.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Conexion\ServicioTicket.cs" />
+    <Compile Include="Controladores\AGENTESController.cs" />
+    <Compile Include="Controladores\ALERTASController.cs" />
+    <Compile Include="Controladores\AREAsController.cs" />
+    <Compile Include="Controladores\CALENDARIOsController.cs" />
+    <Compile Include="Controladores\CAMBIO_MONEDAController.cs" />
+    <Compile Include="Controladores\COMUNASController.cs" />
+    <Compile Include="Controladores\DATOS_EXTRASController.cs" />
+    <Compile Include="Controladores\DISTRITOSController.cs" />
+    <Compile Include="Controladores\EMPRESAsController.cs" />
+    <Compile Include="Controladores\ESTADOSController.cs" />
+    <Compile Include="Controladores\HIJOSController.cs" />
+    <Compile Include="Controladores\HISTORIAsController.cs" />
+    <Compile Include="Controladores\HITOS_NO_LABORALESController.cs" />
+    <Compile Include="Controladores\HORAS_TURNOSController.cs" />
+    <Compile Include="Controladores\IMPACTOesController.cs" />
+    <Compile Include="Controladores\LOGINsController.cs" />
+    <Compile Include="Controladores\METADATAsController.cs" />
+    <Compile Include="Controladores\MODULOesController.cs" />
+    <Compile Include="Controladores\MONEDAsController.cs" />
+    <Compile Include="Controladores\PAISESController.cs" />
+    <Compile Include="Controladores\REGIONESController.cs" />
+    <Compile Include="Controladores\RESOLUTORES_TERCEROSController.cs" />
+    <Compile Include="Controladores\ROLsController.cs" />
+    <Compile Include="Controladores\ROL_MODULOController.cs" />
+    <Compile Include="Controladores\SERVICIOsController.cs" />
+    <Compile Include="Controladores\SERVICIO_EMPRESAController.cs" />
+    <Compile Include="Controladores\SLAs1Controller.cs" />
+    <Compile Include="Controladores\SLAsController.cs" />
+    <Compile Include="Controladores\TELS_EMPRESAController.cs" />
+    <Compile Include="Controladores\TELS_RESOL_TERController.cs" />
+    <Compile Include="Controladores\TIPIFICACIONsController.cs" />
+    <Compile Include="Controladores\TIPOS_METADTAController.cs" />
+    <Compile Include="Controladores\TKTsController.cs" />
+    <Compile Include="Controladores\URGENCIAsController.cs" />
+    <Compile Include="Controladores\USUARIO_FINALController.cs" />
+    <Compile Include="Controladores\VALORESController.cs" />
     <Compile Include="Data\TICKET.Master.cs">
       <DependentUpon>TICKET.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,14 +391,31 @@
     <Compile Include="Data\TICKET.Master.designer.cs">
       <DependentUpon>TICKET.Master</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Html\Buscar.aspx.cs">
+      <DependentUpon>Buscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Html\Buscar.aspx.designer.cs">
+      <DependentUpon>Buscar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Html\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bdd\Bdd.csproj">
+      <Project>{a50c6e4a-e98f-48c1-b30b-a9b057129c45}</Project>
+      <Name>Bdd</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Negocio\Negocio.csproj">
       <Project>{8cc46f72-7c76-4535-a8d4-7bb8c25d5609}</Project>
       <Name>Negocio</Name>

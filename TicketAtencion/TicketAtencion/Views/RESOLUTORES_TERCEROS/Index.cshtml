@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Bdd.RESOLUTORES_TERCEROS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOM_RESOL_TER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RSOCIAL_RESOL_TER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT_RESOL_TER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION_RESOL_TER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMUNAS.NOM_COMUNA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOM_RESOL_TER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RSOCIAL_RESOL_TER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT_RESOL_TER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION_RESOL_TER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMUNAS.NOM_COMUNA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_RESOL_TER }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_RESOL_TER }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_RESOL_TER })
+        </td>
+    </tr>
+}
+
+</table>

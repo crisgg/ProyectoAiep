@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Bdd.ALERTAS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SONIDO_ALERTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COLOR_ALERTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAIL_ALERTA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SONIDO_ALERTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COLOR_ALERTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAIL_ALERTA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_ALERTA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_ALERTA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_ALERTA })
+        </td>
+    </tr>
+}
+
+</table>

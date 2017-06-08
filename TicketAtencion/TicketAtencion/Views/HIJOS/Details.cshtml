@@ -1,0 +1,42 @@
+﻿@model Bdd.HIJOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HIJOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_HIJO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_HIJO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDAD_HIJO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDAD_HIJO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAC_HIJO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAC_HIJO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_HIJO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

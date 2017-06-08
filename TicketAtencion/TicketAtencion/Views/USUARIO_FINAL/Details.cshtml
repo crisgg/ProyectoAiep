@@ -1,0 +1,42 @@
+﻿@model Bdd.USUARIO_FINAL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>USUARIO_FINAL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPRESA_CLI.RUT_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPRESA_CLI.RUT_EMPRESA_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOGIN.PASS_HASH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOGIN.PASS_HASH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_USUFINAL }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

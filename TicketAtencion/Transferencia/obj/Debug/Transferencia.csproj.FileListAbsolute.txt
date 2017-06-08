@@ -5,3 +5,8 @@ C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAte
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\obj\Debug\Transferencia.csprojResolveAssemblyReference.cache
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\obj\Debug\Transferencia.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\obj\Debug\Transferencia.pdb
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\Transferencia.dll.config
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\EntityFramework.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\EntityFramework.xml
+C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Transferencia\bin\Debug\EntityFramework.SqlServer.xml

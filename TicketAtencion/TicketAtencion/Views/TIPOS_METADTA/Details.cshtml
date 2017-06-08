@@ -1,0 +1,26 @@
+﻿@model Bdd.TIPOS_METADTA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TIPOS_METADTA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DESC_TIPO_META)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESC_TIPO_META)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_TIPO_META }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

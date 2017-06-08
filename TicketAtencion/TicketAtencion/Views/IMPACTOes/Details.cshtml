@@ -1,0 +1,50 @@
+﻿@model Bdd.IMPACTO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IMPACTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_IMPACTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_IMPACTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_IMPACTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPCION_IMPACTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR_IMPACTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VALOR_IMPACTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RUT_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RUT_EMPRESA_PROV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_IMPACTO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

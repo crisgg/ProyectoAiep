@@ -1,0 +1,58 @@
+﻿@model Bdd.HORAS_TURNOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HORAS_TURNOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HRS_TRABAJO_SEM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HRS_TRABAJO_SEM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_INICIO_LABORAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_INICIO_LABORAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_TERMINO_LABORAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORA_TERMINO_LABORAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HORAS_TRABAJADAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HORAS_TRABAJADAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPRESA.NOMBRE_EMPRESA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_TURNO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

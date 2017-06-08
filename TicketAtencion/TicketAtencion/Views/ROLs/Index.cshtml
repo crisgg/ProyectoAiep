@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Bdd.ROL>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RUT_EMPRESA_PROV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_ROL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOGIN.PASS_HASH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RUT_EMPRESA_PROV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPCION_ROL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOGIN.PASS_HASH)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_ROL }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_ROL }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_ROL })
+        </td>
+    </tr>
+}
+
+</table>
