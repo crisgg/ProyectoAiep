@@ -33,7 +33,7 @@ namespace WebAiep.Models
         public int PRIORIDAD_TKT { get; set; }
         public byte VALOR_IMPACTO_TKT { get; set; }
         public byte VALOR_URGENCIA_TKT { get; set; }
-        public string RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> Id_EMPRESA_PROV { get; set; }
     
         public virtual ESTADOS ESTADOS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

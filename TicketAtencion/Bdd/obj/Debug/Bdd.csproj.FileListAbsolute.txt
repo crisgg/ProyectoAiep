@@ -10,3 +10,16 @@ C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAte
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.csprojResolveAssemblyReference.cache
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Bdd\obj\Debug\Bdd.pdb
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\Bdd.dll.config
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\Bdd.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\Bdd.pdb
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\Comun.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\EntityFramework.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\EntityFramework.SqlServer.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\Comun.pdb
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\Comun.dll.config
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\EntityFramework.xml
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\bin\Debug\EntityFramework.SqlServer.xml
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\obj\Debug\Bdd.csprojResolveAssemblyReference.cache
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\obj\Debug\Bdd.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Bdd\obj\Debug\Bdd.pdb

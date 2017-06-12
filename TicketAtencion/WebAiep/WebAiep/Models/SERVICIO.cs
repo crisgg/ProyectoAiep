@@ -21,10 +21,10 @@ namespace WebAiep.Models
         }
     
         public decimal ID_SERV { get; set; }
-        public Nullable<decimal> RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
         public string NOMBRE_SERVICIO { get; set; }
     
-        public virtual EMPRESA EMPRESA { get; set; }
+        public virtual EMPRESA_Prov EMPRESA_Prov { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SERVICIO_EMPRESA> SERVICIO_EMPRESA { get; set; }
     }

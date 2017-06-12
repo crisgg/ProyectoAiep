@@ -20,7 +20,7 @@ namespace WebAiep.Models
             this.AGENTES = new HashSet<AGENTES>();
         }
     
-        public string RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
         public decimal ID_AREA { get; set; }
         public string EMAIL_AREA { get; set; }
         public string DESCRIPCION_AREA { get; set; }

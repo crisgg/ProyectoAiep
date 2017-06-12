@@ -20,7 +20,7 @@ namespace WebAiep.Models
             this.ROL_MODULO = new HashSet<ROL_MODULO>();
         }
     
-        public string RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
         public decimal ID_ROL { get; set; }
         public Nullable<decimal> ID_LOGIN { get; set; }
         public string DESCRIPCION_ROL { get; set; }

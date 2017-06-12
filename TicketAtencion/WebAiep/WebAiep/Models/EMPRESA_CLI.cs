@@ -21,7 +21,7 @@ namespace WebAiep.Models
             this.USUARIO_FINAL = new HashSet<USUARIO_FINAL>();
         }
     
-        public string RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
         public decimal ID_EMPRESA { get; set; }
         public Nullable<decimal> ID_COMUNA { get; set; }
         public string NOMBRE_EMPRESA { get; set; }

@@ -14,24 +14,27 @@
     <div class="form-horizontal">
         <h4>AGENTES</h4>
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })           
-
-                <input class="form-control text-box single-line" id="RUT_EMPRESA_PROV" name="RUT_EMPRESA_PROV" type="text" value="11111111-1" style="visibility: hidden;" />               
-    
-        
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <label class="control-label col-md-2" for="ID_LOGIN">Login</label>
+            @Html.LabelFor(model => model.ID_EMPRESA_PROV, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ID_LOGIN", null, htmlAttributes: new { @class = "form-control" })
-                <span class="field-validation-valid text-danger" data-valmsg-for="ID_LOGIN" data-valmsg-replace="true"></span>
+                @Html.EditorFor(model => model.ID_EMPRESA_PROV, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ID_EMPRESA_PROV, "", new { @class = "text-danger" })
             </div>
         </div>
 
+        <div class="form-group">
+            @Html.LabelFor(model => model.ID_LOGIN, "ID_LOGIN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_LOGIN", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ID_LOGIN, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.ID_COMUNA, "ID_COMUNA", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("ID_COMUNA", Model.ID_COMUNA, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("ID_COMUNA", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.ID_COMUNA, "", new { @class = "text-danger" })
             </div>
         </div>

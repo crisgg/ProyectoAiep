@@ -20,7 +20,7 @@ namespace WebAiep.Models
             this.TKT = new HashSet<TKT>();
         }
     
-        public string RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
         public decimal ID_ESTADO { get; set; }
         public string DESCRIPCION_ESTADO { get; set; }
     

@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.RUT_EMPRESA_PROV)
+            @Html.DisplayNameFor(model => model.ID_EMPRESA_PROV)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NOMBRE_AGENTE)
@@ -27,7 +27,7 @@
             @Html.DisplayNameFor(model => model.EMAIL_AGENTE)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AREA.RUT_EMPRESA_PROV)
+            @Html.DisplayNameFor(model => model.AREA.EMAIL_AREA)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.COMUNAS.NOM_COMUNA)
@@ -41,7 +41,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.RUT_EMPRESA_PROV)
+            @Html.DisplayFor(modelItem => item.ID_EMPRESA_PROV)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.NOMBRE_AGENTE)
@@ -56,7 +56,7 @@
             @Html.DisplayFor(modelItem => item.EMAIL_AGENTE)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AREA.RUT_EMPRESA_PROV)
+            @Html.DisplayFor(modelItem => item.AREA.EMAIL_AREA)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.COMUNAS.NOM_COMUNA)

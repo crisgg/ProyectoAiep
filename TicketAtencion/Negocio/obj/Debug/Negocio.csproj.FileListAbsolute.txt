@@ -14,3 +14,21 @@ C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAte
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\obj\Debug\Negocio.dll
 C:\Users\maxco\Desktop\proyectos de estudio\Numeros de atencion visual\TicketAtencion\Negocio\obj\Debug\Negocio.pdb
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Negocio.dll.config
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Negocio.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Negocio.pdb
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Bdd.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Comun.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\EntityFramework.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\EntityFramework.SqlServer.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Newtonsoft.Json.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Bdd.pdb
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Bdd.dll.config
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Comun.pdb
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Comun.dll.config
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\EntityFramework.xml
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\EntityFramework.SqlServer.xml
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\bin\Debug\Newtonsoft.Json.xml
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\obj\Debug\Negocio.dll
+C:\GIT Repo\ProyectoAiep\TicketAtencion\Negocio\obj\Debug\Negocio.pdb

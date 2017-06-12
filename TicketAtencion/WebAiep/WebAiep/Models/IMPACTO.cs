@@ -24,7 +24,7 @@ namespace WebAiep.Models
         public string NOMBRE_IMPACTO { get; set; }
         public string DESCRIPCION_IMPACTO { get; set; }
         public byte VALOR_IMPACTO { get; set; }
-        public string RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TKT> TKT { get; set; }

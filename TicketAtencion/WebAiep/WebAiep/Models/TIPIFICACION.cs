@@ -25,7 +25,7 @@ namespace WebAiep.Models
         public Nullable<decimal> ID_TIPO_PADRE { get; set; }
         public string NOMBRE_TIPO { get; set; }
         public int NIVEL_TIPO { get; set; }
-        public string RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TIPIFICACION> TIPIFICACION1 { get; set; }

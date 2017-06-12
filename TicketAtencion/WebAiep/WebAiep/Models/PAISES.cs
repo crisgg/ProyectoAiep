@@ -18,7 +18,7 @@ namespace WebAiep.Models
         public PAISES()
         {
             this.CALENDARIO = new HashSet<CALENDARIO>();
-            this.EMPRESA = new HashSet<EMPRESA>();
+            this.EMPRESA_Prov = new HashSet<EMPRESA_Prov>();
             this.REGIONES = new HashSet<REGIONES>();
         }
     
@@ -29,7 +29,7 @@ namespace WebAiep.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CALENDARIO> CALENDARIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EMPRESA> EMPRESA { get; set; }
+        public virtual ICollection<EMPRESA_Prov> EMPRESA_Prov { get; set; }
         public virtual MONEDA MONEDA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<REGIONES> REGIONES { get; set; }

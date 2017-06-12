@@ -51,9 +51,16 @@
                             <li><a href="../Html/Buscar.aspx">Buscar</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Administraciòn</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administración<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/Empresas/Details">Mi Empresa</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Ayudas</a></li>
                 </ul>
+
+                @* Login *@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/Account/Register"><span class="glyphicon glyphicon-user "></span>Registro</a></li>
                     <li><a href="/Account/Login"><span class="glyphicon glyphicon-log-in "></span>Login</a></li>

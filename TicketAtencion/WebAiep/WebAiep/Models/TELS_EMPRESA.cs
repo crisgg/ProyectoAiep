@@ -16,8 +16,8 @@ namespace WebAiep.Models
     {
         public string TEL_EMPRESA { get; set; }
         public decimal ID_TEL_EMRPESA { get; set; }
-        public Nullable<decimal> RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> Id_EMPRESA_PROV { get; set; }
     
-        public virtual EMPRESA EMPRESA { get; set; }
+        public virtual EMPRESA_Prov EMPRESA_Prov { get; set; }
     }
 }

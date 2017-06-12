@@ -21,7 +21,7 @@ namespace WebAiep.Models
             this.HIJOS = new HashSet<HIJOS>();
         }
     
-        public string RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
         public int ID_AGENTE { get; set; }
         public Nullable<decimal> ID_LOGIN { get; set; }
         public Nullable<decimal> ID_COMUNA { get; set; }

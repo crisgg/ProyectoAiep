@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="ID_AGENTE" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="ID_AGENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_LOGIN" Type="numeric" Precision="18" Scale="0" />
           <Property Name="ID_COMUNA" Type="numeric" Precision="18" Scale="0" />
@@ -40,7 +40,7 @@
           <Key>
             <PropertyRef Name="ID_AREA" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="ID_AREA" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EMAIL_AREA" Type="varchar" MaxLength="50" />
           <Property Name="DESCRIPCION_AREA" Type="varchar" MaxLength="150" Nullable="false" />
@@ -93,31 +93,32 @@
           <Property Name="ID_REGION" Type="numeric" Precision="18" Scale="0" />
           <Property Name="NOM_DISTRITO" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="EMPRESA">
-          <Key>
-            <PropertyRef Name="RUT_EMPRESA_PROV" />
-          </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ID_PAIS" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="NOMBRE_EMPRESA" Type="varchar" MaxLength="50" />
-          <Property Name="RAZON_SOCIAL_EMPRESA" Type="varchar" MaxLength="150" />
-          <Property Name="DIRECCION_EMPRSA" Type="varchar" MaxLength="250" />
-        </EntityType>
         <EntityType Name="EMPRESA_CLI">
           <Key>
             <PropertyRef Name="ID_EMPRESA" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="ID_EMPRESA" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_COMUNA" Type="numeric" Precision="18" Scale="0" />
           <Property Name="NOMBRE_EMPRESA" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="DIRECCION_EMPRESA" Type="varchar" MaxLength="150" Nullable="false" />
         </EntityType>
+        <EntityType Name="EMPRESA_Prov">
+          <Key>
+            <PropertyRef Name="ID_Empresa_Prov" />
+          </Key>
+          <Property Name="ID_Empresa_Prov" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PAIS" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_EMPRESA" Type="varchar" MaxLength="50" />
+          <Property Name="RAZON_SOCIAL_EMPRESA" Type="varchar" MaxLength="150" />
+          <Property Name="DIRECCION_EMPRSA" Type="varchar" MaxLength="250" />
+          <Property Name="DNI_Empre_Prov" Type="varchar" MaxLength="10" />
+        </EntityType>
         <EntityType Name="ESTADOS">
           <Key>
             <PropertyRef Name="ID_ESTADO" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="ID_ESTADO" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DESCRIPCION_ESTADO" Type="varchar" MaxLength="200" Nullable="false" />
         </EntityType>
@@ -148,7 +149,7 @@
             <PropertyRef Name="ID_HITOS" />
           </Key>
           <Property Name="ID_HITOS" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="DESCRIPCION_HITONL" Type="varchar" MaxLength="250" />
           <Property Name="FECHA_INICO_HITONL" Type="datetime" />
           <Property Name="FECHA_TERMINO_HITONL" Type="datetime" />
@@ -161,7 +162,7 @@
           </Key>
           <Property Name="HRS_TRABAJO_SEM" Type="int" />
           <Property Name="ID_TURNO" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="HORA_INICIO_LABORAL" Type="datetime" />
           <Property Name="HORA_TERMINO_LABORAL" Type="datetime" />
           <Property Name="HORAS_TRABAJADAS" Type="int" />
@@ -174,7 +175,7 @@
           <Property Name="NOMBRE_IMPACTO" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="DESCRIPCION_IMPACTO" Type="varchar" MaxLength="100" />
           <Property Name="VALOR_IMPACTO" Type="tinyint" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="LOGIN">
           <Key>
@@ -221,6 +222,7 @@
           <Property Name="ID_REGION" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_PAIS" Type="numeric" Precision="18" Scale="0" />
           <Property Name="NOMBRE_REGION" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ordinal" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="RESOLUTORES_TERCEROS">
           <Key>
@@ -237,7 +239,7 @@
           <Key>
             <PropertyRef Name="ID_ROL" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="ID_ROL" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_LOGIN" Type="numeric" Precision="18" Scale="0" />
           <Property Name="DESCRIPCION_ROL" Type="varchar" MaxLength="150" Nullable="false" />
@@ -258,7 +260,7 @@
             <PropertyRef Name="ID_SERV" />
           </Key>
           <Property Name="ID_SERV" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="NOMBRE_SERVICIO" Type="varchar" MaxLength="150" Nullable="false" />
         </EntityType>
         <EntityType Name="SERVICIO_EMPRESA">
@@ -287,7 +289,7 @@
           </Key>
           <Property Name="TEL_EMPRESA" Type="varchar" MaxLength="12" Nullable="false" />
           <Property Name="ID_TEL_EMRPESA" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Id_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="TELS_RESOL_TER">
           <Key>
@@ -305,7 +307,7 @@
           <Property Name="ID_TIPO_PADRE" Type="numeric" Precision="18" Scale="0" />
           <Property Name="NOMBRE_TIPO" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="NIVEL_TIPO" Type="int" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="TIPOS_METADTA">
           <Key>
@@ -331,13 +333,13 @@
           <Property Name="PRIORIDAD_TKT" Type="int" Nullable="false" />
           <Property Name="VALOR_IMPACTO_TKT" Type="tinyint" Nullable="false" />
           <Property Name="VALOR_URGENCIA_TKT" Type="tinyint" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="Id_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="URGENCIA">
           <Key>
             <PropertyRef Name="ID_URGENCIA" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="Id_EMPRESA_PROV" Type="numeric" Precision="18" Scale="0" />
           <Property Name="ID_URGENCIA" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NOMBRE_URGENCIA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="DESCRIPCION_URGENCIA" Type="varchar" MaxLength="100" />
@@ -518,12 +520,12 @@
         </Association>
         <Association Name="FK_EMPRESA_REFERENCE_PAISES">
           <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="*" />
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PAISES">
               <PropertyRef Name="ID_PAIS" />
             </Principal>
-            <Dependent Role="EMPRESA">
+            <Dependent Role="EMPRESA_Prov">
               <PropertyRef Name="ID_PAIS" />
             </Dependent>
           </ReferentialConstraint>
@@ -553,26 +555,26 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HITOS_NO_REFERENCE_EMPRESA">
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="0..1" />
           <End Role="HITOS_NO_LABORALES" Type="Self.HITOS_NO_LABORALES" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            <Principal Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_Empresa_Prov" />
             </Principal>
             <Dependent Role="HITOS_NO_LABORALES">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
+              <PropertyRef Name="ID_EMPRESA_PROV" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HORAS_TU_REFERENCE_EMPRESA">
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="0..1" />
           <End Role="HORAS_TURNOS" Type="Self.HORAS_TURNOS" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            <Principal Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_Empresa_Prov" />
             </Principal>
             <Dependent Role="HORAS_TURNOS">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
+              <PropertyRef Name="ID_EMPRESA_PROV" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -661,14 +663,14 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SERVICIO_REFERENCE_EMPRESA">
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="0..1" />
           <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            <Principal Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_Empresa_Prov" />
             </Principal>
             <Dependent Role="SERVICIO">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
+              <PropertyRef Name="ID_EMPRESA_PROV" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -721,14 +723,14 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_TELS_EMP_REFERENCE_EMPRESA">
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="0..1" />
           <End Role="TELS_EMPRESA" Type="Self.TELS_EMPRESA" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
+            <Principal Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_Empresa_Prov" />
             </Principal>
             <Dependent Role="TELS_EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
+              <PropertyRef Name="Id_EMPRESA_PROV" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -875,8 +877,8 @@
           <EntitySet Name="DATOS_EXTRAS" EntityType="Self.DATOS_EXTRAS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DISTRITO_META" EntityType="Self.DISTRITO_META" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DISTRITOS" EntityType="Self.DISTRITOS" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EMPRESA_CLI" EntityType="Self.EMPRESA_CLI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPRESA_Prov" EntityType="Self.EMPRESA_Prov" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ESTADOS" EntityType="Self.ESTADOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HIJOS" EntityType="Self.HIJOS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HISTORIA" EntityType="Self.HISTORIA" Schema="dbo" store:Type="Tables" />
@@ -957,7 +959,7 @@
           </AssociationSet>
           <AssociationSet Name="FK_EMPRESA_REFERENCE_PAISES" Association="Self.FK_EMPRESA_REFERENCE_PAISES">
             <End Role="PAISES" EntitySet="PAISES" />
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
           </AssociationSet>
           <AssociationSet Name="FK_HISTORIA_RELATIONS_RESOLUTO" Association="Self.FK_HISTORIA_RELATIONS_RESOLUTO">
             <End Role="RESOLUTORES_TERCEROS" EntitySet="RESOLUTORES_TERCEROS" />
@@ -968,11 +970,11 @@
             <End Role="HISTORIA" EntitySet="HISTORIA" />
           </AssociationSet>
           <AssociationSet Name="FK_HITOS_NO_REFERENCE_EMPRESA" Association="Self.FK_HITOS_NO_REFERENCE_EMPRESA">
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
             <End Role="HITOS_NO_LABORALES" EntitySet="HITOS_NO_LABORALES" />
           </AssociationSet>
           <AssociationSet Name="FK_HORAS_TU_REFERENCE_EMPRESA" Association="Self.FK_HORAS_TU_REFERENCE_EMPRESA">
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
             <End Role="HORAS_TURNOS" EntitySet="HORAS_TURNOS" />
           </AssociationSet>
           <AssociationSet Name="FK_METADATA_REFERENCE_TIPOS_ME" Association="Self.FK_METADATA_REFERENCE_TIPOS_ME">
@@ -1004,7 +1006,7 @@
             <End Role="ROL" EntitySet="ROL" />
           </AssociationSet>
           <AssociationSet Name="FK_SERVICIO_REFERENCE_EMPRESA" Association="Self.FK_SERVICIO_REFERENCE_EMPRESA">
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
             <End Role="SERVICIO" EntitySet="SERVICIO" />
           </AssociationSet>
           <AssociationSet Name="FK_SERVICIO_RELATIONS_EMPRESA_" Association="Self.FK_SERVICIO_RELATIONS_EMPRESA_">
@@ -1024,7 +1026,7 @@
             <End Role="SLA" EntitySet="SLA" />
           </AssociationSet>
           <AssociationSet Name="FK_TELS_EMP_REFERENCE_EMPRESA" Association="Self.FK_TELS_EMP_REFERENCE_EMPRESA">
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
             <End Role="TELS_EMPRESA" EntitySet="TELS_EMPRESA" />
           </AssociationSet>
           <AssociationSet Name="FK_TELS_RES_RELATIONS_RESOLUTO" Association="Self.FK_TELS_RES_RELATIONS_RESOLUTO">
@@ -1081,7 +1083,7 @@
           <Key>
             <PropertyRef Name="ID_AGENTE" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ID_AGENTE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_LOGIN" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ID_COMUNA" Type="Decimal" Precision="18" Scale="0" />
@@ -1110,7 +1112,7 @@
           <Key>
             <PropertyRef Name="ID_AREA" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ID_AREA" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="EMAIL_AREA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="DESCRIPCION_AREA" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1166,26 +1168,11 @@
           <NavigationProperty Name="REGIONES" Relationship="Self.FK_DISTRITO_REFERENCE_REGIONES" FromRole="DISTRITOS" ToRole="REGIONES" />
           <NavigationProperty Name="METADATA" Relationship="Self.DISTRITO_META" FromRole="DISTRITOS" ToRole="METADATA" />
         </EntityType>
-        <EntityType Name="EMPRESA">
-          <Key>
-            <PropertyRef Name="RUT_EMPRESA_PROV" />
-          </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_PAIS" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="RAZON_SOCIAL_EMPRESA" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="DIRECCION_EMPRSA" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PAISES" Relationship="Self.FK_EMPRESA_REFERENCE_PAISES" FromRole="EMPRESA" ToRole="PAISES" />
-          <NavigationProperty Name="HITOS_NO_LABORALES" Relationship="Self.FK_HITOS_NO_REFERENCE_EMPRESA" FromRole="EMPRESA" ToRole="HITOS_NO_LABORALES" />
-          <NavigationProperty Name="HORAS_TURNOS" Relationship="Self.FK_HORAS_TU_REFERENCE_EMPRESA" FromRole="EMPRESA" ToRole="HORAS_TURNOS" />
-          <NavigationProperty Name="SERVICIO" Relationship="Self.FK_SERVICIO_REFERENCE_EMPRESA" FromRole="EMPRESA" ToRole="SERVICIO" />
-          <NavigationProperty Name="TELS_EMPRESA" Relationship="Self.FK_TELS_EMP_REFERENCE_EMPRESA" FromRole="EMPRESA" ToRole="TELS_EMPRESA" />
-        </EntityType>
         <EntityType Name="EMPRESA_CLI">
           <Key>
             <PropertyRef Name="ID_EMPRESA" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ID_EMPRESA" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_COMUNA" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1194,11 +1181,27 @@
           <NavigationProperty Name="SERVICIO_EMPRESA" Relationship="Self.FK_SERVICIO_RELATIONS_EMPRESA_" FromRole="EMPRESA_CLI" ToRole="SERVICIO_EMPRESA" />
           <NavigationProperty Name="USUARIO_FINAL" Relationship="Self.FK_USUARIO__RELATIONS_EMPRESA_" FromRole="EMPRESA_CLI" ToRole="USUARIO_FINAL" />
         </EntityType>
+        <EntityType Name="EMPRESA_Prov">
+          <Key>
+            <PropertyRef Name="ID_Empresa_Prov" />
+          </Key>
+          <Property Name="ID_Empresa_Prov" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PAIS" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NOMBRE_EMPRESA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RAZON_SOCIAL_EMPRESA" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION_EMPRSA" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="DNI_Empre_Prov" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PAISES" Relationship="Self.FK_EMPRESA_REFERENCE_PAISES" FromRole="EMPRESA_Prov" ToRole="PAISES" />
+          <NavigationProperty Name="HITOS_NO_LABORALES" Relationship="Self.FK_HITOS_NO_REFERENCE_EMPRESA" FromRole="EMPRESA_Prov" ToRole="HITOS_NO_LABORALES" />
+          <NavigationProperty Name="HORAS_TURNOS" Relationship="Self.FK_HORAS_TU_REFERENCE_EMPRESA" FromRole="EMPRESA_Prov" ToRole="HORAS_TURNOS" />
+          <NavigationProperty Name="SERVICIO" Relationship="Self.FK_SERVICIO_REFERENCE_EMPRESA" FromRole="EMPRESA_Prov" ToRole="SERVICIO" />
+          <NavigationProperty Name="TELS_EMPRESA" Relationship="Self.FK_TELS_EMP_REFERENCE_EMPRESA" FromRole="EMPRESA_Prov" ToRole="TELS_EMPRESA" />
+        </EntityType>
         <EntityType Name="ESTADOS">
           <Key>
             <PropertyRef Name="ID_ESTADO" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ID_ESTADO" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DESCRIPCION_ESTADO" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_ESTADOS" FromRole="ESTADOS" ToRole="TKT" />
@@ -1233,13 +1236,13 @@
             <PropertyRef Name="ID_HITOS" />
           </Key>
           <Property Name="ID_HITOS" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RUT_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="DESCRIPCION_HITONL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="FECHA_INICO_HITONL" Type="DateTime" Precision="3" />
           <Property Name="FECHA_TERMINO_HITONL" Type="DateTime" Precision="3" />
           <Property Name="HORA_INICIO_HITONL" Type="DateTime" Precision="3" />
           <Property Name="HORA_TERMNO_HITONL" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_HITOS_NO_REFERENCE_EMPRESA" FromRole="HITOS_NO_LABORALES" ToRole="EMPRESA" />
+          <NavigationProperty Name="EMPRESA_Prov" Relationship="Self.FK_HITOS_NO_REFERENCE_EMPRESA" FromRole="HITOS_NO_LABORALES" ToRole="EMPRESA_Prov" />
         </EntityType>
         <EntityType Name="HORAS_TURNOS">
           <Key>
@@ -1247,11 +1250,11 @@
           </Key>
           <Property Name="HRS_TRABAJO_SEM" Type="Int32" />
           <Property Name="ID_TURNO" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RUT_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="HORA_INICIO_LABORAL" Type="DateTime" Precision="3" />
           <Property Name="HORA_TERMINO_LABORAL" Type="DateTime" Precision="3" />
           <Property Name="HORAS_TRABAJADAS" Type="Int32" />
-          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_HORAS_TU_REFERENCE_EMPRESA" FromRole="HORAS_TURNOS" ToRole="EMPRESA" />
+          <NavigationProperty Name="EMPRESA_Prov" Relationship="Self.FK_HORAS_TU_REFERENCE_EMPRESA" FromRole="HORAS_TURNOS" ToRole="EMPRESA_Prov" />
         </EntityType>
         <EntityType Name="IMPACTO">
           <Key>
@@ -1261,7 +1264,7 @@
           <Property Name="NOMBRE_IMPACTO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DESCRIPCION_IMPACTO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="VALOR_IMPACTO" Type="Byte" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_IMPACTO" FromRole="IMPACTO" ToRole="TKT" />
         </EntityType>
         <EntityType Name="LOGIN">
@@ -1312,7 +1315,7 @@
           <Property Name="ID_MONEDA" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="NOM_PAIS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="CALENDARIO" Relationship="Self.FK_CALENDAR_REFERENCE_PAISES" FromRole="PAISES" ToRole="CALENDARIO" />
-          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_EMPRESA_REFERENCE_PAISES" FromRole="PAISES" ToRole="EMPRESA" />
+          <NavigationProperty Name="EMPRESA_Prov" Relationship="Self.FK_EMPRESA_REFERENCE_PAISES" FromRole="PAISES" ToRole="EMPRESA_Prov" />
           <NavigationProperty Name="MONEDA" Relationship="Self.FK_PAISES_REFERENCE_MONEDA" FromRole="PAISES" ToRole="MONEDA" />
           <NavigationProperty Name="REGIONES" Relationship="Self.FK_REGIONES_REFERENCE_PAISES" FromRole="PAISES" ToRole="REGIONES" />
         </EntityType>
@@ -1323,6 +1326,7 @@
           <Property Name="ID_REGION" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_PAIS" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="NOMBRE_REGION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ordinal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DISTRITOS" Relationship="Self.FK_DISTRITO_REFERENCE_REGIONES" FromRole="REGIONES" ToRole="DISTRITOS" />
           <NavigationProperty Name="PAISES" Relationship="Self.FK_REGIONES_REFERENCE_PAISES" FromRole="REGIONES" ToRole="PAISES" />
         </EntityType>
@@ -1344,7 +1348,7 @@
           <Key>
             <PropertyRef Name="ID_ROL" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ID_ROL" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_LOGIN" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="DESCRIPCION_ROL" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
@@ -1369,9 +1373,9 @@
             <PropertyRef Name="ID_SERV" />
           </Key>
           <Property Name="ID_SERV" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RUT_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="NOMBRE_SERVICIO" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_SERVICIO_REFERENCE_EMPRESA" FromRole="SERVICIO" ToRole="EMPRESA" />
+          <NavigationProperty Name="EMPRESA_Prov" Relationship="Self.FK_SERVICIO_REFERENCE_EMPRESA" FromRole="SERVICIO" ToRole="EMPRESA_Prov" />
           <NavigationProperty Name="SERVICIO_EMPRESA" Relationship="Self.FK_SERVICIO_RELATIONS_SERVICIO" FromRole="SERVICIO" ToRole="SERVICIO_EMPRESA" />
         </EntityType>
         <EntityType Name="SERVICIO_EMPRESA">
@@ -1406,8 +1410,8 @@
           </Key>
           <Property Name="TEL_EMPRESA" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ID_TEL_EMRPESA" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RUT_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
-          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_TELS_EMP_REFERENCE_EMPRESA" FromRole="TELS_EMPRESA" ToRole="EMPRESA" />
+          <Property Name="Id_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="EMPRESA_Prov" Relationship="Self.FK_TELS_EMP_REFERENCE_EMPRESA" FromRole="TELS_EMPRESA" ToRole="EMPRESA_Prov" />
         </EntityType>
         <EntityType Name="TELS_RESOL_TER">
           <Key>
@@ -1426,7 +1430,7 @@
           <Property Name="ID_TIPO_PADRE" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="NOMBRE_TIPO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NIVEL_TIPO" Type="Int32" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="TIPIFICACION1" Relationship="Self.FK_TIPIFICA_RELATIONS_TIPIFICA" FromRole="TIPIFICACION" ToRole="TIPIFICACION1" />
           <NavigationProperty Name="TIPIFICACION2" Relationship="Self.FK_TIPIFICA_RELATIONS_TIPIFICA" FromRole="TIPIFICACION1" ToRole="TIPIFICACION" />
           <NavigationProperty Name="TKT" Relationship="Self.FK_TKT_RELATIONS_TIPIFICA" FromRole="TIPIFICACION" ToRole="TKT" />
@@ -1456,7 +1460,7 @@
           <Property Name="PRIORIDAD_TKT" Type="Int32" Nullable="false" />
           <Property Name="VALOR_IMPACTO_TKT" Type="Byte" Nullable="false" />
           <Property Name="VALOR_URGENCIA_TKT" Type="Byte" Nullable="false" />
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="ESTADOS" Relationship="Self.FK_TKT_RELATIONS_ESTADOS" FromRole="TKT" ToRole="ESTADOS" />
           <NavigationProperty Name="HISTORIA" Relationship="Self.FK_HISTORIA_RELATIONS_TKT" FromRole="TKT" ToRole="HISTORIA" />
           <NavigationProperty Name="IMPACTO" Relationship="Self.FK_TKT_RELATIONS_IMPACTO" FromRole="TKT" ToRole="IMPACTO" />
@@ -1469,7 +1473,7 @@
           <Key>
             <PropertyRef Name="ID_URGENCIA" />
           </Key>
-          <Property Name="RUT_EMPRESA_PROV" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Id_EMPRESA_PROV" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ID_URGENCIA" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NOMBRE_URGENCIA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DESCRIPCION_URGENCIA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -1628,66 +1632,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_EMPRESA_REFERENCE_PAISES">
-          <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PAISES">
-              <PropertyRef Name="ID_PAIS" />
-            </Principal>
-            <Dependent Role="EMPRESA">
-              <PropertyRef Name="ID_PAIS" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HITOS_NO_REFERENCE_EMPRESA">
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
-          <End Role="HITOS_NO_LABORALES" Type="Self.HITOS_NO_LABORALES" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
-            </Principal>
-            <Dependent Role="HITOS_NO_LABORALES">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_HORAS_TU_REFERENCE_EMPRESA">
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
-          <End Role="HORAS_TURNOS" Type="Self.HORAS_TURNOS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
-            </Principal>
-            <Dependent Role="HORAS_TURNOS">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_SERVICIO_REFERENCE_EMPRESA">
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
-          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
-            </Principal>
-            <Dependent Role="SERVICIO">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_TELS_EMP_REFERENCE_EMPRESA">
-          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="0..1" />
-          <End Role="TELS_EMPRESA" Type="Self.TELS_EMPRESA" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
-            </Principal>
-            <Dependent Role="TELS_EMPRESA">
-              <PropertyRef Name="RUT_EMPRESA_PROV" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_SERVICIO_RELATIONS_EMPRESA_">
           <End Role="EMPRESA_CLI" Type="Self.EMPRESA_CLI" Multiplicity="0..1" />
           <End Role="SERVICIO_EMPRESA" Type="Self.SERVICIO_EMPRESA" Multiplicity="*" />
@@ -1709,6 +1653,66 @@
             </Principal>
             <Dependent Role="USUARIO_FINAL">
               <PropertyRef Name="ID_EMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EMPRESA_REFERENCE_PAISES">
+          <End Role="PAISES" Type="Self.PAISES" Multiplicity="0..1" />
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PAISES">
+              <PropertyRef Name="ID_PAIS" />
+            </Principal>
+            <Dependent Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_PAIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HITOS_NO_REFERENCE_EMPRESA">
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="0..1" />
+          <End Role="HITOS_NO_LABORALES" Type="Self.HITOS_NO_LABORALES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_Empresa_Prov" />
+            </Principal>
+            <Dependent Role="HITOS_NO_LABORALES">
+              <PropertyRef Name="ID_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HORAS_TU_REFERENCE_EMPRESA">
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="0..1" />
+          <End Role="HORAS_TURNOS" Type="Self.HORAS_TURNOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_Empresa_Prov" />
+            </Principal>
+            <Dependent Role="HORAS_TURNOS">
+              <PropertyRef Name="ID_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SERVICIO_REFERENCE_EMPRESA">
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="0..1" />
+          <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_Empresa_Prov" />
+            </Principal>
+            <Dependent Role="SERVICIO">
+              <PropertyRef Name="ID_EMPRESA_PROV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TELS_EMP_REFERENCE_EMPRESA">
+          <End Role="EMPRESA_Prov" Type="Self.EMPRESA_Prov" Multiplicity="0..1" />
+          <End Role="TELS_EMPRESA" Type="Self.TELS_EMPRESA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA_Prov">
+              <PropertyRef Name="ID_Empresa_Prov" />
+            </Principal>
+            <Dependent Role="TELS_EMPRESA">
+              <PropertyRef Name="Id_EMPRESA_PROV" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1960,7 +1964,7 @@
           <End Role="DISTRITOS" Type="Self.DISTRITOS" Multiplicity="*" />
           <End Role="METADATA" Type="Self.METADATA" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="DB_A255CD_MoDeskBDDEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DB_A255CD_MoDeskBDDEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AGENTES" EntityType="Self.AGENTES" />
           <EntitySet Name="ALERTAS" EntityType="Self.ALERTAS" />
           <EntitySet Name="AREA" EntityType="Self.AREA" />
@@ -1969,8 +1973,8 @@
           <EntitySet Name="COMUNAS" EntityType="Self.COMUNAS" />
           <EntitySet Name="DATOS_EXTRAS" EntityType="Self.DATOS_EXTRAS" />
           <EntitySet Name="DISTRITOS" EntityType="Self.DISTRITOS" />
-          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" />
           <EntitySet Name="EMPRESA_CLI" EntityType="Self.EMPRESA_CLI" />
+          <EntitySet Name="EMPRESA_Prov" EntityType="Self.EMPRESA_Prov" />
           <EntitySet Name="ESTADOS" EntityType="Self.ESTADOS" />
           <EntitySet Name="HIJOS" EntityType="Self.HIJOS" />
           <EntitySet Name="HISTORIA" EntityType="Self.HISTORIA" />
@@ -2041,26 +2045,6 @@
             <End Role="REGIONES" EntitySet="REGIONES" />
             <End Role="DISTRITOS" EntitySet="DISTRITOS" />
           </AssociationSet>
-          <AssociationSet Name="FK_EMPRESA_REFERENCE_PAISES" Association="Self.FK_EMPRESA_REFERENCE_PAISES">
-            <End Role="PAISES" EntitySet="PAISES" />
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HITOS_NO_REFERENCE_EMPRESA" Association="Self.FK_HITOS_NO_REFERENCE_EMPRESA">
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
-            <End Role="HITOS_NO_LABORALES" EntitySet="HITOS_NO_LABORALES" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HORAS_TU_REFERENCE_EMPRESA" Association="Self.FK_HORAS_TU_REFERENCE_EMPRESA">
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
-            <End Role="HORAS_TURNOS" EntitySet="HORAS_TURNOS" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SERVICIO_REFERENCE_EMPRESA" Association="Self.FK_SERVICIO_REFERENCE_EMPRESA">
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
-            <End Role="SERVICIO" EntitySet="SERVICIO" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TELS_EMP_REFERENCE_EMPRESA" Association="Self.FK_TELS_EMP_REFERENCE_EMPRESA">
-            <End Role="EMPRESA" EntitySet="EMPRESA" />
-            <End Role="TELS_EMPRESA" EntitySet="TELS_EMPRESA" />
-          </AssociationSet>
           <AssociationSet Name="FK_SERVICIO_RELATIONS_EMPRESA_" Association="Self.FK_SERVICIO_RELATIONS_EMPRESA_">
             <End Role="EMPRESA_CLI" EntitySet="EMPRESA_CLI" />
             <End Role="SERVICIO_EMPRESA" EntitySet="SERVICIO_EMPRESA" />
@@ -2068,6 +2052,26 @@
           <AssociationSet Name="FK_USUARIO__RELATIONS_EMPRESA_" Association="Self.FK_USUARIO__RELATIONS_EMPRESA_">
             <End Role="EMPRESA_CLI" EntitySet="EMPRESA_CLI" />
             <End Role="USUARIO_FINAL" EntitySet="USUARIO_FINAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EMPRESA_REFERENCE_PAISES" Association="Self.FK_EMPRESA_REFERENCE_PAISES">
+            <End Role="PAISES" EntitySet="PAISES" />
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HITOS_NO_REFERENCE_EMPRESA" Association="Self.FK_HITOS_NO_REFERENCE_EMPRESA">
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
+            <End Role="HITOS_NO_LABORALES" EntitySet="HITOS_NO_LABORALES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HORAS_TU_REFERENCE_EMPRESA" Association="Self.FK_HORAS_TU_REFERENCE_EMPRESA">
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
+            <End Role="HORAS_TURNOS" EntitySet="HORAS_TURNOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SERVICIO_REFERENCE_EMPRESA" Association="Self.FK_SERVICIO_REFERENCE_EMPRESA">
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
+            <End Role="SERVICIO" EntitySet="SERVICIO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TELS_EMP_REFERENCE_EMPRESA" Association="Self.FK_TELS_EMP_REFERENCE_EMPRESA">
+            <End Role="EMPRESA_Prov" EntitySet="EMPRESA_Prov" />
+            <End Role="TELS_EMPRESA" EntitySet="TELS_EMPRESA" />
           </AssociationSet>
           <AssociationSet Name="FK_TKT_RELATIONS_ESTADOS" Association="Self.FK_TKT_RELATIONS_ESTADOS">
             <End Role="ESTADOS" EntitySet="ESTADOS" />
@@ -2163,11 +2167,11 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_A255CD_MoDeskBDDModelStoreContainer" CdmEntityContainer="DB_A255CD_MoDeskBDDEntities">
+        <EntityContainerMapping StorageEntityContainer="DB_A255CD_MoDeskBDDModelStoreContainer" CdmEntityContainer="DB_A255CD_MoDeskBDDEntities2">
           <EntitySetMapping Name="AGENTES">
             <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.AGENTES">
               <MappingFragment StoreEntitySet="AGENTES">
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
                 <ScalarProperty Name="ID_AGENTE" ColumnName="ID_AGENTE" />
                 <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
                 <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
@@ -2192,7 +2196,7 @@
           <EntitySetMapping Name="AREA">
             <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.AREA">
               <MappingFragment StoreEntitySet="AREA">
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
                 <ScalarProperty Name="ID_AREA" ColumnName="ID_AREA" />
                 <ScalarProperty Name="EMAIL_AREA" ColumnName="EMAIL_AREA" />
                 <ScalarProperty Name="DESCRIPCION_AREA" ColumnName="DESCRIPCION_AREA" />
@@ -2244,21 +2248,10 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="EMPRESA">
-            <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.EMPRESA">
-              <MappingFragment StoreEntitySet="EMPRESA">
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
-                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
-                <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
-                <ScalarProperty Name="RAZON_SOCIAL_EMPRESA" ColumnName="RAZON_SOCIAL_EMPRESA" />
-                <ScalarProperty Name="DIRECCION_EMPRSA" ColumnName="DIRECCION_EMPRSA" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="EMPRESA_CLI">
             <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.EMPRESA_CLI">
               <MappingFragment StoreEntitySet="EMPRESA_CLI">
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
                 <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
                 <ScalarProperty Name="ID_COMUNA" ColumnName="ID_COMUNA" />
                 <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
@@ -2266,10 +2259,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="EMPRESA_Prov">
+            <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.EMPRESA_Prov">
+              <MappingFragment StoreEntitySet="EMPRESA_Prov">
+                <ScalarProperty Name="ID_Empresa_Prov" ColumnName="ID_Empresa_Prov" />
+                <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+                <ScalarProperty Name="NOMBRE_EMPRESA" ColumnName="NOMBRE_EMPRESA" />
+                <ScalarProperty Name="RAZON_SOCIAL_EMPRESA" ColumnName="RAZON_SOCIAL_EMPRESA" />
+                <ScalarProperty Name="DIRECCION_EMPRSA" ColumnName="DIRECCION_EMPRSA" />
+                <ScalarProperty Name="DNI_Empre_Prov" ColumnName="DNI_Empre_Prov" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="ESTADOS">
             <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.ESTADOS">
               <MappingFragment StoreEntitySet="ESTADOS">
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
                 <ScalarProperty Name="ID_ESTADO" ColumnName="ID_ESTADO" />
                 <ScalarProperty Name="DESCRIPCION_ESTADO" ColumnName="DESCRIPCION_ESTADO" />
               </MappingFragment>
@@ -2303,7 +2308,7 @@
             <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.HITOS_NO_LABORALES">
               <MappingFragment StoreEntitySet="HITOS_NO_LABORALES">
                 <ScalarProperty Name="ID_HITOS" ColumnName="ID_HITOS" />
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
                 <ScalarProperty Name="DESCRIPCION_HITONL" ColumnName="DESCRIPCION_HITONL" />
                 <ScalarProperty Name="FECHA_INICO_HITONL" ColumnName="FECHA_INICO_HITONL" />
                 <ScalarProperty Name="FECHA_TERMINO_HITONL" ColumnName="FECHA_TERMINO_HITONL" />
@@ -2317,7 +2322,7 @@
               <MappingFragment StoreEntitySet="HORAS_TURNOS">
                 <ScalarProperty Name="HRS_TRABAJO_SEM" ColumnName="HRS_TRABAJO_SEM" />
                 <ScalarProperty Name="ID_TURNO" ColumnName="ID_TURNO" />
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
                 <ScalarProperty Name="HORA_INICIO_LABORAL" ColumnName="HORA_INICIO_LABORAL" />
                 <ScalarProperty Name="HORA_TERMINO_LABORAL" ColumnName="HORA_TERMINO_LABORAL" />
                 <ScalarProperty Name="HORAS_TRABAJADAS" ColumnName="HORAS_TRABAJADAS" />
@@ -2331,7 +2336,7 @@
                 <ScalarProperty Name="NOMBRE_IMPACTO" ColumnName="NOMBRE_IMPACTO" />
                 <ScalarProperty Name="DESCRIPCION_IMPACTO" ColumnName="DESCRIPCION_IMPACTO" />
                 <ScalarProperty Name="VALOR_IMPACTO" ColumnName="VALOR_IMPACTO" />
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2384,6 +2389,7 @@
                 <ScalarProperty Name="ID_REGION" ColumnName="ID_REGION" />
                 <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
                 <ScalarProperty Name="NOMBRE_REGION" ColumnName="NOMBRE_REGION" />
+                <ScalarProperty Name="Ordinal" ColumnName="Ordinal" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2402,7 +2408,7 @@
           <EntitySetMapping Name="ROL">
             <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.ROL">
               <MappingFragment StoreEntitySet="ROL">
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
                 <ScalarProperty Name="ID_ROL" ColumnName="ID_ROL" />
                 <ScalarProperty Name="ID_LOGIN" ColumnName="ID_LOGIN" />
                 <ScalarProperty Name="DESCRIPCION_ROL" ColumnName="DESCRIPCION_ROL" />
@@ -2424,7 +2430,7 @@
             <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.SERVICIO">
               <MappingFragment StoreEntitySet="SERVICIO">
                 <ScalarProperty Name="ID_SERV" ColumnName="ID_SERV" />
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
                 <ScalarProperty Name="NOMBRE_SERVICIO" ColumnName="NOMBRE_SERVICIO" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -2456,7 +2462,7 @@
               <MappingFragment StoreEntitySet="TELS_EMPRESA">
                 <ScalarProperty Name="TEL_EMPRESA" ColumnName="TEL_EMPRESA" />
                 <ScalarProperty Name="ID_TEL_EMRPESA" ColumnName="ID_TEL_EMRPESA" />
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="Id_EMPRESA_PROV" ColumnName="Id_EMPRESA_PROV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2476,7 +2482,7 @@
                 <ScalarProperty Name="ID_TIPO_PADRE" ColumnName="ID_TIPO_PADRE" />
                 <ScalarProperty Name="NOMBRE_TIPO" ColumnName="NOMBRE_TIPO" />
                 <ScalarProperty Name="NIVEL_TIPO" ColumnName="NIVEL_TIPO" />
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="ID_EMPRESA_PROV" ColumnName="ID_EMPRESA_PROV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2504,14 +2510,14 @@
                 <ScalarProperty Name="PRIORIDAD_TKT" ColumnName="PRIORIDAD_TKT" />
                 <ScalarProperty Name="VALOR_IMPACTO_TKT" ColumnName="VALOR_IMPACTO_TKT" />
                 <ScalarProperty Name="VALOR_URGENCIA_TKT" ColumnName="VALOR_URGENCIA_TKT" />
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="Id_EMPRESA_PROV" ColumnName="Id_EMPRESA_PROV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="URGENCIA">
             <EntityTypeMapping TypeName="DB_A255CD_MoDeskBDDModel.URGENCIA">
               <MappingFragment StoreEntitySet="URGENCIA">
-                <ScalarProperty Name="RUT_EMPRESA_PROV" ColumnName="RUT_EMPRESA_PROV" />
+                <ScalarProperty Name="Id_EMPRESA_PROV" ColumnName="Id_EMPRESA_PROV" />
                 <ScalarProperty Name="ID_URGENCIA" ColumnName="ID_URGENCIA" />
                 <ScalarProperty Name="NOMBRE_URGENCIA" ColumnName="NOMBRE_URGENCIA" />
                 <ScalarProperty Name="DESCRIPCION_URGENCIA" ColumnName="DESCRIPCION_URGENCIA" />

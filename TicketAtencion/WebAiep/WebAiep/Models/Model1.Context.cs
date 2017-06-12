@@ -33,8 +33,8 @@ namespace WebAiep.Models
         public virtual DbSet<COMUNAS> COMUNAS { get; set; }
         public virtual DbSet<DATOS_EXTRAS> DATOS_EXTRAS { get; set; }
         public virtual DbSet<DISTRITOS> DISTRITOS { get; set; }
-        public virtual DbSet<EMPRESA> EMPRESA { get; set; }
         public virtual DbSet<EMPRESA_CLI> EMPRESA_CLI { get; set; }
+        public virtual DbSet<EMPRESA_Prov> EMPRESA_Prov { get; set; }
         public virtual DbSet<ESTADOS> ESTADOS { get; set; }
         public virtual DbSet<HIJOS> HIJOS { get; set; }
         public virtual DbSet<HISTORIA> HISTORIA { get; set; }

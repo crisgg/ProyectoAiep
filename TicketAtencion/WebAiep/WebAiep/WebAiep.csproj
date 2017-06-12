@@ -181,6 +181,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AGENTESController.cs" />
+    <Compile Include="Controllers\EMPRESA_ProvController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -211,10 +212,10 @@
     <Compile Include="Models\DISTRITOS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EMPRESA.cs">
+    <Compile Include="Models\EMPRESA_CLI.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EMPRESA_CLI.cs">
+    <Compile Include="Models\EMPRESA_Prov.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ESTADOS.cs">
@@ -387,6 +388,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\EMPRESA_Prov\Create.cshtml" />
+    <Content Include="Views\EMPRESA_Prov\Delete.cshtml" />
+    <Content Include="Views\EMPRESA_Prov\Details.cshtml" />
+    <Content Include="Views\EMPRESA_Prov\Edit.cshtml" />
+    <Content Include="Views\EMPRESA_Prov\Index.cshtml" />
     <Content Include="Views\AGENTES\Create.cshtml" />
     <Content Include="Views\AGENTES\Delete.cshtml" />
     <Content Include="Views\AGENTES\Details.cshtml" />

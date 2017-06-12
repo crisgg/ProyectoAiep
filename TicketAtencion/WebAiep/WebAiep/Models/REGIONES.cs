@@ -23,6 +23,7 @@ namespace WebAiep.Models
         public decimal ID_REGION { get; set; }
         public Nullable<decimal> ID_PAIS { get; set; }
         public string NOMBRE_REGION { get; set; }
+        public string Ordinal { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DISTRITOS> DISTRITOS { get; set; }

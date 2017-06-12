@@ -16,11 +16,11 @@ namespace WebAiep.Models
     {
         public Nullable<int> HRS_TRABAJO_SEM { get; set; }
         public decimal ID_TURNO { get; set; }
-        public Nullable<decimal> RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
         public Nullable<System.DateTime> HORA_INICIO_LABORAL { get; set; }
         public Nullable<System.DateTime> HORA_TERMINO_LABORAL { get; set; }
         public Nullable<int> HORAS_TRABAJADAS { get; set; }
     
-        public virtual EMPRESA EMPRESA { get; set; }
+        public virtual EMPRESA_Prov EMPRESA_Prov { get; set; }
     }
 }

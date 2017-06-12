@@ -15,13 +15,13 @@ namespace WebAiep.Models
     public partial class HITOS_NO_LABORALES
     {
         public decimal ID_HITOS { get; set; }
-        public Nullable<decimal> RUT_EMPRESA_PROV { get; set; }
+        public Nullable<decimal> ID_EMPRESA_PROV { get; set; }
         public string DESCRIPCION_HITONL { get; set; }
         public Nullable<System.DateTime> FECHA_INICO_HITONL { get; set; }
         public Nullable<System.DateTime> FECHA_TERMINO_HITONL { get; set; }
         public Nullable<System.DateTime> HORA_INICIO_HITONL { get; set; }
         public Nullable<System.DateTime> HORA_TERMNO_HITONL { get; set; }
     
-        public virtual EMPRESA EMPRESA { get; set; }
+        public virtual EMPRESA_Prov EMPRESA_Prov { get; set; }
     }
 }

@@ -12,10 +12,10 @@ namespace WebAiep.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class EMPRESA
+    public partial class EMPRESA_Prov
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public EMPRESA()
+        public EMPRESA_Prov()
         {
             this.HITOS_NO_LABORALES = new HashSet<HITOS_NO_LABORALES>();
             this.HORAS_TURNOS = new HashSet<HORAS_TURNOS>();
@@ -23,11 +23,12 @@ namespace WebAiep.Models
             this.TELS_EMPRESA = new HashSet<TELS_EMPRESA>();
         }
     
-        public decimal RUT_EMPRESA_PROV { get; set; }
+        public decimal ID_Empresa_Prov { get; set; }
         public Nullable<decimal> ID_PAIS { get; set; }
         public string NOMBRE_EMPRESA { get; set; }
         public string RAZON_SOCIAL_EMPRESA { get; set; }
         public string DIRECCION_EMPRSA { get; set; }
+        public string DNI_Empre_Prov { get; set; }
     
         public virtual PAISES PAISES { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
