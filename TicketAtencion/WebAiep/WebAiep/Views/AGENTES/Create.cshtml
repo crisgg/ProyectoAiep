@@ -15,13 +15,6 @@
         <h4>AGENTES</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.ID_EMPRESA_PROV, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ID_EMPRESA_PROV, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ID_EMPRESA_PROV, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.ID_LOGIN, "ID_LOGIN", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -30,7 +23,7 @@
                 @Html.ValidationMessageFor(model => model.ID_LOGIN, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        
         <div class="form-group">
             @Html.LabelFor(model => model.ID_COMUNA, "ID_COMUNA", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -78,6 +71,27 @@
                 @Html.ValidationMessageFor(model => model.EMAIL_AGENTE, "", new { @class = "text-danger" })
             </div>
         </div>
+
+
+        @*
+            Agregar Login en creacion de Usuario
+            
+            <div class="form-group">
+            @Html.LabelFor(model => model.EMAIL_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EMAIL_AGENTE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EMAIL_AGENTE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EMAIL_AGENTE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EMAIL_AGENTE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EMAIL_AGENTE, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

@@ -54,7 +54,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administración<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/Empresas/Details">Mi Empresa</a></li>
+                            <li><a href="/Empresa_Prov/Details/1">Mi Empresa</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Ayudas</a></li>
@@ -62,8 +62,15 @@
 
                 @* Login *@
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/Account/Register"><span class="glyphicon glyphicon-user "></span>Registro</a></li>
-                    <li><a href="/Account/Login"><span class="glyphicon glyphicon-log-in "></span>Login</a></li>
+                    @if (Session["Usuario"].Equals(null))
+                    {
+                        <li><a href="/Login/Login"><span class="glyphicon glyphicon-log-in "></span>Login</a></li>
+                    }
+                    else
+                    {
+                       
+                        <li><a href="/LOGIN/Details/"><span class="glyphicon glyphicon-log-in "></span>Hola @Session["Usuario"]</a></li>
+                    }
                 </ul>
             </div>
         </div>

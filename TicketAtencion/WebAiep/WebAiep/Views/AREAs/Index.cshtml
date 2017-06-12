@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebAiep.Models.AREA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_EMPRESA_PROV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL_AREA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPCION_AREA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_EMPRESA_PROV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL_AREA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPCION_AREA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_AREA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_AREA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_AREA })
+        </td>
+    </tr>
+}
+
+</table>

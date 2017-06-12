@@ -181,8 +181,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AGENTESController.cs" />
+    <Compile Include="Controllers\AREAsController.cs" />
+    <Compile Include="Controllers\Enconder.cs" />
     <Compile Include="Controllers\EMPRESA_ProvController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LOGINsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -398,6 +401,17 @@
     <Content Include="Views\AGENTES\Details.cshtml" />
     <Content Include="Views\AGENTES\Edit.cshtml" />
     <Content Include="Views\AGENTES\Index.cshtml" />
+    <Content Include="Views\AREAs\Create.cshtml" />
+    <Content Include="Views\AREAs\Delete.cshtml" />
+    <Content Include="Views\AREAs\Details.cshtml" />
+    <Content Include="Views\AREAs\Edit.cshtml" />
+    <Content Include="Views\AREAs\Index.cshtml" />
+    <Content Include="Views\LOGINs\Create.cshtml" />
+    <Content Include="Views\LOGINs\Delete.cshtml" />
+    <Content Include="Views\LOGINs\Details.cshtml" />
+    <Content Include="Views\LOGINs\Edit.cshtml" />
+    <Content Include="Views\LOGINs\Index.cshtml" />
+    <Content Include="Views\LOGINs\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

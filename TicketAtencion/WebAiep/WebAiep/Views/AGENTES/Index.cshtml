@@ -32,9 +32,7 @@
         <th>
             @Html.DisplayNameFor(model => model.COMUNAS.NOM_COMUNA)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LOGIN.PASS_HASH)
-        </th>
+
         <th></th>
     </tr>
 
@@ -61,9 +59,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.COMUNAS.NOM_COMUNA)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LOGIN.PASS_HASH)
-        </td>
+
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID_AGENTE }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID_AGENTE }) |

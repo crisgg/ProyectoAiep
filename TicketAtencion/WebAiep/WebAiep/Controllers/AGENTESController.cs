@@ -40,7 +40,9 @@ namespace WebAiep.Controllers
         // GET: AGENTES/Create
         public ActionResult Create()
         {
-            ViewBag.ID_AREA = new SelectList(db.AREA, "ID_AREA", "EMAIL_AREA");
+            ViewBag.ID_AREA = new SelectList(db.AREA, "ID_AREA", "DESCRIPCION_AREA");
+            //ViewBag.ID_PAIS = new SelectList(db.PAISES, "ID_PAIS", "NOM_PAIS");
+            //ViewBag.ID_Region = new SelectList(db.REGIONES, "ID_REGION", "NOMBRE_REGION");
             ViewBag.ID_COMUNA = new SelectList(db.COMUNAS, "ID_COMUNA", "NOM_COMUNA");
             ViewBag.ID_LOGIN = new SelectList(db.LOGIN, "ID_LOGIN", "PASS_HASH");
             return View();
@@ -51,16 +53,18 @@ namespace WebAiep.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ID_EMPRESA_PROV,ID_AGENTE,ID_LOGIN,ID_COMUNA,ID_AREA,NOMBRE_AGENTE,APELLIDOP_AGENTE,APELLIDOM_AGENTE,EMAIL_AGENTE")] AGENTES aGENTES)
+        public async Task<ActionResult> Create( [Bind(Include = "USER_NAME")]LOGIN lOGIN ,[Bind(Include = "ID_AGENTE,ID_LOGIN,ID_COMUNA,ID_AREA,NOMBRE_AGENTE,APELLIDOP_AGENTE,APELLIDOM_AGENTE,EMAIL_AGENTE")] AGENTES aGENTES)
         {
             if (ModelState.IsValid)
             {
+                aGENTES.ID_EMPRESA_PROV = 1;
+
                 db.AGENTES.Add(aGENTES);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID_AREA = new SelectList(db.AREA, "ID_AREA", "EMAIL_AREA", aGENTES.ID_AREA);
+            ViewBag.ID_AREA = new SelectList(db.AREA, "ID_AREA", "DESCRIPCION_AREA", aGENTES.ID_AREA);
             ViewBag.ID_COMUNA = new SelectList(db.COMUNAS, "ID_COMUNA", "NOM_COMUNA", aGENTES.ID_COMUNA);
             ViewBag.ID_LOGIN = new SelectList(db.LOGIN, "ID_LOGIN", "PASS_HASH", aGENTES.ID_LOGIN);
             return View(aGENTES);
@@ -89,10 +93,13 @@ namespace WebAiep.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ID_EMPRESA_PROV,ID_AGENTE,ID_LOGIN,ID_COMUNA,ID_AREA,NOMBRE_AGENTE,APELLIDOP_AGENTE,APELLIDOM_AGENTE,EMAIL_AGENTE")] AGENTES aGENTES)
+        public async Task<ActionResult> Edit([Bind(Include = "ID_AGENTE,ID_LOGIN,ID_COMUNA,ID_AREA,NOMBRE_AGENTE,APELLIDOP_AGENTE,APELLIDOM_AGENTE,EMAIL_AGENTE")] AGENTES aGENTES)
         {
             if (ModelState.IsValid)
             {
+
+                aGENTES.ID_EMPRESA_PROV = 1;
+
                 db.Entry(aGENTES).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
