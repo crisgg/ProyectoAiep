@@ -1,0 +1,82 @@
+﻿@model WebAiep.Models.AGENTES
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AGENTES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_EMPRESA_PROV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_EMPRESA_PROV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOMBRE_AGENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOMBRE_AGENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APELLIDOP_AGENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APELLIDOP_AGENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APELLIDOM_AGENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APELLIDOM_AGENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL_AGENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL_AGENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AREA.EMAIL_AREA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AREA.EMAIL_AREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMUNAS.NOM_COMUNA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMUNAS.NOM_COMUNA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOGIN.PASS_HASH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOGIN.PASS_HASH)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_AGENTE }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
