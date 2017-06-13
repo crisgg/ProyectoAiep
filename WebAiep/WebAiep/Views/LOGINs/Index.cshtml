@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebAiep.Models.LOGIN>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PASS_HASH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USER_NAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PASS_HASH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USER_NAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_LOGIN }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_LOGIN }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_LOGIN })
+        </td>
+    </tr>
+}
+
+</table>
